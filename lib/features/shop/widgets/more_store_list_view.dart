@@ -7,7 +7,7 @@ import 'package:flutter_sixvalley_ecommerce/features/home/widgets/aster_theme/mo
 import 'package:provider/provider.dart';
 
 class MoreStoreViewListView extends StatefulWidget {
-  final String? title;
+  final dynamic title;
   const MoreStoreViewListView({super.key, this.title});
   @override
   State<MoreStoreViewListView> createState() => _MoreStoreViewListViewState();

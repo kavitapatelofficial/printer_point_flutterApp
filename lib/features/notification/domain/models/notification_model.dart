@@ -1,10 +1,10 @@
 import 'package:flutter_sixvalley_ecommerce/data/model/image_full_url.dart';
 
 class NotificationItemModel {
-  int? totalSize;
-  int? limit;
-  int? offset;
-  int? newNotificationItem;
+  dynamic totalSize;
+  dynamic limit;
+  dynamic offset;
+  dynamic newNotificationItem;
   List<NotificationItem>? notification;
 
   NotificationItemModel(
@@ -29,17 +29,17 @@ class NotificationItemModel {
 }
 
 class NotificationItem {
-  int? id;
-  String? sentBy;
-  String? sentTo;
-  String? title;
-  String? description;
-  int? notificationCount;
-  String? image;
+  dynamic id;
+  dynamic sentBy;
+  dynamic sentTo;
+  dynamic title;
+  dynamic description;
+  dynamic notificationCount;
+  dynamic image;
   ImageFullUrl? imageFullUrl;
-  int? status;
-  String? createdAt;
-  String? updatedAt;
+  dynamic status;
+  dynamic createdAt;
+  dynamic updatedAt;
   NotificationSeenBy? seen;
 
 
@@ -78,10 +78,10 @@ class NotificationItem {
 }
 
 class NotificationSeenBy {
-  int? id;
-  int? userId;
-  int? notificationId;
-  String? createdAt;
+  dynamic id;
+  dynamic userId;
+  dynamic notificationId;
+  dynamic createdAt;
 
 
   NotificationSeenBy(

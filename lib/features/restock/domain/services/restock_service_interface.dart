@@ -4,6 +4,6 @@ abstract class RestockServiceInterface{
 
   Future<dynamic> getRestockProductList(String offset, bool getAll);
 
-  Future<dynamic> deleteRestockProduct(String? type, String? id);
+  Future<dynamic> deleteRestockProduct(dynamic type, dynamic id);
 
 }

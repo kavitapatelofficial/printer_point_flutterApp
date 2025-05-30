@@ -84,9 +84,9 @@ class OrderAgainCard extends StatelessWidget {
                           itemBuilder: (context, detailsIndex) {
                             return Padding(padding: const EdgeInsets.only(right: Dimensions.paddingSizeSmall),
                               child: InkWell(onTap: (){
-                                  showDialog(context: context, builder: (_) => ImageDialog(imageUrl: orders.details?[detailsIndex].product?.thumbnail??''));
+                                  showDialog(context: context, builder: (_) => ImageDialog(imageUrl: orders.details?[detailsIndex].product?.thumbnailFullUrl!.status==200?"${orders.details?[detailsIndex].product?.thumbnailFullUrl!.path}":orders.details?[detailsIndex].product?.thumbnailFullUrl!.key));
                                 } ,
-                                child: CustomImageWidget(fit: BoxFit.cover, width: 45, height: 45, image: orders.details?[detailsIndex].product?.thumbnail ?? ''),),);}),),
+                                child: CustomImageWidget(fit: BoxFit.cover, width: 45, height: 45, image: orders.details?[detailsIndex].product?.thumbnailFullUrl!.status==200?"${orders.details?[detailsIndex].product?.thumbnailFullUrl!.path}":orders.details?[detailsIndex].product?.thumbnailFullUrl!.key),),);}),),
 
                       if(orders.details!.length> 3)
                       Text('+${orders.details!.length-3}\n ${getTranslated('more', context)}', style: textRegular),

@@ -27,8 +27,8 @@ import 'package:provider/provider.dart';
 
 class OrderDetailsScreen extends StatefulWidget {
   final bool isNotification;
-  final int? orderId;
-  final String? phone;
+  final dynamic orderId;
+  final dynamic phone;
   final bool fromTrack;
   const OrderDetailsScreen({super.key, required this.orderId, this.isNotification = false, this.phone,  this.fromTrack = false});
 

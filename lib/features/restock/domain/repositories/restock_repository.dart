@@ -32,7 +32,7 @@ class RestockRepository implements RestockRepositoryInterface{
 
 
   @override
-  Future<ApiResponse> deleteRestockProduct(String? type, String? id) async {
+  Future<ApiResponse> deleteRestockProduct(dynamic type, dynamic id) async {
     try {
       final response = await dioClient!.post(
         AppConstants.productRestockDelete,
@@ -61,7 +61,7 @@ class RestockRepository implements RestockRepositoryInterface{
 
 
   @override
-  Future getList({int? offset = 1}) {
+  Future getList({dynamic offset = 1}) {
     // TODO: implement getList
     throw UnimplementedError();
   }

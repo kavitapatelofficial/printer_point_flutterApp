@@ -1,12 +1,12 @@
 class RegisterModel {
-  String? email;
-  String? password;
-  String? fName;
-  String? lName;
-  String? phone;
-  String? socialId;
-  String? loginMedium;
-  String? referCode;
+  dynamic email;
+  dynamic password;
+  dynamic fName;
+  dynamic lName;
+  dynamic phone;
+  dynamic socialId;
+  dynamic loginMedium;
+  dynamic referCode;
 
   RegisterModel({this.email, this.password, this.fName, this.lName, this.socialId,this.loginMedium, this.referCode});
 

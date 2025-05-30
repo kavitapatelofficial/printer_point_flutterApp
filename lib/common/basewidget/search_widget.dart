@@ -10,8 +10,8 @@ import 'package:provider/provider.dart';
 
 
 class SearchWidget extends StatefulWidget {
-  final String? hintText;
-  final int? sellerId;
+  final dynamic hintText;
+  final dynamic sellerId;
   const SearchWidget({super.key, required this.hintText, this.sellerId});
 
   @override

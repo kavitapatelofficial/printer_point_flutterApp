@@ -1,8 +1,8 @@
 class LanguageModel {
-  String? imageUrl;
-  String? languageName;
-  String? languageCode;
-  String? countryCode;
+  dynamic imageUrl;
+  dynamic languageName;
+  dynamic languageCode;
+  dynamic countryCode;
 
   LanguageModel({this.imageUrl, this.languageName, this.countryCode, this.languageCode});
 }

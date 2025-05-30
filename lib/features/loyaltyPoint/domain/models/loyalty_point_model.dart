@@ -1,14 +1,14 @@
 import 'package:flutter_sixvalley_ecommerce/helper/date_converter.dart';
 
 class LoyaltyPointModel {
-  int? limit;
-  int? offset;
-  int? totalSize;
-  String? filterBy;
+  dynamic limit;
+  dynamic offset;
+  dynamic totalSize;
+  dynamic filterBy;
   DateTime? startDate;
   DateTime? endDate;
   List<String>? transactionTypes;
-  int? totalLoyaltyPoint;
+  dynamic totalLoyaltyPoint;
   List<LoyaltyPointList>? loyaltyPointList;
 
 
@@ -49,28 +49,28 @@ class LoyaltyPointModel {
 }
 
 class LoyaltyPointList {
-  int? _id;
-  int? _userId;
-  String? _transactionId;
-  int? _credit;
-  int? _debit;
+  dynamic _id;
+  dynamic _userId;
+  dynamic _transactionId;
+  dynamic _credit;
+  dynamic _debit;
   double? _balance;
-  String? _reference;
-  String? _transactionType;
-  String? _createdAt;
-  String? _updatedAt;
+  dynamic _reference;
+  dynamic _transactionType;
+  dynamic _createdAt;
+  dynamic _updatedAt;
 
   LoyaltyPointList(
-      {int? id,
-        int? userId,
-        String? transactionId,
-        int? credit,
-        int? debit,
+      {dynamic id,
+        dynamic userId,
+        dynamic transactionId,
+        dynamic credit,
+        dynamic debit,
         double? balance,
-        String? reference,
-        String? transactionType,
-        String? createdAt,
-        String? updatedAt}) {
+        dynamic reference,
+        dynamic transactionType,
+        dynamic createdAt,
+        dynamic updatedAt}) {
     if (id != null) {
       _id = id;
     }
@@ -103,16 +103,16 @@ class LoyaltyPointList {
     }
   }
 
-  int? get id => _id;
-  int? get userId => _userId;
-  String? get transactionId => _transactionId;
-  int? get credit => _credit;
-  int? get debit => _debit;
+  dynamic get id => _id;
+  dynamic get userId => _userId;
+  dynamic get transactionId => _transactionId;
+  dynamic get credit => _credit;
+  dynamic get debit => _debit;
   double? get balance => _balance;
-  String? get reference => _reference;
-  String? get transactionType => _transactionType;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
+  dynamic get reference => _reference;
+  dynamic get transactionType => _transactionType;
+  dynamic get createdAt => _createdAt;
+  dynamic get updatedAt => _updatedAt;
 
 
   LoyaltyPointList.fromJson(Map<String, dynamic> json) {

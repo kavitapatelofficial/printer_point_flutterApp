@@ -7,7 +7,7 @@ abstract class WalletServiceInterface {
 
   Future<dynamic> getWalletBonusBannerList();
 
-  Future<dynamic> getList({int? offset = 1, String? filterBy, DateTime? startDate, DateTime? endDate, List<String>? transactionTypes});
+  Future<dynamic> getList({dynamic offset = 1, dynamic filterBy, DateTime? startDate, DateTime? endDate, List<String>? transactionTypes});
 
 
 }

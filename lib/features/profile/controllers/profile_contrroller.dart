@@ -72,7 +72,7 @@ class ProfileController extends ChangeNotifier {
     _isLoading = false;
     if (response.statusCode == 200) {
       Map map = jsonDecode(await response.stream.bytesToString());
-      String? message = map["message"];
+      dynamic message = map["message"];
       _userInfoModel = updateUserModel;
       responseModel = ResponseModel(message, true);
       Navigator.of(Get.context!).pop();
@@ -82,7 +82,7 @@ class ProfileController extends ChangeNotifier {
       var decodedData = jsonDecode(responseBody);
     
 
-      String? errorMessage;
+      dynamic errorMessage;
 
       if(decodedData != null){
         errorMessage = decodedData['errors']?[0]?['message'];

@@ -14,7 +14,7 @@ class ChatService implements ChatServiceInterface{
   }
 
   @override
-  Future getMessageList(String type, int? id, int offset) async{
+  Future getMessageList(String type, dynamic id, int offset) async{
     return chatRepositoryInterface.getMessageList(type, id, offset);
   }
 

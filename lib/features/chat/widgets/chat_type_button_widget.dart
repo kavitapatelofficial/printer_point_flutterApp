@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 
 
 class ChatTypeButtonWidget extends StatelessWidget {
-  final String? text;
+  final dynamic text;
   final int index;
   const ChatTypeButtonWidget({super.key, required this.text, required this.index});
 

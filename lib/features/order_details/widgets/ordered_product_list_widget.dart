@@ -6,10 +6,10 @@ import 'package:flutter_sixvalley_ecommerce/common/basewidget/show_custom_snakba
 import 'package:provider/provider.dart';
 
 class OrderProductListWidget extends StatelessWidget {
-  final String? orderType;
-  final String? orderId;
+  final dynamic orderType;
+  final dynamic orderId;
   final bool fromTrack;
-  final int? isGuest;
+  final dynamic isGuest;
   const OrderProductListWidget({super.key, this.orderType,  this.fromTrack = false, this.isGuest, this.orderId});
 
   @override

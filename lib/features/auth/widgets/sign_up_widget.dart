@@ -47,7 +47,7 @@ class SignUpWidgetState extends State<SignUpWidget> {
 
 
 
-  route(bool isRoute, String? token, String? tempToken, String? errorMessage) async {
+  route(bool isRoute, dynamic token, dynamic tempToken, dynamic errorMessage) async {
     var splashController = Provider.of<SplashController>(context,listen: false);
     var authController = Provider.of<AuthController>(context, listen: false);
     var profileController = Provider.of<ProfileController>(context, listen: false);

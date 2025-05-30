@@ -13,7 +13,7 @@ class LocationService implements LocationServiceInterface{
   }
 
   @override
-  Future getPlaceDetails(String? placeID) async{
+  Future getPlaceDetails(dynamic placeID) async{
     return await locationRepoInterface.getPlaceDetails(placeID);
   }
 

@@ -663,7 +663,7 @@ class _CustomExpansionTileState extends State<CustomExpansionTile> with SingleTi
     final String onTapHint = _isExpanded
         ? localizations.expansionTileExpandedTapHint
         : localizations.expansionTileCollapsedTapHint;
-    String? semanticsHint;
+    dynamic semanticsHint;
     switch (theme.platform) {
       case TargetPlatform.iOS:
       case TargetPlatform.macOS:

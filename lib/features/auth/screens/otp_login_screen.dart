@@ -28,7 +28,7 @@ class OtpLoginScreen extends StatefulWidget {
 
 class _OtpLoginScreenState extends State<OtpLoginScreen> {
 
-  String? countryCode;
+  dynamic countryCode;
   TextEditingController? _phoneNumberController;
 
   @override

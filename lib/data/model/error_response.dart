@@ -15,8 +15,8 @@ class ErrorResponse {
 }
 
 class Errors {
-  String? code;
-  String? message;
+  dynamic code;
+  dynamic message;
 
   Errors({this.code, this.message});
 

@@ -99,7 +99,7 @@ class _CouponBottomSheetWidgetState extends State<CouponBottomSheetWidget> {
                       return CouponItemWidget(
                         coupons: couponProvider.availableCouponList![index],
                         fromCheckout: true,
-                        onCopy: (String? code ) { 
+                        onCopy: (dynamic code ) { 
                           couponController.text = code ?? '';
                         },
                       );

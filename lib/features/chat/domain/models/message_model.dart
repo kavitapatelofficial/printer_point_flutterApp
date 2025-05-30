@@ -1,9 +1,9 @@
 import 'package:flutter_sixvalley_ecommerce/features/chat/domain/models/chat_model.dart';
 
 class MessageModel {
-  int? totalSize;
-  int? limit;
-  int? offset;
+  dynamic totalSize;
+  dynamic limit;
+  dynamic offset;
   List<Message>? message;
 
   MessageModel({this.totalSize, this.limit, this.offset, this.message});
@@ -23,14 +23,14 @@ class MessageModel {
 }
 
 class Message {
-  int? id;
-  String? message;
+  dynamic id;
+  dynamic message;
   bool? sentByCustomer;
   bool? sentBySeller;
   bool? sentByAdmin;
   bool? sentByDeliveryman;
   bool? seenByDeliveryMan;
-  String? createdAt;
+  dynamic createdAt;
   DeliveryMan? deliveryMan;
   SellerInfo? sellerInfo;
   List<Attachment>? attachment;
@@ -76,10 +76,10 @@ class Message {
 }
 
 class Attachment {
-  String? type;
-  String? key;
-  String? path;
-  String? size;
+  dynamic type;
+  dynamic key;
+  dynamic path;
+  dynamic size;
 
   Attachment({this.type, this.key, this.path, this.size});
 

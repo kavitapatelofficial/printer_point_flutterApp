@@ -117,7 +117,7 @@ class AddressController with ChangeNotifier {
   }
 
 
-  Future<void> updateAddress(BuildContext context, {required AddressModel addressModel, int? addressId}) async {
+  Future<void> updateAddress(BuildContext context, {required AddressModel addressModel, dynamic addressId}) async {
     _isLoading = true;
     notifyListeners();
     ApiResponse apiResponse = await addressServiceInterface.update(addressModel.toJson(), addressId!);

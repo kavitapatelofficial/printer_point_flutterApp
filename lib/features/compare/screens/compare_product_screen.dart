@@ -118,7 +118,7 @@ class _CompareProductScreenState extends State<CompareProductScreen> {
 
 class CompareCard extends StatelessWidget {
   final Product? product;
-  final int? compareId;
+  final dynamic compareId;
   const CompareCard({super.key, required this.product, this.compareId});
 
   @override
@@ -156,7 +156,7 @@ class CompareCard extends StatelessWidget {
                               color: Provider.of<ThemeController>(context, listen: false).darkTheme? Theme.of(context).hintColor.withOpacity(.5) : ColorResources.getIconBg(context),
                               borderRadius: const BorderRadius.all(Radius.circular(10))),
                             child: ClipRRect(borderRadius: const BorderRadius.all( Radius.circular(Dimensions.paddingSizeSmall)),
-                              child: CustomImageWidget(image: '${product?.thumbnail}',
+                              child: CustomImageWidget(image: '${product!.imagesFullUrl!.first.status==200?product!.imagesFullUrl!.first.path:product!.imagesFullUrl!.first.key}',
                                   height: 180,width: 200, placeholder: Images.emptyProduct)
 
                             ),

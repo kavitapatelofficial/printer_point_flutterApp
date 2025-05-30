@@ -19,10 +19,10 @@ class CategoryController extends ChangeNotifier {
 
 
   List<CategoryModel> _categoryList = [];
-  int? _categorySelectedIndex;
+  dynamic _categorySelectedIndex;
 
   List<CategoryModel> get categoryList => _categoryList;
-  int? get categorySelectedIndex => _categorySelectedIndex;
+  dynamic get categorySelectedIndex => _categorySelectedIndex;
 
   Future<void> getCategoryList(bool reload) async {
 
@@ -108,7 +108,7 @@ class CategoryController extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> resetChecked(int? id, bool fromShop) async{
+  Future<void> resetChecked(dynamic id, bool fromShop) async{
     if(fromShop){
       await getSellerWiseCategoryList(id!);
       Provider.of<BrandController>(Get.context!, listen: false).getSellerWiseBrandList(id);

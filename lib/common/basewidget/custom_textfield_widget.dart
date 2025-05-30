@@ -11,9 +11,9 @@ import 'package:provider/provider.dart';
 
 
 class CustomTextFieldWidget extends StatefulWidget {
-  final String? hintText;
-  final String? titleText;
-  final String? labelText;
+  final dynamic hintText;
+  final dynamic titleText;
+  final dynamic labelText;
   final TextAlign textAlign;
   final TextEditingController? controller;
   final FocusNode? focusNode;
@@ -36,13 +36,13 @@ class CustomTextFieldWidget extends StatefulWidget {
   final int maxLines;
   final TextCapitalization capitalization;
   final double borderRadius;
-  final String? prefixIcon;
-  final String? suffixIcon;
-  final String? suffixIcon2;
+  final dynamic prefixIcon;
+  final dynamic suffixIcon;
+  final dynamic suffixIcon2;
   final double suffixIconSize;
   final bool showBorder;
   final bool showLabelText;
-  final String? countryDialCode;
+  final dynamic countryDialCode;
   final double prefixHeight;
   final Color borderColor;
   final List<TextInputFormatter>? inputFormatters;
@@ -52,7 +52,7 @@ class CustomTextFieldWidget extends StatefulWidget {
   final Color? suffixColor;
   final bool isShowBorder;
   final bool isToolTipSuffix;
-  final String? toolTipMessage;
+  final dynamic toolTipMessage;
   final GlobalKey? toolTipKey;
 
   const CustomTextFieldWidget({

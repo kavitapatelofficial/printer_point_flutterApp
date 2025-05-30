@@ -1,6 +1,6 @@
 abstract class CouponServiceInterface{
 
-  Future<dynamic> getList({int? offset = 1});
+  Future<dynamic> getList({dynamic offset = 1});
 
   Future<dynamic> get(String id);
 

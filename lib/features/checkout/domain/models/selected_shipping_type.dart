@@ -1,8 +1,8 @@
 class SelectedShippingType {
-  int? _sellerId;
-  String? _selectedShippingType;
+  dynamic _sellerId;
+  dynamic _selectedShippingType;
 
-  SelectedShippingType({int? sellerId, String? selectedShippingType}) {
+  SelectedShippingType({dynamic sellerId, dynamic selectedShippingType}) {
     if (sellerId != null) {
       _sellerId = sellerId;
     }
@@ -11,8 +11,8 @@ class SelectedShippingType {
     }
   }
 
-  int? get sellerId => _sellerId;
-  String? get selectedShippingType => _selectedShippingType;
+  dynamic get sellerId => _sellerId;
+  dynamic get selectedShippingType => _selectedShippingType;
 
   SelectedShippingType.fromJson(Map<String, dynamic> json) {
     _sellerId = json['sellerId'];

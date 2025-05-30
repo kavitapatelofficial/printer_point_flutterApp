@@ -2,9 +2,9 @@ import 'package:flutter_sixvalley_ecommerce/data/model/image_full_url.dart';
 
 
 class Brand {
-  int? totalSize;
-  int? limit;
-  int? offset;
+  dynamic totalSize;
+  dynamic limit;
+  dynamic offset;
   List<BrandModel>? brands;
 
   Brand({this.totalSize, this.limit, this.offset, this.brands});
@@ -33,25 +33,25 @@ class Brand {
 
 
 class BrandModel {
-  int? _id;
-  String? _name;
-  String? _image;
-  int? _status;
-  String? _createdAt;
-  String? _updatedAt;
-  int? _brandProductsCount;
+  dynamic _id;
+  dynamic _name;
+  dynamic _image;
+  dynamic _status;
+  dynamic _createdAt;
+  dynamic _updatedAt;
+  dynamic _brandProductsCount;
   bool? checked;
   ImageFullUrl? _imageFullUrl;
 
 
   BrandModel(
-      {int? id,
-        String? name,
-        String? image,
-        int? status,
-        String? createdAt,
-        String? updatedAt,
-        int? brandProductsCount,
+      {dynamic id,
+        dynamic name,
+        dynamic image,
+        dynamic status,
+        dynamic createdAt,
+        dynamic updatedAt,
+        dynamic brandProductsCount,
         bool? checked,
         ImageFullUrl? imageFullUrl,
       }) {
@@ -67,13 +67,13 @@ class BrandModel {
 
   }
 
-  int? get id => _id;
-  String? get name => _name;
-  String? get image => _image;
-  int? get status => _status;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-  int? get brandProductsCount => _brandProductsCount;
+  dynamic get id => _id;
+  dynamic get name => _name;
+  dynamic get image => _image;
+  dynamic get status => _status;
+  dynamic get createdAt => _createdAt;
+  dynamic get updatedAt => _updatedAt;
+  dynamic get brandProductsCount => _brandProductsCount;
   ImageFullUrl? get imageFullUrl => _imageFullUrl;
 
 

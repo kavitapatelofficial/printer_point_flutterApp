@@ -170,7 +170,7 @@ class OrderDetailsController with ChangeNotifier {
 
 
   bool searching = false;
-  Future<ApiResponse> trackOrder({String? orderId, String? phoneNumber, bool isUpdate = true}) async {
+  Future<ApiResponse> trackOrder({dynamic orderId, dynamic phoneNumber, bool isUpdate = true}) async {
     searching = true;
     if(isUpdate) {
       notifyListeners();
@@ -189,7 +189,7 @@ class OrderDetailsController with ChangeNotifier {
     return apiResponse;
   }
 
-  Future<ApiResponse> downloadDigitalProduct({int? orderDetailsId}) async {
+  Future<ApiResponse> downloadDigitalProduct({dynamic orderDetailsId}) async {
     ApiResponse apiResponse = await orderDetailsServiceInterface.downloadDigitalProduct(orderDetailsId!);
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {
       Provider.of<AuthController>(Get.context!, listen: false).resendTime = (apiResponse.response!.data["time_count_in_second"]);
@@ -202,7 +202,7 @@ class OrderDetailsController with ChangeNotifier {
   }
 
 
-  Future<ApiResponse> resentDigitalProductOtp({int? orderId}) async {
+  Future<ApiResponse> resentDigitalProductOtp({dynamic orderId}) async {
     ApiResponse apiResponse = await orderDetailsServiceInterface.resentDigitalProductOtp(orderId!);
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {
 
@@ -283,7 +283,7 @@ class OrderDetailsController with ChangeNotifier {
        Navigator.of(Get.context!).pop();
      }
    } else {
-     String? task;
+     dynamic task;
      Directory downloadDirectory = Directory('/storage/emulated/0/Download');
      String filePathName = "${downloadDirectory.path}/$fileName";
      File savedFile = File(filePathName);

@@ -40,7 +40,7 @@ class MoreScreen extends StatefulWidget {
 
 class _MoreScreenState extends State<MoreScreen> {
   late bool isGuestMode;
-  String? version;
+  dynamic version;
   bool singleVendor = false;
 
 

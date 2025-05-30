@@ -10,7 +10,7 @@ class SellerProductRepository implements SellerProductRepositoryInterface{
 
 
   @override
-  Future<ApiResponse> getSellerProductList(String sellerId, String offset, String productId, {String search = '', String? categoryIds="[]", String? brandIds="[]", String? authorIds ='[]', String? publishingIds = '[]', String? productType}) async {
+  Future<ApiResponse> getSellerProductList(String sellerId, String offset, String productId, {String search = '', dynamic categoryIds="[]", dynamic brandIds="[]", dynamic authorIds ='[]', dynamic publishingIds = '[]', dynamic productType}) async {
     try {
       final response = await dioClient!.get(
         '${AppConstants.sellerProductUri}$sellerId/products?guest_id=1&limit=10&offset=$offset&search=$search&category=$categoryIds&brand_ids=$brandIds&product_id=$productId&product_authors=$authorIds&publishing_houses=$publishingIds&product_type=$productType');
@@ -84,7 +84,7 @@ class SellerProductRepository implements SellerProductRepositoryInterface{
   }
 
   @override
-  Future getList({int? offset = 1}) {
+  Future getList({dynamic offset = 1}) {
     // TODO: implement getList
     throw UnimplementedError();
   }

@@ -9,7 +9,7 @@ import 'package:provider/provider.dart';
 
 class MenuButtonWidget extends StatelessWidget {
   final String image;
-  final String? title;
+  final dynamic title;
   final Widget navigateTo;
   final bool isNotification;
   final bool isProfile;

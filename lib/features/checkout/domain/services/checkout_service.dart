@@ -8,15 +8,15 @@ class CheckoutService implements CheckoutServiceInterface{
   CheckoutService({required this.checkoutRepositoryInterface});
 
   @override
-  Future cashOnDeliveryPlaceOrder({String? addressID,
-    String? couponCode,
-    String? couponDiscountAmount,
-    String? billingAddressId,
-    String? orderNote,
+  Future cashOnDeliveryPlaceOrder({dynamic addressID,
+    dynamic couponCode,
+    dynamic couponDiscountAmount,
+    dynamic billingAddressId,
+    dynamic orderNote,
     bool? isCheckCreateAccount,
-    String? password,
+    dynamic password,
     double? cashChangeAmount,
-    String? currentCurrencyCode,
+    dynamic currentCurrencyCode,
   }) async{
     return await checkoutRepositoryInterface.cashOnDeliveryPlaceOrder(
      addressID: addressID,
@@ -32,7 +32,7 @@ class CheckoutService implements CheckoutServiceInterface{
   }
 
   @override
-  Future digitalPaymentPlaceOrder(String? orderNote, String? customerId, String? addressId, String? billingAddressId, String? couponCode, String? couponDiscount, String? paymentMethod, bool? isCheckCreateAccount, String? password) async {
+  Future digitalPaymentPlaceOrder(dynamic orderNote, dynamic customerId, dynamic addressId, dynamic billingAddressId, dynamic couponCode, dynamic couponDiscount, dynamic paymentMethod, bool? isCheckCreateAccount, dynamic password) async {
     return await checkoutRepositoryInterface.digitalPaymentPlaceOrder(orderNote, customerId, addressId, billingAddressId, couponCode, couponDiscount, paymentMethod, isCheckCreateAccount, password);
   }
 
@@ -42,12 +42,12 @@ class CheckoutService implements CheckoutServiceInterface{
   }
 
   @override
-  Future offlinePaymentPlaceOrder(String? addressID, String? couponCode, String? couponDiscountAmount, String? billingAddressId, String? orderNote, List<String?> typeKey, List<String> typeValue, int? id, String name, String? paymentNote,bool? isCheckCreateAccount, String? password) async{
+  Future offlinePaymentPlaceOrder(dynamic addressID, dynamic couponCode, dynamic couponDiscountAmount, dynamic billingAddressId, dynamic orderNote, List<String?> typeKey, List<String> typeValue, dynamic id, String name, dynamic paymentNote,bool? isCheckCreateAccount, dynamic password) async{
     return await checkoutRepositoryInterface.offlinePaymentPlaceOrder(addressID, couponCode, couponDiscountAmount, billingAddressId, orderNote, typeKey, typeValue, id, name, paymentNote, isCheckCreateAccount, password);
   }
 
   @override
-  Future walletPaymentPlaceOrder(String? addressID, String? couponCode, String? couponDiscountAmount, String? billingAddressId, String? orderNote, bool? isCheckCreateAccount, String? password) async{
+  Future walletPaymentPlaceOrder(dynamic addressID, dynamic couponCode, dynamic couponDiscountAmount, dynamic billingAddressId, dynamic orderNote, bool? isCheckCreateAccount, dynamic password) async{
     return await checkoutRepositoryInterface.walletPaymentPlaceOrder(addressID, couponCode, couponDiscountAmount, billingAddressId, orderNote, isCheckCreateAccount, password);
   }
 

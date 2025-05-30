@@ -23,7 +23,7 @@ class OrderController with ChangeNotifier {
 
   OrderModel? orderModel;
   OrderModel? deliveredOrderModel;
-  Future<void> getOrderList(int offset, String status, {String? type}) async {
+  Future<void> getOrderList(int offset, String status, {dynamic type}) async {
 
     var localData =  await database.getCacheResponseById(AppConstants.orderUri);
 
@@ -105,7 +105,7 @@ class OrderController with ChangeNotifier {
   }
 
 
-  Future<ApiResponse> cancelOrder(BuildContext context, int? orderId) async {
+  Future<ApiResponse> cancelOrder(BuildContext context, dynamic orderId) async {
     _isLoading = true;
     ApiResponse apiResponse = await orderServiceInterface.cancelOrder(orderId);
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {

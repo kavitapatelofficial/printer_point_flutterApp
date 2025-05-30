@@ -18,7 +18,7 @@ class BrandsView extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.75,
         centerTitle: true,
-        backgroundColor: Theme.of(context).cardColor,
+        backgroundColor: Theme.of(context).primaryColor,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios, size: 20, color: Theme.of(context).textTheme.bodyLarge?.color),
           onPressed: () => Navigator.of(context).pop(),),

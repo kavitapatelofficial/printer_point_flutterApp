@@ -22,7 +22,7 @@ class AppLocalization {
     _localizedValues = mappedJson.map((key, value) => MapEntry(key, value.toString()));
   }
 
-  String? translate(String? key) {
+  dynamic translate(dynamic key) {
     throwIf(_localizedValues[key] == null, 'key [$key] is missing');
     return _localizedValues[key!];
   }

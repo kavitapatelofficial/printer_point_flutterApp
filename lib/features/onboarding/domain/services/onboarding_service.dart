@@ -7,7 +7,7 @@ class OnBoardingService implements OnBoardingServiceInterface{
   OnBoardingService({required this.onBoardingRepositoryInterface});
 
   @override
-  Future getList({int? offset = 1}) {
+  Future getList({dynamic offset = 1}) {
     return onBoardingRepositoryInterface.getList();
   }
 

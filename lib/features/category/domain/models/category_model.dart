@@ -1,30 +1,30 @@
 import 'package:flutter_sixvalley_ecommerce/data/model/image_full_url.dart';
 
 class CategoryModel {
-  int? _id;
-  String? _name;
-  String? _slug;
-  String? _icon;
-  int? _parentId;
-  int? _position;
-  String? _createdAt;
+  dynamic _id;
+  dynamic _name;
+  dynamic _slug;
+  dynamic _icon;
+  dynamic _parentId;
+  dynamic _position;
+  dynamic _createdAt;
 
-  String? _updatedAt;
+  dynamic _updatedAt;
   List<SubCategory>? _subCategories;
   bool? isSelected;
-   String? _thumbnail;
+   dynamic _thumbnail;
   ImageFullUrl? _imageFullUrl;
 
   CategoryModel(
-      {int? id,
-        String? name,
-        String? slug,
-        String? icon,
-        int? parentId,
-        int? position,
-        String? createdAt,
-        String? updatedAt,
-           String? thumbnail,
+      {dynamic id,
+        dynamic name,
+        dynamic slug,
+        dynamic icon,
+        dynamic parentId,
+        dynamic position,
+        dynamic createdAt,
+        dynamic updatedAt,
+           dynamic thumbnail,
         List<SubCategory>? subCategories,
         bool? isSelected,
         ImageFullUrl? imageFullUrl
@@ -43,15 +43,15 @@ class CategoryModel {
     _imageFullUrl = imageFullUrl;
   }
 
-  int? get id => _id;
-  String? get name => _name;
-  String? get slug => _slug;
-  String? get icon => _icon;
-  int? get parentId => _parentId;
-  int? get position => _position;
-  String? get createdAt => _createdAt;
-   String? get thumbnail => _thumbnail;
-  String? get updatedAt => _updatedAt;
+  dynamic get id => _id;
+  dynamic get name => _name;
+  dynamic get slug => _slug;
+  dynamic get icon => _icon;
+  dynamic get parentId => _parentId;
+  dynamic get position => _position;
+  dynamic get createdAt => _createdAt;
+   dynamic get thumbnail => _thumbnail;
+  dynamic get updatedAt => _updatedAt;
   List<SubCategory>? get subCategories => _subCategories;
   ImageFullUrl? get imageFullUrl => _imageFullUrl;
 
@@ -80,26 +80,26 @@ class CategoryModel {
 }
 
 class SubCategory {
-  int? _id;
-  String? _name;
-  String? _slug;
-  String? _icon;
-  int? _parentId;
-  int? _position;
-  String? _createdAt;
-  String? _updatedAt;
+  dynamic _id;
+  dynamic _name;
+  dynamic _slug;
+  dynamic _icon;
+  dynamic _parentId;
+  dynamic _position;
+  dynamic _createdAt;
+  dynamic _updatedAt;
   List<SubSubCategory>? _subSubCategories;
   bool? isSelected;
 
   SubCategory(
-      {int? id,
-        String? name,
-        String? slug,
-        String? icon,
-        int? parentId,
-        int? position,
-        String? createdAt,
-        String? updatedAt,
+      {dynamic id,
+        dynamic name,
+        dynamic slug,
+        dynamic icon,
+        dynamic parentId,
+        dynamic position,
+        dynamic createdAt,
+        dynamic updatedAt,
         List<SubSubCategory>? subSubCategories,
         bool? isSelected,
       }) {
@@ -115,14 +115,14 @@ class SubCategory {
     isSelected = isSelected;
   }
 
-  int? get id => _id;
-  String? get name => _name;
-  String? get slug => _slug;
-  String? get icon => _icon;
-  int? get parentId => _parentId;
-  int? get position => _position;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
+  dynamic get id => _id;
+  dynamic get name => _name;
+  dynamic get slug => _slug;
+  dynamic get icon => _icon;
+  dynamic get parentId => _parentId;
+  dynamic get position => _position;
+  dynamic get createdAt => _createdAt;
+  dynamic get updatedAt => _updatedAt;
   List<SubSubCategory>? get subSubCategories => _subSubCategories;
 
   SubCategory.fromJson(Map<String, dynamic> json) {
@@ -146,24 +146,24 @@ class SubCategory {
 }
 
 class SubSubCategory {
-  int? _id;
-  String? _name;
-  String? _slug;
-  String? _icon;
-  int? _parentId;
-  int? _position;
-  String? _createdAt;
-  String? _updatedAt;
+  dynamic _id;
+  dynamic _name;
+  dynamic _slug;
+  dynamic _icon;
+  dynamic _parentId;
+  dynamic _position;
+  dynamic _createdAt;
+  dynamic _updatedAt;
 
   SubSubCategory(
-      {int? id,
-        String? name,
-        String? slug,
-        String? icon,
-        int? parentId,
-        int? position,
-        String? createdAt,
-        String? updatedAt}) {
+      {dynamic id,
+        dynamic name,
+        dynamic slug,
+        dynamic icon,
+        dynamic parentId,
+        dynamic position,
+        dynamic createdAt,
+        dynamic updatedAt}) {
     _id = id;
     _name = name;
     _slug = slug;
@@ -174,14 +174,14 @@ class SubSubCategory {
     _updatedAt = updatedAt;
   }
 
-  int? get id => _id;
-  String? get name => _name;
-  String? get slug => _slug;
-  String? get icon => _icon;
-  int? get parentId => _parentId;
-  int? get position => _position;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
+  dynamic get id => _id;
+  dynamic get name => _name;
+  dynamic get slug => _slug;
+  dynamic get icon => _icon;
+  dynamic get parentId => _parentId;
+  dynamic get position => _position;
+  dynamic get createdAt => _createdAt;
+  dynamic get updatedAt => _updatedAt;
 
   SubSubCategory.fromJson(Map<String, dynamic> json) {
     _id = json['id'];

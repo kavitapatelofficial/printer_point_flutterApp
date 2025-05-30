@@ -80,7 +80,7 @@ class RefundController with ChangeNotifier {
 
 
 
-  Future<ApiResponse> getRefundReqInfo(int? orderDetailId) async {
+  Future<ApiResponse> getRefundReqInfo(dynamic orderDetailId) async {
     _isRefund = true;
     ApiResponse apiResponse = await refundServiceInterface.getRefundInfo(orderDetailId);
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {
@@ -95,7 +95,7 @@ class RefundController with ChangeNotifier {
   }
 
 
-  Future<ApiResponse> getRefundResult(BuildContext context, int? orderDetailId) async {
+  Future<ApiResponse> getRefundResult(BuildContext context, dynamic orderDetailId) async {
     _isLoading =true;
     ApiResponse apiResponse = await refundServiceInterface.getRefundResult(orderDetailId);
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {

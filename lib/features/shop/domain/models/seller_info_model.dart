@@ -2,14 +2,14 @@ import 'package:flutter_sixvalley_ecommerce/data/model/image_full_url.dart';
 
 class SellerInfoModel {
   Seller? _seller;
-  String? _avgRating;
-  int? _totalReview;
-  int? _totalOrder;
-  int? _totalProduct;
+  dynamic _avgRating;
+  dynamic _totalReview;
+  dynamic _totalOrder;
+  dynamic _totalProduct;
   double? minimumOrderAmount;
 
   SellerInfoModel(
-      {Seller? seller, String? avgRating, int? totalReview, int? totalOrder, int? totalProduct, double? minimumOrderAmount}) {
+      {Seller? seller, dynamic avgRating, dynamic totalReview, dynamic totalOrder, dynamic totalProduct, double? minimumOrderAmount}) {
     if (seller != null) {
       _seller = seller;
     }
@@ -31,10 +31,10 @@ class SellerInfoModel {
   }
 
   Seller? get seller => _seller;
-  String? get avgRating => _avgRating;
-  int? get totalReview => _totalReview;
-  int? get totalOrder => _totalOrder;
-  int? get totalProduct => _totalProduct;
+  dynamic get avgRating => _avgRating;
+  dynamic get totalReview => _totalReview;
+  dynamic get totalOrder => _totalOrder;
+  dynamic get totalProduct => _totalProduct;
 
 
   SellerInfoModel.fromJson(Map<String, dynamic> json) {
@@ -70,19 +70,19 @@ class SellerInfoModel {
 }
 
 class Seller {
-  int? _id;
-  String? _fName;
-  String? _lName;
-  String? _phone;
-  String? _image;
+  dynamic _id;
+  dynamic _fName;
+  dynamic _lName;
+  dynamic _phone;
+  dynamic _image;
   Shop? _shop;
 
   Seller(
-      {int? id,
-        String? fName,
-        String? lName,
-        String? phone,
-        String? image,
+      {dynamic id,
+        dynamic fName,
+        dynamic lName,
+        dynamic phone,
+        dynamic image,
         Shop? shop}) {
     if (id != null) {
       _id = id;
@@ -104,11 +104,11 @@ class Seller {
     }
   }
 
-  int? get id => _id;
-  String? get fName => _fName;
-  String? get lName => _lName;
-  String? get phone => _phone;
-  String? get image => _image;
+  dynamic get id => _id;
+  dynamic get fName => _fName;
+  dynamic get lName => _lName;
+  dynamic get phone => _phone;
+  dynamic get image => _image;
   Shop? get shop => _shop;
 
   Seller.fromJson(Map<String, dynamic> json) {
@@ -135,36 +135,36 @@ class Seller {
 }
 
 class Shop {
-  int? _id;
-  int? _sellerId;
-  String? _name;
-  String? _address;
-  String? _contact;
-  String? _image;
+  dynamic _id;
+  dynamic _sellerId;
+  dynamic _name;
+  dynamic _address;
+  dynamic _contact;
+  dynamic _image;
   ImageFullUrl? _imageFullUrl;
-  String? _createdAt;
-  String? _updatedAt;
-  String? _banner;
+  dynamic _createdAt;
+  dynamic _updatedAt;
+  dynamic _banner;
   bool? _temporaryClose;
-  String? _vacationEndDate;
-  String? _vacationStartDate;
+  dynamic _vacationEndDate;
+  dynamic _vacationStartDate;
   bool? _vacationStatus;
   ImageFullUrl? _bannerFullUrl;
 
   Shop(
-      {int? id,
-        int? sellerId,
-        String? name,
-        String? address,
-        String? contact,
-        String? image,
+      {dynamic id,
+        dynamic sellerId,
+        dynamic name,
+        dynamic address,
+        dynamic contact,
+        dynamic image,
         ImageFullUrl? imageFullUrl,
-        String? createdAt,
-        String? updatedAt,
-        String? banner,
+        dynamic createdAt,
+        dynamic updatedAt,
+        dynamic banner,
         bool? temporaryClose,
-        String? vacationEndDate,
-        String? vacationStartDate,
+        dynamic vacationEndDate,
+        dynamic vacationStartDate,
         bool? vacationStatus,
         ImageFullUrl? bannerFullUrl,
       }) {
@@ -203,19 +203,19 @@ class Shop {
     _bannerFullUrl = bannerFullUrl;
   }
 
-  int? get id => _id;
-  int? get sellerId => _sellerId;
-  String? get name => _name;
-  String? get address => _address;
-  String? get contact => _contact;
-  String? get image => _image;
+  dynamic get id => _id;
+  dynamic get sellerId => _sellerId;
+  dynamic get name => _name;
+  dynamic get address => _address;
+  dynamic get contact => _contact;
+  dynamic get image => _image;
   ImageFullUrl? get imageFullUrl => _imageFullUrl;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-  String? get banner => _banner;
+  dynamic get createdAt => _createdAt;
+  dynamic get updatedAt => _updatedAt;
+  dynamic get banner => _banner;
   bool? get temporaryClose => _temporaryClose;
-  String? get vacationEndDate => _vacationEndDate;
-  String? get vacationStartDate => _vacationStartDate;
+  dynamic get vacationEndDate => _vacationEndDate;
+  dynamic get vacationStartDate => _vacationStartDate;
   bool? get vacationStatus => _vacationStatus;
   ImageFullUrl? get bannerFullUrl => _bannerFullUrl;
 

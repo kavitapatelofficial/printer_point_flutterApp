@@ -10,7 +10,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
 class ClearanceTitleRowWidget extends StatelessWidget {
-  final String? title;
+  final dynamic title;
   final Function? icon;
   final Function? onTap;
   final bool? isDetailsPage;
@@ -18,7 +18,7 @@ class ClearanceTitleRowWidget extends StatelessWidget {
   final Color? titleColor;
   final bool isBackExist;
   final Color? percentColor;
-  final String? discountPercent;
+  final dynamic discountPercent;
 
   const ClearanceTitleRowWidget({
     super.key,

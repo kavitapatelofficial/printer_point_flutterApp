@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 
 class CustomButton extends StatelessWidget {
   final Function()? onTap;
-  final String? buttonText;
+  final dynamic buttonText;
   final bool isBuy;
   final bool isBorder;
   final Color? backgroundColor;
@@ -16,7 +16,7 @@ class CustomButton extends StatelessWidget {
   final Color? loadingColor;
   final double? radius;
   final double? fontSize;
-  final String? leftIcon;
+  final dynamic leftIcon;
   final double? borderWidth;
   final bool isLoading;
   final double buttonHeight;

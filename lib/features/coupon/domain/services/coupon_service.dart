@@ -16,7 +16,7 @@ class CouponService implements CouponServiceInterface{
   }
 
   @override
-  Future getList({int? offset = 1}) async{
+  Future getList({dynamic offset = 1}) async{
     return await couponRepositoryInterface.getList(offset: offset);
   }
 

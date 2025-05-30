@@ -15,7 +15,7 @@ class ShippingRepository implements ShippingRepositoryInterface{
 
 
   @override
-  Future<ApiResponse> getShippingMethod(int? sellerId, String? type) async {
+  Future<ApiResponse> getShippingMethod(dynamic sellerId, dynamic type) async {
     try {
       final response = await dioClient!.get('${AppConstants.getShippingMethod}/$sellerId/$type');
       return ApiResponse.withSuccess(response);
@@ -26,7 +26,7 @@ class ShippingRepository implements ShippingRepositoryInterface{
 
 
   @override
-  Future<ApiResponse> addShippingMethod(int? id, String? cartGroupId) async {
+  Future<ApiResponse> addShippingMethod(dynamic id, dynamic cartGroupId) async {
     log('===>${{"id":id, "cart_group_id": cartGroupId}}');
     try {
       final response = await dioClient!.post(AppConstants.chooseShippingMethod,
@@ -70,7 +70,7 @@ class ShippingRepository implements ShippingRepositoryInterface{
 
 
   @override
-  Future getList({int? offset}) {
+  Future getList({dynamic offset}) {
     // TODO: implement getList
     throw UnimplementedError();
   }

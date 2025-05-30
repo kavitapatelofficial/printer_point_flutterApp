@@ -26,8 +26,8 @@ class ShippingController extends ChangeNotifier {
   bool isSelectAll = true;
   bool _isLoading = false;
   CartModel? cart;
-  String? _updateQuantityErrorText;
-  String? get addOrderStatusErrorText => _updateQuantityErrorText;
+  dynamic _updateQuantityErrorText;
+  dynamic get addOrderStatusErrorText => _updateQuantityErrorText;
   bool get isLoading => _isLoading;
 
 
@@ -63,7 +63,7 @@ class ShippingController extends ChangeNotifier {
         _shippingList![i].shippingMethodList =[];
         _shippingList![i].shippingMethodList!.addAll(shippingMethodList);
         int index = -1;
-        int? shipId = -1;
+        dynamic shipId = -1;
         for(ChosenShippingMethodModel cs in _chosenShippingList) {
           if(cs.cartGroupId == groupList[i]) {
             shipId = cs.shippingMethodId;
@@ -140,7 +140,7 @@ class ShippingController extends ChangeNotifier {
 
 
 
-  void setSelectedShippingMethod(int? index , int sellerIndex) {
+  void setSelectedShippingMethod(dynamic index , int sellerIndex) {
     _shippingList![sellerIndex].shippingIndex = index;
     notifyListeners();
   }
@@ -158,7 +158,7 @@ class ShippingController extends ChangeNotifier {
 
 
 
-  Future addShippingMethod(BuildContext context, int? id, String? cartGroupId) async {
+  Future addShippingMethod(BuildContext context, dynamic id, dynamic cartGroupId) async {
     _isLoading = true;
     notifyListeners();
     ApiResponse apiResponse = await shippingServiceInterface.addShippingMethod(id,cartGroupId);
@@ -178,8 +178,8 @@ class ShippingController extends ChangeNotifier {
 
 
 
-  String? _selectedShippingType;
-  String? get selectedShippingType=>_selectedShippingType;
+  dynamic _selectedShippingType;
+  dynamic get selectedShippingType=>_selectedShippingType;
 
   final List<SelectedShippingType> _selectedShippingTypeList = [];
   List<SelectedShippingType> get selectedShippingTypeList => _selectedShippingTypeList;

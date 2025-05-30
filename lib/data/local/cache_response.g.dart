@@ -7,7 +7,7 @@ class $CacheResponseTable extends CacheResponse
     with TableInfo<$CacheResponseTable, CacheResponseData> {
   @override
   final GeneratedDatabase attachedDatabase;
-  final String? _alias;
+  final dynamic _alias;
   $CacheResponseTable(this.attachedDatabase, [this._alias]);
   static const VerificationMeta _idMeta = const VerificationMeta('id');
   @override
@@ -76,7 +76,7 @@ class $CacheResponseTable extends CacheResponse
   @override
   Set<GeneratedColumn> get $primaryKey => {id};
   @override
-  CacheResponseData map(Map<String, dynamic> data, {String? tablePrefix}) {
+  CacheResponseData map(Map<String, dynamic> data, {dynamic tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
     return CacheResponseData(
       id: attachedDatabase.typeMapping
@@ -148,7 +148,7 @@ class CacheResponseData extends DataClass
   }
 
   CacheResponseData copyWith(
-          {int? id, String? endPoint, String? header, String? response}) =>
+          {dynamic id, dynamic endPoint, dynamic header, dynamic response}) =>
       CacheResponseData(
         id: id ?? this.id,
         endPoint: endPoint ?? this.endPoint,

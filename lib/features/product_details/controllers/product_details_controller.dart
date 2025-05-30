@@ -22,30 +22,30 @@ class ProductDetailsController extends ChangeNotifier {
   ProductDetailsController({required this.productDetailsServiceInterface});
 
 
-  int? _imageSliderIndex;
-  int? _quantity = 0;
-  int? _variantIndex;
+  dynamic _imageSliderIndex;
+  dynamic _quantity = 0;
+  dynamic _variantIndex;
   List<int>? _variationIndex;
-  int? _orderCount;
-  int? _wishCount;
-  String? _sharableLink;
-  int? _digitalVariationIndex = 0;
-  int? _digitalVariationSubindex = 0;
+  dynamic _orderCount;
+  dynamic _wishCount;
+  dynamic _sharableLink;
+  dynamic _digitalVariationIndex = 0;
+  dynamic _digitalVariationSubindex = 0;
   bool _isDownloadLoading = false;
 
   bool _isDetails = false;
   bool get isDetails =>_isDetails;
-  int? get imageSliderIndex => _imageSliderIndex;
-  int? get quantity => _quantity;
-  int? get variantIndex => _variantIndex;
+  dynamic get imageSliderIndex => _imageSliderIndex;
+  dynamic get quantity => _quantity;
+  dynamic get variantIndex => _variantIndex;
   List<int>? get variationIndex => _variationIndex;
-  int? get orderCount => _orderCount;
-  int? get wishCount => _wishCount;
-  String? get sharableLink => _sharableLink;
+  dynamic get orderCount => _orderCount;
+  dynamic get wishCount => _wishCount;
+  dynamic get sharableLink => _sharableLink;
   ProductDetailsModel? _productDetailsModel;
   ProductDetailsModel? get productDetailsModel => _productDetailsModel;
-  int? get digitalVariationIndex => _digitalVariationIndex;
-  int? get digitalVariationSubindex => _digitalVariationSubindex;
+  dynamic get digitalVariationIndex => _digitalVariationIndex;
+  dynamic get digitalVariationSubindex => _digitalVariationSubindex;
   bool get isDownloadLoading => _isDownloadLoading;
 
 
@@ -77,7 +77,7 @@ class ProductDetailsController extends ChangeNotifier {
 
 
 
-  void initData(ProductDetailsModel product, int? minimumOrderQuantity, BuildContext context) {
+  void initData(ProductDetailsModel product, dynamic minimumOrderQuantity, BuildContext context) {
     _variantIndex = 0;
     _quantity = minimumOrderQuantity;
     _variationIndex = [];
@@ -132,13 +132,13 @@ class ProductDetailsController extends ChangeNotifier {
     notifyListeners();
   }
 
-  void setCartVariantIndex(int? minimumOrderQuantity,int index, BuildContext context) {
+  void setCartVariantIndex(dynamic minimumOrderQuantity,int index, BuildContext context) {
     _variantIndex = index;
     _quantity = minimumOrderQuantity;
     notifyListeners();
   }
 
-  void setCartVariationIndex(int? minimumOrderQuantity, int index, int i, BuildContext context) {
+  void setCartVariationIndex(dynamic minimumOrderQuantity, int index, int i, BuildContext context) {
     _variationIndex![index] = i;
     _quantity = minimumOrderQuantity;
     notifyListeners();
@@ -157,7 +157,7 @@ class ProductDetailsController extends ChangeNotifier {
     return regex.hasMatch(url);
   }
 
-  void setDigitalVariationIndex(int? minimumOrderQuantity, int index, int subIndex, BuildContext context) {
+  void setDigitalVariationIndex(dynamic minimumOrderQuantity, int index, int subIndex, BuildContext context) {
     _quantity = minimumOrderQuantity;
     _digitalVariationIndex = index;
     _digitalVariationSubindex = subIndex;
@@ -239,7 +239,7 @@ class ProductDetailsController extends ChangeNotifier {
         Navigator.of(Get.context!).pop();
       }
     } else {
-      String? task;
+      dynamic task;
       Directory downloadDirectory = Directory('/storage/emulated/0/Download');
       String filePathName = "${downloadDirectory.path}/$fileName";
       File savedFile = File(filePathName);
@@ -290,7 +290,7 @@ class ProductDetailsController extends ChangeNotifier {
   }
 
 
-  void updateProductRestock({String? variantKey}) {
+  void updateProductRestock({dynamic variantKey}) {
     if(_productDetailsModel != null){
       _productDetailsModel?.isRestockRequested = 1;
       if(variantKey != null && variantKey.isNotEmpty) {

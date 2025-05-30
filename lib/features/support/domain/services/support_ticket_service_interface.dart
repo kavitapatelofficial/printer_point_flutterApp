@@ -11,5 +11,5 @@ abstract class SupportTicketServiceInterface{
 
   Future<dynamic> closeSupportTicket(String ticketID);
 
-  Future<dynamic> getList({int? offset = 1});
+  Future<dynamic> getList({dynamic offset = 1});
 }

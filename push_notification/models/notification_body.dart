@@ -1,14 +1,14 @@
 
 
 class NotificationBody {
-  int? orderId;
-  String? type;
-  String? status;
-  String? messageKey;
-  String? title;
-  String? productId;
-  String? slug;
-  String? image;
+  dynamic orderId;
+  dynamic type;
+  dynamic status;
+  dynamic messageKey;
+  dynamic title;
+  dynamic productId;
+  dynamic slug;
+  dynamic image;
 
 
   NotificationBody({

@@ -42,7 +42,7 @@ class ChatRepository implements ChatRepositoryInterface {
   }
 
   @override
-  Future<ApiResponse> getMessageList(String type, int? id,int offset) async {
+  Future<ApiResponse> getMessageList(String type, dynamic id,int offset) async {
     try {
       final response = await dioClient!.get('${AppConstants.messageUri}$type/$id?limit=30&offset=$offset');
       return ApiResponse.withSuccess(response);
@@ -110,7 +110,7 @@ class ChatRepository implements ChatRepositoryInterface {
   }
 
   @override
-  Future getList({int? offset}) {
+  Future getList({dynamic offset}) {
     // TODO: implement getList
     throw UnimplementedError();
   }

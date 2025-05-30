@@ -27,11 +27,11 @@ import 'package:provider/provider.dart';
 
 
 class VerificationScreen extends StatefulWidget {
-  final String? userInput;
+  final dynamic userInput;
   final FromPage fromPage;
   final bool fromDigitalProduct;
-  final int? orderId;
-  final String? session;
+  final dynamic orderId;
+  final dynamic session;
 
   const VerificationScreen(this.userInput, this.fromPage,
    {super.key, this.session, this.fromDigitalProduct = false, this.orderId});
@@ -42,7 +42,7 @@ class VerificationScreen extends StatefulWidget {
 
 class _VerificationScreenState extends State<VerificationScreen> {
   Timer? _timer;
-  int? _seconds = 0;
+  dynamic _seconds = 0;
 
   bool? isPhone;
 

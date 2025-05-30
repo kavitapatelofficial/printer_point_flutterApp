@@ -93,7 +93,7 @@ class LocationController with ChangeNotifier {
     notifyListeners();
   }
 
-  void updateMapPosition(CameraPosition? position, bool fromAddress, String? address, BuildContext context) async {
+  void updateMapPosition(CameraPosition? position, bool fromAddress, dynamic address, BuildContext context) async {
     if(_updateAddAddressData) {
       _loading = true;
       // notifyListeners();
@@ -108,7 +108,7 @@ class LocationController with ChangeNotifier {
             heading: 1, accuracy: 1, altitude: 1, speedAccuracy: 1, speed: 1,altitudeAccuracy: 1, headingAccuracy: 1);
         }
         if (_changeAddress) {
-            String? addresss = await getAddressFromGeocode(LatLng(position.target.latitude, position.target.longitude), context);
+            dynamic addresss = await getAddressFromGeocode(LatLng(position.target.latitude, position.target.longitude), context);
             fromAddress ? _address = Placemark(name: addresss) : _pickAddress = Placemark(name: addresss);
 
           if(address != null) {
@@ -132,7 +132,7 @@ class LocationController with ChangeNotifier {
   }
 
 
-  void setLocation(String? placeID, String? address, GoogleMapController? mapController) async {
+  void setLocation(dynamic placeID, dynamic address, GoogleMapController? mapController) async {
     _loading = true;
     notifyListeners();
     PlaceDetailsModel detail;

@@ -107,7 +107,7 @@ class ReviewRepository implements ReviewRepositoryInterface{
 
 
   @override
-  Future getList({int? offset = 1}) {
+  Future getList({dynamic offset = 1}) {
     // TODO: implement getList
     throw UnimplementedError();
   }

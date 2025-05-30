@@ -1,6 +1,6 @@
 class RestrictedZipModel {
-  int? id;
-  String? zipcode;
+  dynamic id;
+  dynamic zipcode;
   RestrictedZipModel({this.id, this.zipcode});
 
   RestrictedZipModel.fromJson(Map<String, dynamic> json) {

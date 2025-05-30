@@ -34,7 +34,7 @@ class LocationRepository implements LocationRepositoryInterface{
   }
 
   @override
-  Future<ApiResponse> getPlaceDetails(String? placeID) async {
+  Future<ApiResponse> getPlaceDetails(dynamic placeID) async {
     try {
       Response response = await dioClient!.get('${AppConstants.placeDetailsUri}?placeid=$placeID');
       return ApiResponse.withSuccess(response);
@@ -62,7 +62,7 @@ class LocationRepository implements LocationRepositoryInterface{
   }
 
   @override
-  Future getList({int? offset = 1}) {
+  Future getList({dynamic offset = 1}) {
     // TODO: implement getList
     throw UnimplementedError();
   }

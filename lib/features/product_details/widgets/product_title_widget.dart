@@ -18,7 +18,7 @@ import 'package:provider/provider.dart';
 
 class ProductTitleWidget extends StatelessWidget {
   final ProductDetailsModel? productModel;
-  final String? averageRatting;
+  final dynamic averageRatting;
   const ProductTitleWidget({super.key, required this.productModel, this.averageRatting});
 
   @override

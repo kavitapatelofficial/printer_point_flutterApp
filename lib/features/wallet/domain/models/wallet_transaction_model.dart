@@ -1,11 +1,11 @@
 import 'package:flutter_sixvalley_ecommerce/helper/date_converter.dart';
 
 class WalletTransactionModel {
-  int? limit;
-  int? offset;
-  int? totalSize;
+  dynamic limit;
+  dynamic offset;
+  dynamic totalSize;
   double? totalWalletBalance;
-  String? filterBy;
+  dynamic filterBy;
   DateTime? startDate;
   DateTime? endDate;
   List<String>? transactionTypes;
@@ -41,32 +41,32 @@ class WalletTransactionModel {
 }
 
 class WalletTransactionList {
-  int? _id;
-  int? _userId;
-  String? _transactionId;
+  dynamic _id;
+  dynamic _userId;
+  dynamic _transactionId;
   double? _credit;
   double? _debit;
   double? _adminBonus;
   double? _balance;
-  String? _transactionType;
-  String? _reference;
-  String? _createdAt;
-  String? _updatedAt;
-  String? paymentMethod;
+  dynamic _transactionType;
+  dynamic _reference;
+  dynamic _createdAt;
+  dynamic _updatedAt;
+  dynamic paymentMethod;
 
   WalletTransactionList(
-      {int? id,
-        int? userId,
-        String? transactionId,
+      {dynamic id,
+        dynamic userId,
+        dynamic transactionId,
         double? credit,
         double? debit,
         double? adminBonus,
         double? balance,
-        String? transactionType,
-        String? reference,
-        String? createdAt,
-        String? updatedAt,
-        String? paymentMethod
+        dynamic transactionType,
+        dynamic reference,
+        dynamic createdAt,
+        dynamic updatedAt,
+        dynamic paymentMethod
       }) {
     if (id != null) {
       _id = id;
@@ -104,17 +104,17 @@ class WalletTransactionList {
     this.paymentMethod;
   }
 
-  int? get id => _id;
-  int? get userId => _userId;
-  String? get transactionId => _transactionId;
+  dynamic get id => _id;
+  dynamic get userId => _userId;
+  dynamic get transactionId => _transactionId;
   double? get credit => _credit;
   double? get debit => _debit;
   double? get adminBonus => _adminBonus;
   double? get balance => _balance;
-  String? get transactionType => _transactionType;
-  String? get reference => _reference;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
+  dynamic get transactionType => _transactionType;
+  dynamic get reference => _reference;
+  dynamic get createdAt => _createdAt;
+  dynamic get updatedAt => _updatedAt;
 
   WalletTransactionList.fromJson(Map<String, dynamic> json) {
     _id = json['id'];

@@ -13,8 +13,8 @@ class LoyaltyPointService implements LoyaltyPointServiceInterface{
 
   @override
   Future getList({
-    int? offset = 1,
-    String? filterBy,
+    dynamic offset = 1,
+    dynamic filterBy,
     DateTime? startDate,
     DateTime? endDate,
     List<String>? transactionTypes,

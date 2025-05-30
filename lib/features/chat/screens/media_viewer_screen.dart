@@ -235,12 +235,12 @@
 //     ));
 //   }
 
-//   String _extractFileName(String? url) {
+//   String _extractFileName(dynamic url) {
 //     if(url == null) return '';
 //     return Uri.parse(url).pathSegments.last;
 //   }
 
-//   Future<void> _download(String? url) async {
+//   Future<void> _download(dynamic url) async {
 //     if(url == null) return;
 //     final ChatController chatController = Provider.of<ChatController>(context, listen: false);
 

@@ -10,7 +10,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
 class TitleRowWidget extends StatelessWidget {
-  final String? title;
+  final dynamic title;
   final Function? icon;
   final Function? onTap;
   final Duration? eventDuration;
@@ -22,7 +22,7 @@ class TitleRowWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int? days, hours, minutes, seconds;
+    dynamic days, hours, minutes, seconds;
     if (eventDuration != null) {
       days = eventDuration!.inDays;
       hours = eventDuration!.inHours - days * 24;
@@ -165,9 +165,9 @@ class TitleRowWidget extends StatelessWidget {
 }
 
 class TimerBox extends StatelessWidget {
-  final int? time;
+  final dynamic time;
   final bool isBorder;
-  final String? day;
+  final dynamic day;
   final bool? isDetailsPage;
 
   const TimerBox({super.key, required this.time, this.isBorder = false, this.day,  this.isDetailsPage = false});

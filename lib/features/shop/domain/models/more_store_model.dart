@@ -4,32 +4,32 @@ import 'package:flutter_sixvalley_ecommerce/features/product_details/domain/mode
 
 
 class MostPopularStoreModel {
-  int? id;
-  int? sellerId;
-  String? name;
-  String? slug;
-  String? address;
-  String? contact;
-  String? image;
-  String? bottomBanner;
-  String? offerBanner;
-  String? vacationStartDate;
-  String? vacationEndDate;
-  String? vacationNote;
+  dynamic id;
+  dynamic sellerId;
+  dynamic name;
+  dynamic slug;
+  dynamic address;
+  dynamic contact;
+  dynamic image;
+  dynamic bottomBanner;
+  dynamic offerBanner;
+  dynamic vacationStartDate;
+  dynamic vacationEndDate;
+  dynamic vacationNote;
   bool? vacationStatus;
   bool? temporaryClose;
-  String? createdAt;
-  String? updatedAt;
-  String? banner;
-  int? productsCount;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic banner;
+  dynamic productsCount;
   List<Products>? products;
-  int? ordersCount;
+  dynamic ordersCount;
   List<CouponList>? couponList;
   double? averageRating;
-  int? reviewCount;
-  int? totalRating;
+  dynamic reviewCount;
+  dynamic totalRating;
   double? positiveReview;
-  int? isVacationModeNow;
+  dynamic isVacationModeNow;
   ThumbnailFullUrl? imageFullUrl;
   ThumbnailFullUrl? bottomBannerFullUrl;
   OfferBannerFullUrl? offerBannerFullUrl;
@@ -185,64 +185,64 @@ class MostPopularStoreModel {
 }
 
 class Products {
-  int? id;
-  String? addedBy;
-  int? userId;
-  String? name;
-  String? slug;
-  String? productType;
-  String? categoryIds;
-  int? categoryId;
-  int? subCategoryId;
+  dynamic id;
+  dynamic addedBy;
+  dynamic userId;
+  dynamic name;
+  dynamic slug;
+  dynamic productType;
+  dynamic categoryIds;
+  dynamic categoryId;
+  dynamic subCategoryId;
   Null subSubCategoryId;
-  int? brandId;
-  String? unit;
-  int? minQty;
-  int? refundable;
-  String? digitalProductType;
-  String? digitalFileReady;
-  String? images;
-  String? colorImage;
-  String? thumbnail;
-  int? featured;
+  dynamic brandId;
+  dynamic unit;
+  dynamic minQty;
+  dynamic refundable;
+  dynamic digitalProductType;
+  dynamic digitalFileReady;
+  dynamic images;
+  dynamic colorImage;
+  dynamic thumbnail;
+  dynamic featured;
   Null flashDeal;
-  String? videoProvider;
-  String? videoUrl;
-  String? colors;
-  int? variantProduct;
-  String? attributes;
-  String? choiceOptions;
-  String? variation;
+  dynamic videoProvider;
+  dynamic videoUrl;
+  dynamic colors;
+  dynamic variantProduct;
+  dynamic attributes;
+  dynamic choiceOptions;
+  dynamic variation;
   List<String>? digitalProductFileTypes;
   List<Null>? digitalProductExtensions;
-  int? published;
+  dynamic published;
   double? unitPrice;
-  int? purchasePrice;
-  int? tax;
-  String? taxType;
-  String? taxModel;
+  dynamic purchasePrice;
+  dynamic tax;
+  dynamic taxType;
+  dynamic taxModel;
   double? discount;
-  String? discountType;
-  int? currentStock;
-  int? minimumOrderQty;
-  String? details;
-  int? freeShipping;
+  dynamic discountType;
+  dynamic currentStock;
+  dynamic minimumOrderQty;
+  dynamic details;
+  dynamic freeShipping;
   Null attachment;
-  String? createdAt;
-  String? updatedAt;
-  int? status;
-  int? featuredStatus;
-  String? metaTitle;
-  String? metaDescription;
-  String? metaImage;
-  int? requestStatus;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic status;
+  dynamic featuredStatus;
+  dynamic metaTitle;
+  dynamic metaDescription;
+  dynamic metaImage;
+  dynamic requestStatus;
   Null deniedNote;
-  int? shippingCost;
-  int? multiplyQty;
+  dynamic shippingCost;
+  dynamic multiplyQty;
   double? tempShippingCost;
-  int? isShippingCostUpdated;
-  String? code;
-  int? isShopTemporaryClose;
+  dynamic isShippingCostUpdated;
+  dynamic code;
+  dynamic isShopTemporaryClose;
   ThumbnailFullUrl? thumbnailFullUrl;
   List<ColorImagesFullUrl>? colorImagesFullUrl;
   ThumbnailFullUrl? metaImageFullUrl;
@@ -509,9 +509,9 @@ class Products {
 }
 
 class ThumbnailFullUrl {
-  String? key;
-  String? path;
-  int? status;
+  dynamic key;
+  dynamic path;
+  dynamic status;
 
   ThumbnailFullUrl({this.key, this.path, this.status});
 
@@ -533,13 +533,13 @@ class ThumbnailFullUrl {
 
 
 class Storage {
-  int? id;
-  String? dataType;
-  String? dataId;
-  String? key;
-  String? value;
-  String? createdAt;
-  String? updatedAt;
+  dynamic id;
+  dynamic dataType;
+  dynamic dataId;
+  dynamic key;
+  dynamic value;
+  dynamic createdAt;
+  dynamic updatedAt;
 
   Storage(
       {this.id,
@@ -574,24 +574,24 @@ class Storage {
 }
 
 class SeoInfo {
-  int? id;
-  int? productId;
-  String? title;
-  String? description;
-  String? index;
-  String? noFollow;
-  String? noImageIndex;
-  String? noArchive;
-  String? noSnippet;
-  String? maxSnippet;
-  String? maxSnippetValue;
-  String? maxVideoPreview;
-  String? maxVideoPreviewValue;
-  String? maxImagePreview;
-  String? maxImagePreviewValue;
-  String? image;
-  String? createdAt;
-  String? updatedAt;
+  dynamic id;
+  dynamic productId;
+  dynamic title;
+  dynamic description;
+  dynamic index;
+  dynamic noFollow;
+  dynamic noImageIndex;
+  dynamic noArchive;
+  dynamic noSnippet;
+  dynamic maxSnippet;
+  dynamic maxSnippetValue;
+  dynamic maxVideoPreview;
+  dynamic maxVideoPreviewValue;
+  dynamic maxImagePreview;
+  dynamic maxImagePreviewValue;
+  dynamic image;
+  dynamic createdAt;
+  dynamic updatedAt;
   ThumbnailFullUrl? imageFullUrl;
   List<Storage>? storage;
 
@@ -678,18 +678,18 @@ class SeoInfo {
 }
 
 class Reviews {
-  int? id;
-  int? productId;
-  int? customerId;
+  dynamic id;
+  dynamic productId;
+  dynamic customerId;
   Null deliveryManId;
-  int? orderId;
-  String? comment;
+  dynamic orderId;
+  dynamic comment;
   List<Attachment>? attachment;
-  int? rating;
-  int? status;
+  dynamic rating;
+  dynamic status;
   bool? isSaved;
-  String? createdAt;
-  String? updatedAt;
+  dynamic createdAt;
+  dynamic updatedAt;
   List<Storage>? storage;
 
   Reviews(
@@ -757,8 +757,8 @@ class Reviews {
 }
 
 class Attachment {
-  String? fileName;
-  String? storage;
+  dynamic fileName;
+  dynamic storage;
 
   Attachment({this.fileName, this.storage});
 
@@ -776,24 +776,24 @@ class Attachment {
 }
 
 class CouponList {
-  int? id;
-  String? addedBy;
-  String? couponType;
-  String? couponBearer;
-  int? sellerId;
-  int? customerId;
-  String? title;
-  String? code;
-  String? startDate;
-  String? expireDate;
-  int? minPurchase;
-  int? maxDiscount;
-  int? discount;
-  String? discountType;
-  int? status;
-  String? createdAt;
-  String? updatedAt;
-  int? limit;
+  dynamic id;
+  dynamic addedBy;
+  dynamic couponType;
+  dynamic couponBearer;
+  dynamic sellerId;
+  dynamic customerId;
+  dynamic title;
+  dynamic code;
+  dynamic startDate;
+  dynamic expireDate;
+  dynamic minPurchase;
+  dynamic maxDiscount;
+  dynamic discount;
+  dynamic discountType;
+  dynamic status;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic limit;
 
   CouponList(
       {this.id,
@@ -861,9 +861,9 @@ class CouponList {
 }
 
 class OfferBannerFullUrl {
-  String? key;
-  String? path;
-  int? status;
+  dynamic key;
+  dynamic path;
+  dynamic status;
 
   OfferBannerFullUrl({this.key, this.path, this.status});
 
@@ -883,30 +883,30 @@ class OfferBannerFullUrl {
 }
 
 class Seller {
-  int? id;
-  String? fName;
-  String? lName;
-  String? phone;
-  String? image;
-  String? email;
-  String? password;
-  String? status;
-  String? rememberToken;
-  String? createdAt;
-  String? updatedAt;
-  String? bankName;
-  String? branch;
-  String? accountNo;
-  String? authToken;
-  int? salesCommissionPercentage;
-  String? gst;
-  String? cmFirebaseToken;
-  int? posStatus;
+  dynamic id;
+  dynamic fName;
+  dynamic lName;
+  dynamic phone;
+  dynamic image;
+  dynamic email;
+  dynamic password;
+  dynamic status;
+  dynamic rememberToken;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic bankName;
+  dynamic branch;
+  dynamic accountNo;
+  dynamic authToken;
+  dynamic salesCommissionPercentage;
+  dynamic gst;
+  dynamic cmFirebaseToken;
+  dynamic posStatus;
   double? minimumOrderAmount;
-  int? freeDeliveryStatus;
-  int? freeDeliveryOverAmount;
-  String? appLanguage;
-  int? ordersCount;
+  dynamic freeDeliveryStatus;
+  dynamic freeDeliveryOverAmount;
+  dynamic appLanguage;
+  dynamic ordersCount;
   ThumbnailFullUrl? imageFullUrl;
   List<Storage>? storage;
 

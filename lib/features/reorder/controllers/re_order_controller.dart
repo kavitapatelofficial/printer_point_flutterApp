@@ -15,7 +15,7 @@ class ReOrderController with ChangeNotifier {
   bool get isLoading => _isLoading;
 
 
-  Future<ApiResponse> reorder({String? orderId}) async {
+  Future<ApiResponse> reorder({dynamic orderId}) async {
     _isLoading =true;
     ApiResponse apiResponse = await reOrderServiceInterface.reorder(orderId!);
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {

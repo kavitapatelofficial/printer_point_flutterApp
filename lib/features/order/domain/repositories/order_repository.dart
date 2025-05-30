@@ -12,7 +12,7 @@ class OrderRepository implements OrderRepositoryInterface{
 
 
   @override
-  Future<ApiResponse> getOrderList(int offset, String status, {String? type}) async {
+  Future<ApiResponse> getOrderList(int offset, String status, {dynamic type}) async {
     try {
       final response = await dioClient!.get('${AppConstants.orderUri}$offset&status=$status&type=$type');
       return ApiResponse.withSuccess(response);
@@ -33,7 +33,7 @@ class OrderRepository implements OrderRepositoryInterface{
   }
 
   @override
-  Future<ApiResponse> cancelOrder(int? orderId) async {
+  Future<ApiResponse> cancelOrder(dynamic orderId) async {
     try {
       final response = await dioClient!.get('${AppConstants.cancelOrderUri}?order_id=$orderId');
       return ApiResponse.withSuccess(response);
@@ -57,7 +57,7 @@ class OrderRepository implements OrderRepositoryInterface{
 
 
   @override
-  Future getList({int? offset = 1}) {
+  Future getList({dynamic offset = 1}) {
     // TODO: implement getList
     throw UnimplementedError();
   }

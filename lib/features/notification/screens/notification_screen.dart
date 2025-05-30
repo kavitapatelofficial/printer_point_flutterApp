@@ -54,7 +54,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               controller: scrollController,
               child: PaginatedListView(
                  scrollController: scrollController,
-                onPaginate: (int? offset) {  },
+                onPaginate: (dynamic offset) {  },
                 totalSize: notificationController.notificationModel?.totalSize,
                 offset:  notificationController.notificationModel?.offset,
                 itemView: ListView.builder(

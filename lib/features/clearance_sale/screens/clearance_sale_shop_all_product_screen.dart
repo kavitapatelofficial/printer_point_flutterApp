@@ -33,7 +33,7 @@ class ClearanceSaleShopProductScreen extends StatefulWidget {
 class _ClearanceSaleShopProductScreenState extends State<ClearanceSaleShopProductScreen> {
   final ScrollController _scrollController = ScrollController();
   final TextEditingController _searchController = TextEditingController();
-  late String? shopName;
+  late dynamic shopName;
 
   @override
   void initState() {
@@ -75,7 +75,7 @@ class _ClearanceSaleShopProductScreenState extends State<ClearanceSaleShopProduc
                         showFilter: true,
                         controller: _searchController,
                         sellerId: int.parse(widget.sellerId),
-                        handleSearchText: (String? text) {productController.setSearchText(text);},
+                        handleSearchText: (dynamic text) {productController.setSearchText(text);},
                         onSearchClick: () => onClick(context, productController, _searchController, widget.sellerId),
                         searchIcon: Icon(!productController.isSearchActive ? Icons.search : Icons.close, color: Theme.of(context).cardColor, size: 15),
                         applyFilter: () => applyShopFilter(context: context, sellerId: widget.sellerId),
@@ -96,7 +96,7 @@ class _ClearanceSaleShopProductScreenState extends State<ClearanceSaleShopProduc
                   return (productModel != null && !shopController.isSearchLoading)
                       ? (productModel.products != null && productModel.products!.isNotEmpty)
                       ? PaginatedListView(scrollController: _scrollController,
-                        onPaginate: (int? offset) async => (shopController.isSearchActive || shopController.isFilterActive)
+                        onPaginate: (dynamic offset) async => (shopController.isSearchActive || shopController.isFilterActive)
                             ? applyShopFilter(context: context, sellerId: widget.sellerId, fromPagination: true, offset: offset)
                             : await shopController.getClearanceShopProductList('clearance_sale', offset.toString(), widget.sellerId),
                           totalSize: productModel.totalSize,
@@ -123,7 +123,7 @@ class _ClearanceSaleShopProductScreenState extends State<ClearanceSaleShopProduc
   }
 }
 
-void applyShopFilter({required BuildContext context, required String sellerId, bool fromPagination = false, int? offset}) async {
+void applyShopFilter({required BuildContext context, required String sellerId, bool fromPagination = false, dynamic offset}) async {
   final brandProvider = Provider.of<BrandController>(context, listen: false);
   final categoryProvider = Provider.of<CategoryController>(context, listen: false);
   final searchProvider = Provider.of<SearchProductController>(context, listen: false);

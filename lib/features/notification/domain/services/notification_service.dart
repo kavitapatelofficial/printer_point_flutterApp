@@ -7,7 +7,7 @@ class NotificationService implements NotificationServiceInterface{
   NotificationService({required this.notificationRepositoryInterface});
 
   @override
-  Future getList({int? offset = 1}) {
+  Future getList({dynamic offset = 1}) {
     return notificationRepositoryInterface.getList(offset: offset);
   }
 

@@ -9,11 +9,11 @@ import 'package:flutter_sixvalley_ecommerce/utill/images.dart';
 import 'package:provider/provider.dart';
 
 class StatusStepperWidget extends StatelessWidget {
-  final String? title;
+  final dynamic title;
   final bool isLastItem;
   final String icon;
   final bool checked;
-  final String? dateTime;
+  final dynamic dateTime;
   const StatusStepperWidget({super.key, required this.title,
     this.isLastItem = false, required this.icon, this.checked = false, this.dateTime});
 

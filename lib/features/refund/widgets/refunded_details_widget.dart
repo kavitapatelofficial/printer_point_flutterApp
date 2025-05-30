@@ -20,8 +20,8 @@ import 'package:provider/provider.dart';
 
 class RefundDetailsWidget extends StatefulWidget {
   final Product? product;
-  final int? orderDetailsId;
-  final String? createdAt;
+  final dynamic orderDetailsId;
+  final dynamic createdAt;
   final OrderDetailsModel? orderDetailsModel;
   const RefundDetailsWidget({super.key, required this.product, required this.orderDetailsId, this.orderDetailsModel, required this.createdAt});
   @override

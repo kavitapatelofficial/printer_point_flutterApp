@@ -30,7 +30,7 @@ class OnlySocialLoginWidget extends StatefulWidget {
 
 class _OnlySocialLoginWidgetState extends State<OnlySocialLoginWidget> {
 
-  route(bool isRoute, String? token, String? temporaryToken, ProfileModel? profileModel, String? errorMessage, String? loginMedium) async {
+  route(bool isRoute, dynamic token, dynamic temporaryToken, ProfileModel? profileModel, dynamic errorMessage, dynamic loginMedium) async {
     if (isRoute) {
       if(token != null){
         Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => const DashBoardScreen()), (route) => false);

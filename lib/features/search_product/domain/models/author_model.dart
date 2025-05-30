@@ -1,8 +1,8 @@
 class AuthorModel {
-  int? id;
-  String? name;
-  String? createdAt;
-  String? updatedAt;
+  dynamic id;
+  dynamic name;
+  dynamic createdAt;
+  dynamic updatedAt;
   bool? isChecked;
 
   AuthorModel({this.id, this.name, this.createdAt, this.updatedAt});

@@ -12,7 +12,7 @@ class CartService implements CartServiceInterface{
   CartRepositoryInterface cartRepositoryInterface;
   CartService({required this.cartRepositoryInterface});
 
-   double getOrderAmount( List<CartModel> cartList, {double? discount, String? discountType}) {
+   double getOrderAmount( List<CartModel> cartList, {double? discount, dynamic discountType}) {
     double amount = 0;
     for(int i=0;i<cartList.length;i++){
       amount += (cartList[i].price! - cartList[i].discount!) * cartList[i].quantity!;
@@ -21,7 +21,7 @@ class CartService implements CartServiceInterface{
   }
 
 
-  static double getOrderTaxAmount( List<CartModel> cartList, {double? discount, String? discountType}) {
+  static double getOrderTaxAmount( List<CartModel> cartList, {double? discount, dynamic discountType}) {
     double tax = 0;
     for(int i=0;i<cartList.length;i++){
       if(cartList[i].taxModel == "exclude"){
@@ -33,7 +33,7 @@ class CartService implements CartServiceInterface{
   }
 
 
-  static double getOrderDiscountAmount( List<CartModel> cartList, {double? discount, String? discountType}) {
+  static double getOrderDiscountAmount( List<CartModel> cartList, {double? discount, dynamic discountType}) {
     double discount = 0;
     for(int i=0;i<cartList.length;i++){
       discount += cartList[i].discount! * cartList[i].quantity!;
@@ -41,7 +41,7 @@ class CartService implements CartServiceInterface{
     return discount;
   }
 
-  static List<String?> getSellerList( List<CartModel> cartList, {double? discount, String? discountType}) {
+  static List<String?> getSellerList( List<CartModel> cartList, {double? discount, dynamic discountType}) {
     List<String?> sellerList = [];
     for(CartModel cart in cartList) {
       if(!sellerList.contains(cart.cartGroupId)) {
@@ -51,7 +51,7 @@ class CartService implements CartServiceInterface{
     return sellerList;
   }
 
-  static List<CartModel> getSellerGroupList(List<String?> sellerList, List<CartModel> cartList, {double? discount, String? discountType}) {
+  static List<CartModel> getSellerGroupList(List<String?> sellerList, List<CartModel> cartList, {double? discount, dynamic discountType}) {
     List<CartModel> sellerGroupList = [];
     for(CartModel cart in cartList) {
       if(!sellerList.contains(cart.cartGroupId)) {
@@ -96,19 +96,19 @@ class CartService implements CartServiceInterface{
 
 
   @override
-  Future addToCartListData(CartModelBody cart, List<ChoiceOptions> choiceOptions, List<int>? variationIndexes, int buyNow, int? shippingMethodExist, int? shippingMethodId) async {
+  Future addToCartListData(CartModelBody cart, List<ChoiceOptions> choiceOptions, List<int>? variationIndexes, int buyNow, dynamic shippingMethodExist, dynamic shippingMethodId) async {
     return await cartRepositoryInterface.addToCartListData(cart, choiceOptions, variationIndexes, buyNow, shippingMethodExist, shippingMethodId);
   }
 
 
   @override
-  Future restockRequest(CartModelBody cart, List<ChoiceOptions> choiceOptions, List<int>? variationIndexes, int buyNow, int? shippingMethodExist, int? shippingMethodId) async {
+  Future restockRequest(CartModelBody cart, List<ChoiceOptions> choiceOptions, List<int>? variationIndexes, int buyNow, dynamic shippingMethodExist, dynamic shippingMethodId) async {
     return await cartRepositoryInterface.restockRequest(cart, choiceOptions, variationIndexes, buyNow, shippingMethodExist, shippingMethodId);
   }
 
 
   @override
-  Future updateQuantity(int? key, int quantity) async {
+  Future updateQuantity(dynamic key, int quantity) async {
     return await cartRepositoryInterface.updateQuantity(key, quantity);
   }
 

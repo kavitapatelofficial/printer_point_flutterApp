@@ -60,7 +60,7 @@ class _OrderScreenState extends State<OrderScreen> {
                 SingleChildScrollView(
                   controller: scrollController,
                   child: PaginatedListView(scrollController: scrollController,
-                    onPaginate: (int? offset) async{
+                    onPaginate: (dynamic offset) async{
                       await orderController.getOrderList(offset!, orderController.selectedType);
                     },
                     totalSize: orderController.orderModel?.totalSize,

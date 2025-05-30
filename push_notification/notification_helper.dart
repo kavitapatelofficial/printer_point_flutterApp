@@ -167,10 +167,10 @@
 
 //   static Future<void> showNotification(RemoteMessage message, FlutterLocalNotificationsPlugin fln, bool data) async {
 //     if(!Platform.isIOS) {
-//       String? title;
-//       String? body;
-//       String? orderID;
-//       String? image;
+//       dynamic title;
+//       dynamic body;
+//       dynamic orderID;
+//       dynamic image;
 //       NotificationBody notificationBody = convertNotification(message.data);
 //       if(data) {
 //         title = message.data['title'];
@@ -215,7 +215,7 @@
 //     await fln.show(0, title, body, platformChannelSpecifics, payload: notificationBody != null ? jsonEncode(notificationBody.toJson()) : null);
 //   }
 
-//   static Future<void> showBigTextNotification(String? title, String body, String? orderID, NotificationBody? notificationBody, FlutterLocalNotificationsPlugin fln) async {
+//   static Future<void> showBigTextNotification(dynamic title, String body, dynamic orderID, NotificationBody? notificationBody, FlutterLocalNotificationsPlugin fln) async {
 //     BigTextStyleInformation bigTextStyleInformation = BigTextStyleInformation(
 //       body, htmlFormatBigText: true,
 //       contentTitle: title, htmlFormatContentTitle: true,
@@ -229,7 +229,7 @@
 //     await fln.show(0, title, body, platformChannelSpecifics, payload: notificationBody != null ? jsonEncode(notificationBody.toJson()) : null);
 //   }
 
-//   static Future<void> showBigPictureNotificationHiddenLargeIcon(String? title, String? body, String? orderID, NotificationBody? notificationBody, String image, FlutterLocalNotificationsPlugin fln) async {
+//   static Future<void> showBigPictureNotificationHiddenLargeIcon(dynamic title, dynamic body, dynamic orderID, NotificationBody? notificationBody, String image, FlutterLocalNotificationsPlugin fln) async {
 //     final String largeIconPath = await _downloadAndSaveFile(image, 'largeIcon');
 //     final String bigPicturePath = await _downloadAndSaveFile(image, 'bigPicture');
 //     final BigPictureStyleInformation bigPictureStyleInformation = BigPictureStyleInformation(

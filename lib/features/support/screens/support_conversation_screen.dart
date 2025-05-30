@@ -47,7 +47,7 @@ class _SupportConversationScreenState extends State<SupportConversationScreen> {
                 reverse: true,
                 itemBuilder: (context, index) {
                   bool isMe = (support.supportReplyList![index].adminId !=  '1' || support.supportReplyList![index].customerMessage != null);
-                  String? message = isMe ? support.supportReplyList![index].customerMessage : support.supportReplyList![index].adminMessage;
+                  dynamic message = isMe ? support.supportReplyList![index].customerMessage : support.supportReplyList![index].adminMessage;
                   String dateTime = DateConverter.localDateToIsoStringAMPM(DateTime.parse(support.supportReplyList![index].createdAt!));
                   return SupportTicketReplyWidget(message: message, dateTime: dateTime, isMe: isMe,
                       replyModel: support.supportReplyList![index]);

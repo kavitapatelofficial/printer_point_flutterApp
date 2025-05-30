@@ -2,9 +2,9 @@
 import 'package:flutter_sixvalley_ecommerce/features/shop/domain/models/seller_model.dart';
 
 class CouponItemModel {
-  int? totalSize;
-  int? limit;
-  int? offset;
+  dynamic totalSize;
+  dynamic limit;
+  dynamic offset;
   List<Coupons>? coupons;
 
   CouponItemModel({this.totalSize, this.limit, this.offset, this.coupons});
@@ -24,22 +24,22 @@ class CouponItemModel {
 }
 
 class Coupons {
-  int? id;
-  String? addedBy;
-  String? couponType;
-  String? couponBearer;
-  int? sellerId;
-  String? title;
-  String? code;
-  int? limit;
+  dynamic id;
+  dynamic addedBy;
+  dynamic couponType;
+  dynamic couponBearer;
+  dynamic sellerId;
+  dynamic title;
+  dynamic code;
+  dynamic limit;
   Seller? seller;
-  String? expireDate;
-  String? expireDatePlanText;
-  String? planExpireDate;
+  dynamic expireDate;
+  dynamic expireDatePlanText;
+  dynamic planExpireDate;
   double? discount;
-  String? discountType;
+  dynamic discountType;
   double? minPurchase;
-  int? orderCount;
+  dynamic orderCount;
 
   Coupons(
       {this.id,

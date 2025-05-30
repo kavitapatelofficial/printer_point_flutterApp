@@ -42,7 +42,7 @@ class ClearanceSaleWidget extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(Dimensions.paddingSizeSmall),
                       child: CustomImageWidget(
-                        image: '${product.thumbnail}',
+                        image: '${product.imagesFullUrl!.first.status==200?product.imagesFullUrl!.first.path:product.imagesFullUrl!.first.key}',
                         height: constrains.maxHeight * 0.6,
                         width: constrains.maxHeight * 0.6,
                       ),

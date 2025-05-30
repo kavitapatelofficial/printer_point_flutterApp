@@ -9,5 +9,5 @@ abstract class WalletRepositoryInterface<T> extends RepositoryInterface{
   Future<dynamic> getWalletBonusBannerList();
 
   @override
-  Future<dynamic> getList({int? offset = 1, String? filterBy, DateTime? startDate, DateTime? endDate, List<String>? transactionTypes});
+  Future<dynamic> getList({dynamic offset = 1, dynamic filterBy, DateTime? startDate, DateTime? endDate, List<String>? transactionTypes});
 }

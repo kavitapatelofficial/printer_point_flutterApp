@@ -16,7 +16,7 @@ class SearchProductService implements SearchProductServiceInterface{
   }
 
   @override
-  Future getSearchProductList(String query, String? categoryIds, String? brandIds, String? authorIds, String? publishingIds, String? sort, String? priceMin, String? priceMax, int offset, String? productType) async{
+  Future getSearchProductList(String query, dynamic categoryIds, dynamic brandIds, dynamic authorIds, dynamic publishingIds, dynamic sort, dynamic priceMin, dynamic priceMax, int offset, dynamic productType) async{
     return await searchProductRepositoryInterface.getSearchProductList(query, categoryIds, brandIds, authorIds, publishingIds, sort, priceMin, priceMax, offset, productType);
   }
 
@@ -31,12 +31,12 @@ class SearchProductService implements SearchProductServiceInterface{
   }
 
   @override
-  Future getAuthorList(int? sellerId){
+  Future getAuthorList(dynamic sellerId){
     return searchProductRepositoryInterface.getAuthorList(sellerId);
   }
 
   @override
-  Future getPublishingHouse(int? sellerId){
+  Future getPublishingHouse(dynamic sellerId){
     return searchProductRepositoryInterface.getPublishingHouse(sellerId);
   }
 

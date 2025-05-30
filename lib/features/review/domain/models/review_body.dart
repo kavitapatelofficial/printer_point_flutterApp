@@ -1,18 +1,18 @@
 class ReviewBody {
-  String? _id;
-  String? _orderId;
-  String? _productId;
-  String? _comment;
-  String? _rating;
+  dynamic _id;
+  dynamic _orderId;
+  dynamic _productId;
+  dynamic _comment;
+  dynamic _rating;
   List<String>? _fileUpload;
 
   ReviewBody(
       {
-        String? id,
-        String? orderId,
-        String? productId,
-        String? comment,
-        String? rating,
+        dynamic id,
+        dynamic orderId,
+        dynamic productId,
+        dynamic comment,
+        dynamic rating,
         List<String>? fileUpload}) {
     _id = id;
     _orderId = orderId;
@@ -23,11 +23,11 @@ class ReviewBody {
 
   }
 
-  String? get id => _id;
-  String? get orderId => _orderId;
-  String? get productId => _productId;
-  String? get comment => _comment;
-  String? get rating => _rating;
+  dynamic get id => _id;
+  dynamic get orderId => _orderId;
+  dynamic get productId => _productId;
+  dynamic get comment => _comment;
+  dynamic get rating => _rating;
   List<String>? get fileUpload => _fileUpload;
 
   ReviewBody.fromJson(Map<String, dynamic> json) {

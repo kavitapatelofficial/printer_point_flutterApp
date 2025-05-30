@@ -7,7 +7,10 @@ class AppConstants {
   static const String appVersion = '1.0.0'; ///Flutter SDK 3.27.4
 
 
-  static const String baseUrl = 'https://etasi.oopssolutions.in';
+  // static const String baseUrl = 'https://printerpoint.co.in/staging';
+
+
+  static const String baseUrl = 'https://printerpoint.co.in/staging';
 
   static const String userId = 'userId';
   static const String name = 'name';

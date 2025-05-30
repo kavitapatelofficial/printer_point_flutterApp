@@ -7,5 +7,5 @@ abstract class LocationRepositoryInterface implements RepositoryInterface{
 
   Future<dynamic> searchLocation(String text);
 
-  Future<dynamic> getPlaceDetails(String? placeID);
+  Future<dynamic> getPlaceDetails(dynamic placeID);
 }

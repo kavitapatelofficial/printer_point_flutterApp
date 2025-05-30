@@ -198,7 +198,7 @@ class SocialLoginWidgetState extends State<SocialLoginWidget> {
     //
     //           InkWell(onTap: () async{
     //               await Provider.of<GoogleSignInController>(context, listen: false).login();
-    //               String? id,token,email, medium;
+    //               dynamic id,token,email, medium;
     //               if(context.mounted){}
     //               if(Provider.of<GoogleSignInController>(Get.context!,listen: false).googleAccount != null){
     //                 id = Provider.of<GoogleSignInController>(Get.context!,listen: false).googleAccount!.id;
@@ -233,7 +233,7 @@ class SocialLoginWidgetState extends State<SocialLoginWidget> {
     //           Provider.of<SplashController>(context,listen: false).configModel!.socialLogin![1].status!?
     //           InkWell(onTap: () async{
     //               await Provider.of<FacebookLoginController>(context, listen: false).login();
-    //               String? id,token,email, medium;
+    //               dynamic id,token,email, medium;
     //               if(Provider.of<FacebookLoginController>(Get.context!,listen: false).userData != null){
     //                 id = Provider.of<FacebookLoginController>(Get.context!,listen: false).result.accessToken!.userId;
     //                 email = Provider.of<FacebookLoginController>(Get.context!,listen: false).userData!['email'];
@@ -269,7 +269,7 @@ class SocialLoginWidgetState extends State<SocialLoginWidget> {
     //                     text: '',
     //                     height: 47,
     //                     onPressed: () async {
-    //                       String? id,token,email, medium;
+    //                       dynamic id,token,email, medium;
     //                       final credential = await SignInWithApple.getAppleIDCredential(
     //                         scopes: [AppleIDAuthorizationScopes.email,
     //                           AppleIDAuthorizationScopes.fullName]);
@@ -298,7 +298,7 @@ class SocialLoginWidgetState extends State<SocialLoginWidget> {
 }
 
 
-route(bool isRoute, String? token, String? temporaryToken, ProfileModel? profileModel, String? errorMessage, String? loginMedium, String? phone) async {
+route(bool isRoute, dynamic token, dynamic temporaryToken, ProfileModel? profileModel, dynamic errorMessage, dynamic loginMedium, dynamic phone) async {
   final AuthController authProvider = Provider.of<AuthController>(Get.context!,listen: false);
 
 
@@ -331,7 +331,7 @@ Future<void> googleLogin(BuildContext context) async {
 
   try{
     await Provider.of<GoogleSignInController>(context, listen: false).login();
-    String? id, token, email, medium;
+    dynamic id, token, email, medium;
     if(context.mounted){}
     if(Provider.of<GoogleSignInController>(Get.context!,listen: false).googleAccount != null) {
       id = Provider.of<GoogleSignInController>(Get.context!,listen: false).googleAccount!.id;
@@ -359,7 +359,7 @@ Future<void> facebookLogin(BuildContext context) async {
 
   try{
     await Provider.of<FacebookLoginController>(context, listen: false).login();
-    String? id,token,email, medium;
+    dynamic id,token,email, medium;
     if(Provider.of<FacebookLoginController>(Get.context!,listen: false).userData != null){
       id = Provider.of<FacebookLoginController>(Get.context!,listen: false).result.accessToken!.userId;
       email = Provider.of<FacebookLoginController>(Get.context!,listen: false).userData!['email'];
@@ -380,7 +380,7 @@ Future<void> facebookLogin(BuildContext context) async {
 Future<void> appleLogin(BuildContext context) async {
   SocialLoginModel socialLogin = SocialLoginModel();
   try{
-    String? id,token,email, medium;
+    dynamic id,token,email, medium;
     final credential = await SignInWithApple.getAppleIDCredential(
         scopes: [AppleIDAuthorizationScopes.email,
           AppleIDAuthorizationScopes.fullName]);
@@ -402,7 +402,7 @@ Future<void> appleLogin(BuildContext context) async {
 
 
 class SocialLoginButtonWidget extends StatelessWidget {
-  final String? text;
+  final dynamic text;
   final String image;
   final Color? color;
   final EdgeInsetsGeometry? padding;

@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 
 
 class SearchInboxWidget extends StatefulWidget {
-  final String? hintText;
+  final dynamic hintText;
   const SearchInboxWidget({super.key, required this.hintText});
 
   @override

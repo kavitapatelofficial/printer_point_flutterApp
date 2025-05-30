@@ -75,8 +75,8 @@ class ChangeLogWidget extends StatelessWidget {
 }
 
 class ItemWidget extends StatelessWidget {
-  final String? lestValue;
-  final String? rightValue;
+  final dynamic lestValue;
+  final dynamic rightValue;
   final bool isPayment;
   final TextStyle? style;
   const ItemWidget({super.key, required this.lestValue, required this.rightValue,  this.isPayment = false, this.style});

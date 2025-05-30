@@ -1,30 +1,30 @@
     class FlashDealModel {
-  int? _id;
-  String? _title;
-  String? _startDate;
-  String? _endDate;
-  String? _backgroundColor;
-  String? _textColor;
-  String? _banner;
-  String? _slug;
-  String? _createdAt;
-  String? _updatedAt;
-  int? _productId;
-  String? _dealType;
+  dynamic _id;
+  dynamic _title;
+  dynamic _startDate;
+  dynamic _endDate;
+  dynamic _backgroundColor;
+  dynamic _textColor;
+  dynamic _banner;
+  dynamic _slug;
+  dynamic _createdAt;
+  dynamic _updatedAt;
+  dynamic _productId;
+  dynamic _dealType;
 
   FlashDealModel(
-      {int? id,
-        String? title,
-        String? startDate,
-        String? endDate,
-        String? backgroundColor,
-        String? textColor,
-        String? banner,
-        String? slug,
-        String? createdAt,
-        String? updatedAt,
-        int? productId,
-        String? dealType}) {
+      {dynamic id,
+        dynamic title,
+        dynamic startDate,
+        dynamic endDate,
+        dynamic backgroundColor,
+        dynamic textColor,
+        dynamic banner,
+        dynamic slug,
+        dynamic createdAt,
+        dynamic updatedAt,
+        dynamic productId,
+        dynamic dealType}) {
     _id = id;
     _title = title;
     _startDate = startDate;
@@ -39,18 +39,18 @@
     _dealType = dealType;
   }
 
-  int? get id => _id;
-  String? get title => _title;
-  String? get startDate => _startDate;
-  String? get endDate => _endDate;
-  String? get backgroundColor => _backgroundColor;
-  String? get textColor => _textColor;
-  String? get banner => _banner;
-  String? get slug => _slug;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-  int? get productId => _productId;
-  String? get dealType => _dealType;
+  dynamic get id => _id;
+  dynamic get title => _title;
+  dynamic get startDate => _startDate;
+  dynamic get endDate => _endDate;
+  dynamic get backgroundColor => _backgroundColor;
+  dynamic get textColor => _textColor;
+  dynamic get banner => _banner;
+  dynamic get slug => _slug;
+  dynamic get createdAt => _createdAt;
+  dynamic get updatedAt => _updatedAt;
+  dynamic get productId => _productId;
+  dynamic get dealType => _dealType;
 
   FlashDealModel.fromJson(Map<String, dynamic> json) {
     _id = json['id'];

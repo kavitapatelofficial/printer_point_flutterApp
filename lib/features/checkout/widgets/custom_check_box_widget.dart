@@ -9,7 +9,7 @@ import 'package:provider/provider.dart';
 class CustomCheckBoxWidget extends StatelessWidget {
   final int index;
   final bool isDigital;
-  final String? icon;
+  final dynamic icon;
   final String name;
   final String title;
   const CustomCheckBoxWidget({super.key,  required this.index, this.isDigital =  false, this.icon, required this.name, required this.title});

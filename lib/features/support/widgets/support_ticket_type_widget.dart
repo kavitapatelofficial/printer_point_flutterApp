@@ -67,8 +67,8 @@ class TicketModel{
   TicketModel(this.icon, this.title);
 }
 class TypeButton extends StatelessWidget {
-  final String? icon;
-  final String? title;
+  final dynamic icon;
+  final dynamic title;
   const TypeButton({super.key, this.icon, this.title});
 
   @override

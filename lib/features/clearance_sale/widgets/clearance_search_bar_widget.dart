@@ -13,11 +13,11 @@ import 'package:provider/provider.dart';
 class ClearanceSearchBarWidget extends StatefulWidget {
   final bool showFilter;
   final bool showBack;
-  final int? sellerId;
+  final dynamic sellerId;
   final bool fromShop;
   final TextEditingController controller;
   final void Function() applyFilter;
-  final Function(String? text) handleSearchText;
+  final Function(dynamic text) handleSearchText;
   final void Function() onSearchClick;
   final Icon searchIcon;
   const ClearanceSearchBarWidget({super.key, this.showFilter = true, this.showBack = false, this.sellerId, this.fromShop = true, required this.controller, required this.applyFilter, required this.handleSearchText, required this.onSearchClick, required this.searchIcon});

@@ -19,7 +19,7 @@ class SupportTicketService implements SupportTicketServiceInterface{
   }
 
   @override
-  Future getList({int? offset = 1}) async{
+  Future getList({dynamic offset = 1}) async{
     return await supportTicketRepositoryInterface.getList();
   }
 

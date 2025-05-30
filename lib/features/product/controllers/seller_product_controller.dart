@@ -22,11 +22,11 @@ class SellerProductController extends ChangeNotifier {
   Future <ApiResponse> getSellerProductList(String sellerId, int offset, String productId, {
     bool reload = true,
     String search = '',
-    String? categoryIds = '[]',
-    String? brandIds = '[]',
-    String? authorIds = '[]',
-    String? publishingIds = '[]',
-    String? productType = 'all',
+    dynamic categoryIds = '[]',
+    dynamic brandIds = '[]',
+    dynamic authorIds = '[]',
+    dynamic publishingIds = '[]',
+    dynamic productType = 'all',
   }) async {
 
     // if(reload) {

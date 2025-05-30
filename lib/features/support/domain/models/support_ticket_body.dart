@@ -1,8 +1,8 @@
 class SupportTicketBody {
-  String? _type;
-  String? _subject;
-  String? _description;
-  String? _priority;
+  dynamic _type;
+  dynamic _subject;
+  dynamic _description;
+  dynamic _priority;
 
   SupportTicketBody(String type, String subject, String description, String priority) {
     _type = type;
@@ -11,10 +11,10 @@ class SupportTicketBody {
     _priority = priority;
   }
 
-  String? get type => _type;
-  String? get subject => _subject;
-  String? get description => _description;
-  String? get priority => _priority;
+  dynamic get type => _type;
+  dynamic get subject => _subject;
+  dynamic get description => _description;
+  dynamic get priority => _priority;
 
   SupportTicketBody.fromJson(Map<String, dynamic> json) {
     _type = json['type'];

@@ -29,8 +29,8 @@ class CartController extends ChangeNotifier {
   bool _cartLoading = false;
   bool  get cartLoading => _cartLoading;
   CartModel? cart;
-  String? _updateQuantityErrorText;
-  String? get addOrderStatusErrorText => _updateQuantityErrorText;
+  dynamic _updateQuantityErrorText;
+  dynamic get addOrderStatusErrorText => _updateQuantityErrorText;
   bool _getData = true;
   bool _addToCartLoading = false;
   bool get addToCartLoading => _addToCartLoading;
@@ -101,7 +101,7 @@ class CartController extends ChangeNotifier {
 
 
 
-  Future<ApiResponse> updateCartProductQuantity(int? key, int quantity, BuildContext context, bool increment, int index) async{
+  Future<ApiResponse> updateCartProductQuantity(dynamic key, int quantity, BuildContext context, bool increment, int index) async{
     if(increment){
       cartList[index].increment = true;
     }else{
@@ -129,7 +129,7 @@ class CartController extends ChangeNotifier {
 
 
 
-  Future<ApiResponse> addToCartAPI(CartModelBody cart, BuildContext context, List<ChoiceOptions> choices, List<int>? variationIndexes, {int buyNow = 0, int? shippingMethodExist, int? shippingMethodId}) async {
+  Future<ApiResponse> addToCartAPI(CartModelBody cart, BuildContext context, List<ChoiceOptions> choices, List<int>? variationIndexes, {int buyNow = 0, dynamic shippingMethodExist, dynamic shippingMethodId}) async {
     _addToCartLoading = true;
     notifyListeners();
     ApiResponse apiResponse = await cartServiceInterface!.addToCartListData(cart, choices, variationIndexes, buyNow, shippingMethodExist, shippingMethodId);
@@ -148,7 +148,7 @@ class CartController extends ChangeNotifier {
   }
 
 
-  Future<ApiResponse> restockRequest(CartModelBody cart, BuildContext context, List<ChoiceOptions> choices, List<int>? variationIndexes, {int buyNow = 0, int? shippingMethodExist, int? shippingMethodId, String? variationType}) async {
+  Future<ApiResponse> restockRequest(CartModelBody cart, BuildContext context, List<ChoiceOptions> choices, List<int>? variationIndexes, {int buyNow = 0, dynamic shippingMethodExist, dynamic shippingMethodId, dynamic variationType}) async {
     _addToCartLoading = true;
     notifyListeners();
     ApiResponse apiResponse = await cartServiceInterface!.restockRequest(cart, choices, variationIndexes, buyNow, shippingMethodExist, shippingMethodId);
@@ -172,7 +172,7 @@ class CartController extends ChangeNotifier {
   }
 
 
-  Future<void> removeFromCartAPI(int? key, int index) async{
+  Future<void> removeFromCartAPI(dynamic key, int index) async{
     cartList[index].decrement = true;
     notifyListeners();
     ApiResponse apiResponse = await cartServiceInterface!.delete(key!);

@@ -12,9 +12,9 @@ import 'package:provider/provider.dart';
 
 class BrandAndCategoryProductScreen extends StatefulWidget {
   final bool isBrand;
-  final int? id;
-  final String? name;
-  final String? image;
+  final dynamic id;
+  final dynamic name;
+  final dynamic image;
   const BrandAndCategoryProductScreen({super.key, required this.isBrand, required this.id, required this.name, this.image});
 
   @override

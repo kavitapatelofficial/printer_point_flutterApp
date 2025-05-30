@@ -4,9 +4,9 @@ import 'package:flutter_sixvalley_ecommerce/data/model/image_full_url.dart';
 import 'package:flutter_sixvalley_ecommerce/features/shop/domain/models/seller_model.dart';
 
 class OrderModel {
-  int? totalSize;
-  String? limit;
-  String? offset;
+  dynamic totalSize;
+  dynamic limit;
+  dynamic offset;
   List<Orders>? orders;
 
   OrderModel({this.totalSize, this.limit, this.offset, this.orders});
@@ -26,55 +26,55 @@ class OrderModel {
 }
 
 class Orders {
-  int? id;
-  int? customerId;
-  int? isGuest;
-  String? customerType;
-  String? paymentStatus;
-  String? orderStatus;
-  String? paymentMethod;
-  String? transactionRef;
-  String? paymentBy;
-  String? paymentNote;
+  dynamic id;
+  dynamic customerId;
+  dynamic isGuest;
+  dynamic customerType;
+  dynamic paymentStatus;
+  dynamic orderStatus;
+  dynamic paymentMethod;
+  dynamic transactionRef;
+  dynamic paymentBy;
+  dynamic paymentNote;
   double? orderAmount;
   double? paidAmount;
-  String? adminCommission;
-  String? cause;
-  String? createdAt;
-  String? updatedAt;
+  dynamic adminCommission;
+  dynamic cause;
+  dynamic createdAt;
+  dynamic updatedAt;
   double? discountAmount;
-  String? discountType;
-  String? couponCode;
-  String? couponDiscountBearer;
-  int? shippingMethodId;
+  dynamic discountType;
+  dynamic couponCode;
+  dynamic couponDiscountBearer;
+  dynamic shippingMethodId;
   double? shippingCost;
   bool? isShippingFree;
-  String? orderGroupId;
-  String? verificationCode;
+  dynamic orderGroupId;
+  dynamic verificationCode;
   bool? verificationStatus;
-  int? sellerId;
-  String? sellerIs;
+  dynamic sellerId;
+  dynamic sellerIs;
   ShippingAddressData? shippingAddressData;
-  int? deliveryManId;
+  dynamic deliveryManId;
   double? deliverymanCharge;
-  String? expectedDeliveryDate;
-  String? orderNote;
-  int? billingAddress;
+  dynamic expectedDeliveryDate;
+  dynamic orderNote;
+  dynamic billingAddress;
   BillingAddressData? billingAddressData;
-  String? orderType;
+  dynamic orderType;
   double? extraDiscount;
-  String? extraDiscountType;
-  String? freeDeliveryBearer;
-  String? shippingType;
-  String? deliveryType;
-  String? deliveryServiceName;
-  String? thirdPartyDeliveryTrackingId;
-  int? orderDetailsCount;
+  dynamic extraDiscountType;
+  dynamic freeDeliveryBearer;
+  dynamic shippingType;
+  dynamic deliveryType;
+  dynamic deliveryServiceName;
+  dynamic thirdPartyDeliveryTrackingId;
+  dynamic orderDetailsCount;
   List<Details>? details;
   DeliveryMan? deliveryMan;
   Seller? seller;
   double? bringChangeAmount;
-  String? bringChangeAmountCurrency;
+  dynamic bringChangeAmountCurrency;
 
 
       Orders(
@@ -210,18 +210,18 @@ class Orders {
 
 
 class BillingAddressData {
-  int? id;
-  String? contactPersonName;
-  String? addressType;
-  String? address;
-  String? city;
-  String? zip;
-  String? phone;
-  String? createdAt;
-  String? updatedAt;
-  String? country;
-  String? latitude;
-  String? longitude;
+  dynamic id;
+  dynamic contactPersonName;
+  dynamic addressType;
+  dynamic address;
+  dynamic city;
+  dynamic zip;
+  dynamic phone;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic country;
+  dynamic latitude;
+  dynamic longitude;
 
   BillingAddressData(
       {this.id,
@@ -255,29 +255,29 @@ class BillingAddressData {
 }
 
 class ShippingAddressData {
-  int? _id;
-  String? _contactPersonName;
-  String? _addressType;
-  String? _address;
-  String? _city;
-  String? _zip;
-  String? _phone;
-  String? _createdAt;
-  String? _updatedAt;
-  String? _country;
+  dynamic _id;
+  dynamic _contactPersonName;
+  dynamic _addressType;
+  dynamic _address;
+  dynamic _city;
+  dynamic _zip;
+  dynamic _phone;
+  dynamic _createdAt;
+  dynamic _updatedAt;
+  dynamic _country;
 
   ShippingAddressData(
-      {int? id,
-        String? contactPersonName,
-        String? addressType,
-        String? address,
-        String? city,
-        String? zip,
-        String? phone,
-        String? createdAt,
-        String? updatedAt,
+      {dynamic id,
+        dynamic contactPersonName,
+        dynamic addressType,
+        dynamic address,
+        dynamic city,
+        dynamic zip,
+        dynamic phone,
+        dynamic createdAt,
+        dynamic updatedAt,
         void state,
-        String? country}) {
+        dynamic country}) {
     if (id != null) {
       _id = id;
     }
@@ -312,16 +312,16 @@ class ShippingAddressData {
     }
   }
 
-  int? get id => _id;
-  String? get contactPersonName => _contactPersonName;
-  String? get addressType => _addressType;
-  String? get address => _address;
-  String? get city => _city;
-  String? get zip => _zip;
-  String? get phone => _phone;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-  String? get country => _country;
+  dynamic get id => _id;
+  dynamic get contactPersonName => _contactPersonName;
+  dynamic get addressType => _addressType;
+  dynamic get address => _address;
+  dynamic get city => _city;
+  dynamic get zip => _zip;
+  dynamic get phone => _phone;
+  dynamic get createdAt => _createdAt;
+  dynamic get updatedAt => _updatedAt;
+  dynamic get country => _country;
 
 
   ShippingAddressData.fromJson(Map<String, dynamic> json) {
@@ -340,20 +340,20 @@ class ShippingAddressData {
 }
 
 class DeliveryMan {
-  int? _id;
-  String? _fName;
-  String? _lName;
-  String? _phone;
-  String? _email;
-  String? _image;
+  dynamic _id;
+  dynamic _fName;
+  dynamic _lName;
+  dynamic _phone;
+  dynamic _email;
+  dynamic _image;
   DeliveryMan(
       {
-        int? id,
-        String? fName,
-        String? lName,
-        String? phone,
-        String? email,
-        String? image
+        dynamic id,
+        dynamic fName,
+        dynamic lName,
+        dynamic phone,
+        dynamic email,
+        dynamic image
       }) {
 
     if (id != null) {
@@ -379,12 +379,12 @@ class DeliveryMan {
   }
 
 
-  int? get id => _id;
-  String? get fName => _fName;
-  String? get lName => _lName;
-  String? get phone => _phone;
-  String? get email => _email;
-  String? get image => _image;
+  dynamic get id => _id;
+  dynamic get fName => _fName;
+  dynamic get lName => _lName;
+  dynamic get phone => _phone;
+  dynamic get email => _email;
+  dynamic get image => _image;
 
   DeliveryMan.fromJson(Map<String, dynamic> json) {
 
@@ -413,8 +413,8 @@ class DeliveryMan {
 
 
 class Shop {
-  String? image;
-  String? name;
+  dynamic image;
+  dynamic name;
   Shop(
       {this.image, this.name});
 
@@ -427,7 +427,7 @@ class Shop {
 
 class Details {
   Product? product;
-  int? qty;
+  dynamic qty;
   double? price;
   double? tax;
   double? discount;
@@ -452,8 +452,8 @@ class Details {
 }
 
 class Product {
-  String? thumbnail;
-  String? productType;
+  dynamic thumbnail;
+  dynamic productType;
   ImageFullUrl? thumbnailFullUrl;
 
 

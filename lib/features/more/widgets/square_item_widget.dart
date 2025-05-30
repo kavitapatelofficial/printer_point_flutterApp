@@ -10,14 +10,14 @@ import 'package:provider/provider.dart';
 
 class SquareButtonWidget extends StatelessWidget {
   final String image;
-  final String? title;
+  final dynamic title;
   final Widget navigateTo;
   final int count;
   final bool hasCount;
   final bool isWallet;
   final double? balance;
   final bool isLoyalty;
-  final String? subTitle;
+  final dynamic subTitle;
 
   const SquareButtonWidget({super.key, required this.image,
     required this.title, required this.navigateTo, required this.count,

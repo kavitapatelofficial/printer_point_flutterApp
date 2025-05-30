@@ -52,7 +52,7 @@ class ShopRepository implements ShopRepositoryInterface{
 
 
   @override
-  Future<ApiResponse> getClearanceSearchProduct(String sellerId, String offset, String productId, {String search = '', String? categoryIds="[]", String? brandIds="[]", String? authorIds ='[]', String? publishingIds = '[]', String? productType, String? offerType}) async {
+  Future<ApiResponse> getClearanceSearchProduct(String sellerId, String offset, String productId, {String search = '', dynamic categoryIds="[]", dynamic brandIds="[]", dynamic authorIds ='[]', dynamic publishingIds = '[]', dynamic productType, dynamic offerType}) async {
     try {
       final response = await dioClient!.get(
           '${AppConstants.clearanceShopSearchProductUri}$sellerId/products?guest_id=1&limit=10&offset=$offset&search=$search&category=$categoryIds&brand_ids=$brandIds&product_id=$productId&product_authors=$authorIds&publishing_houses=$publishingIds&product_type=$productType&offer_type=$offerType');
@@ -75,7 +75,7 @@ class ShopRepository implements ShopRepositoryInterface{
   }
 
   @override
-  Future getList({int? offset = 1}) {
+  Future getList({dynamic offset = 1}) {
     // TODO: implement getList
     throw UnimplementedError();
   }

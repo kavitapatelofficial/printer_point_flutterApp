@@ -13,7 +13,7 @@ import 'package:substring_highlight/substring_highlight.dart';
 
 class SearchSuggestion extends StatefulWidget{
   final bool fromCompare;
-  final int? id;
+  final dynamic id;
   const SearchSuggestion({super.key,  this.fromCompare = false, this.id});
   @override
   State<SearchSuggestion> createState() => _SearchSuggestionState();

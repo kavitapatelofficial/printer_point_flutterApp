@@ -37,7 +37,7 @@ class LatestProductWidget extends StatelessWidget {
                     topRight: Radius.circular(10)),),
                 child: ClipRRect(borderRadius: const BorderRadius.only(topLeft: Radius.circular(Dimensions.paddingSizeSmall),
                       topRight: Radius.circular(10)),
-                  child: CustomImageWidget(image: '${productModel.thumbnail}')
+                  child: CustomImageWidget(image: '${productModel .imagesFullUrl!.first.status==200?productModel .imagesFullUrl!.first.path:productModel .imagesFullUrl!.first.key}')
                 ))),
 
             // Off

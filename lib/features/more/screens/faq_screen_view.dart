@@ -6,7 +6,7 @@ import 'package:flutter_sixvalley_ecommerce/common/basewidget/no_internet_screen
 import 'package:flutter_sixvalley_ecommerce/utill/dimensions.dart';
 import 'package:provider/provider.dart';
 class FaqScreen extends StatefulWidget {
-  final String? title;
+  final dynamic title;
   const FaqScreen({super.key, required this.title});
 
   @override

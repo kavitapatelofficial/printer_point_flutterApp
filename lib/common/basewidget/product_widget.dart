@@ -83,7 +83,7 @@ class ProductWidget extends StatelessWidget {
                               borderRadius: BorderRadius.circular(
                                   Dimensions.paddingSizeEight),
                               child: CustomImageWidget(
-                                image: '${productModel.thumbnail}',
+                                image: '${productModel.imagesFullUrl!.first.status==200?productModel.imagesFullUrl!.first.path:productModel.imagesFullUrl!.first.key}',
                                 fit: BoxFit.cover,
                                 height: boxConstraint.maxWidth * 0.82,
                                 width: boxConstraint.maxWidth,

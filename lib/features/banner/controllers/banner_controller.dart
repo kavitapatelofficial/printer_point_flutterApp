@@ -27,14 +27,14 @@ class BannerController extends ChangeNotifier {
   BannerModel? mainSectionBanner;
   BannerModel? sideBarBanner;
   Product? _product;
-  int? _currentIndex;
-  int? _footerBannerIndex;
+  dynamic _currentIndex;
+  dynamic _footerBannerIndex;
   List<BannerModel>? get mainBannerList => _mainBannerList;
   List<BannerModel>? get footerBannerList => _footerBannerList;
 
   Product? get product => _product;
-  int? get currentIndex => _currentIndex;
-  int? get footerBannerIndex => _footerBannerIndex;
+  dynamic get currentIndex => _currentIndex;
+  dynamic get footerBannerIndex => _footerBannerIndex;
 
   BannerModel? promoBannerMiddleTop;
   BannerModel? promoBannerRight;
@@ -152,7 +152,7 @@ class BannerController extends ChangeNotifier {
   }
 
 
-  void clickBannerRedirect(BuildContext context, int? id, Product? product,  String? type) {
+  void clickBannerRedirect(BuildContext context, dynamic id, Product? product,  dynamic type) {
     final cIndex =  Provider.of<CategoryController>(context, listen: false).categoryList.indexWhere((element) => element.id == id);
     final bIndex =  Provider.of<BrandController>(context, listen: false).brandList.indexWhere((element) => element.id == id);
     final tIndex =  Provider.of<ShopController>(context, listen: false).allSellerModel!.sellers!.indexWhere((element) => element.id == id);

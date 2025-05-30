@@ -106,7 +106,7 @@ Widget build(BuildContext context) {
                     child: SingleChildScrollView(
                       child: PaginatedListView(
                         scrollController: scrollController,
-                        onPaginate: (int? offset) async => await restockController.getRestockProductList(offset!),
+                        onPaginate: (dynamic offset) async => await restockController.getRestockProductList(offset!),
                         totalSize: restockController.restockProductModel?.totalSize,
                         offset: int.tryParse(restockController.restockProductModel!.offset!),
                         itemView: ListView.builder(padding: const EdgeInsets.all(0),

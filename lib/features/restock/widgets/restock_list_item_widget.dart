@@ -47,7 +47,7 @@ class RestockListItemWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall),
                     border: Border.all(color: Theme.of(context).primaryColor.withOpacity(.10),width: 0.5)),
                     child: ClipRRect(borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall),
-                        child: CustomImageWidget(image: product?.thumbnail ?? '', height: 80, width: 80))
+                        child: CustomImageWidget(image: product!.imagesFullUrl!.first.status==200?product!.imagesFullUrl!.first.path:product!.imagesFullUrl!.first.key ?? '', height: 80, width: 80))
                   ),
 
 

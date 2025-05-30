@@ -118,7 +118,7 @@ class _LoyaltyPointScreenState extends State<LoyaltyPointScreen> {
                 builder: (context, loyaltyPointController, _) {
                   return (loyaltyPointController.loyaltyPointModel?.loyaltyPointList?.isNotEmpty ?? false) ? PaginatedListView(
                     scrollController: scrollController,
-                    onPaginate: (int? offset)=> loyaltyPointController.getLoyaltyPointList(
+                    onPaginate: (dynamic offset)=> loyaltyPointController.getLoyaltyPointList(
                       context, offset ?? 1,
                       startDate: loyaltyPointController.loyaltyPointModel?.startDate,
                       endDate: loyaltyPointController.loyaltyPointModel?.endDate,

@@ -59,7 +59,7 @@ class SupportTicketController extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> getSupportTicketReplyList(BuildContext context, int? ticketID) async {
+  Future<void> getSupportTicketReplyList(BuildContext context, dynamic ticketID) async {
     _supportReplyList = null;
     ApiResponse apiResponse = await supportTicketServiceInterface.getSupportReplyList(ticketID.toString());
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {
@@ -73,7 +73,7 @@ class SupportTicketController extends ChangeNotifier {
 
 
 
-  Future<http.StreamedResponse> sendReply(int? ticketID, String message) async {
+  Future<http.StreamedResponse> sendReply(dynamic ticketID, String message) async {
     _isLoading = true;
     notifyListeners();
     http.StreamedResponse response = await supportTicketServiceInterface.sendReply(ticketID.toString(), message, pickedImageFileStored);
@@ -93,7 +93,7 @@ class SupportTicketController extends ChangeNotifier {
   }
 
 
-  Future<void> closeSupportTicket(int? ticketID) async {
+  Future<void> closeSupportTicket(dynamic ticketID) async {
     ApiResponse apiResponse = await supportTicketServiceInterface.closeSupportTicket(ticketID.toString());
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {
       getSupportTicketList();
@@ -127,7 +127,7 @@ class SupportTicketController extends ChangeNotifier {
   List <XFile> _pickedImageFiles =[];
   List <XFile>? get pickedImageFile => _pickedImageFiles;
   List <XFile>  pickedImageFileStored = [];
-  void pickMultipleImage(bool isRemove,{int? index}) async {
+  void pickMultipleImage(bool isRemove,{dynamic index}) async {
     if(isRemove) {
       if(index != null){
         pickedImageFileStored.removeAt(index);

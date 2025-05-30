@@ -5,24 +5,24 @@ import 'package:flutter_sixvalley_ecommerce/features/product_details/domain/mode
 import 'package:flutter_sixvalley_ecommerce/features/shop/domain/models/seller_model.dart';
 
 class OrderDetailsModel {
-  int? _id;
-  int? _orderId;
-  int? _productId;
-  int? _sellerId;
-  String? _digitalFileAfterSell;
+  dynamic _id;
+  dynamic _orderId;
+  dynamic _productId;
+  dynamic _sellerId;
+  dynamic _digitalFileAfterSell;
   Product? _productDetails;
-  int? _qty;
+  dynamic _qty;
   double? _price;
   double? _tax;
-  String? _taxModel;
+  dynamic _taxModel;
   double? _discount;
-  String? _deliveryStatus;
-  String? _paymentStatus;
-  String? _createdAt;
-  String? _updatedAt;
-  int? _shippingMethodId;
-  String? _variant;
-  int? _refundReq;
+  dynamic _deliveryStatus;
+  dynamic _paymentStatus;
+  dynamic _createdAt;
+  dynamic _updatedAt;
+  dynamic _shippingMethodId;
+  dynamic _variant;
+  dynamic _refundReq;
   Seller? _seller;
   List<VerificationImages>? verificationImages;
   Order? order;
@@ -37,24 +37,24 @@ class OrderDetailsModel {
 
 
   OrderDetailsModel(
-      {int? id,
-        int? orderId,
-        int? productId,
-        int? sellerId,
-        String? digitalFileAfterSell,
+      {dynamic id,
+        dynamic orderId,
+        dynamic productId,
+        dynamic sellerId,
+        dynamic digitalFileAfterSell,
         Product? productDetails,
-        int? qty,
+        dynamic qty,
         double? price,
         double? tax,
-        String? taxModel,
+        dynamic taxModel,
         double? discount,
-        String? deliveryStatus,
-        String? paymentStatus,
-        String? createdAt,
-        String? updatedAt,
-        int? shippingMethodId,
-        String? variant,
-        int? refundReq,
+        dynamic deliveryStatus,
+        dynamic paymentStatus,
+        dynamic createdAt,
+        dynamic updatedAt,
+        dynamic shippingMethodId,
+        dynamic variant,
+        dynamic refundReq,
         Seller? seller,
         List<VerificationImages>? verificationImages,
         Order? order,
@@ -98,24 +98,24 @@ class OrderDetailsModel {
 
   }
 
-  int? get id => _id;
-  int? get orderId => _orderId;
-  int? get productId => _productId;
-  int? get sellerId => _sellerId;
-  String? get digitalFileAfterSell => _digitalFileAfterSell;
+  dynamic get id => _id;
+  dynamic get orderId => _orderId;
+  dynamic get productId => _productId;
+  dynamic get sellerId => _sellerId;
+  dynamic get digitalFileAfterSell => _digitalFileAfterSell;
   Product? get productDetails => _productDetails;
-  int? get qty => _qty;
+  dynamic get qty => _qty;
   double? get price => _price;
   double? get tax => _tax;
-  String? get taxModel => _taxModel;
+  dynamic get taxModel => _taxModel;
   double? get discount => _discount;
-  String? get deliveryStatus => _deliveryStatus;
-  String? get paymentStatus => _paymentStatus;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-  int? get shippingMethodId => _shippingMethodId;
-  String? get variant => _variant;
-  int? get refundReq => _refundReq;
+  dynamic get deliveryStatus => _deliveryStatus;
+  dynamic get paymentStatus => _paymentStatus;
+  dynamic get createdAt => _createdAt;
+  dynamic get updatedAt => _updatedAt;
+  dynamic get shippingMethodId => _shippingMethodId;
+  dynamic get variant => _variant;
+  dynamic get refundReq => _refundReq;
   Seller? get seller => _seller;
   Review? get reviewModel => _reviewData;
   double? get bringChangeAmount => _bringChangeAmount;
@@ -183,12 +183,12 @@ class OrderDetailsModel {
 
 
 class VerificationImages {
-  int? id;
-  int? orderId;
-  String? image;
+  dynamic id;
+  dynamic orderId;
+  dynamic image;
   ImageFullUrl? imageFullUrl;
-  String? createdAt;
-  String? updatedAt;
+  dynamic createdAt;
+  dynamic updatedAt;
 
   VerificationImages(
       {this.id, this.orderId, this.image, this.imageFullUrl, this.createdAt, this.updatedAt});
@@ -207,9 +207,9 @@ class VerificationImages {
 }
 
 class Order {
-  int? isShippingFree;
-  String? sellerIs;
-  String? status;
+  dynamic isShippingFree;
+  dynamic sellerIs;
+  dynamic status;
 
   Order({this.isShippingFree, this.sellerIs, this.status});
 

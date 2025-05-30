@@ -1,7 +1,7 @@
 class ImageFullUrl {
-  String? key;
-  String? path;
-  int? status;
+  dynamic key;
+  dynamic path;
+  dynamic status;
 
   ImageFullUrl({this.key, this.path, this.status});
 

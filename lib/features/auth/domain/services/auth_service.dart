@@ -31,7 +31,7 @@ class AuthService implements AuthServiceInterface{
   }
 
   @override
-  String? getGuestIdToken() {
+  dynamic getGuestIdToken() {
     return authRepoInterface.getGuestIdToken();
   }
 
@@ -61,7 +61,7 @@ class AuthService implements AuthServiceInterface{
   }
 
   @override
-  Future login(String? userInput, String? password, String? type) {
+  Future login(dynamic userInput, dynamic password, dynamic type) {
     return authRepoInterface.login(userInput, password, type);
   }
 
@@ -161,13 +161,13 @@ class AuthService implements AuthServiceInterface{
   }
 
   @override
-  Future registerWithOtp(String name, {String? email, required String phone}) {
+  Future registerWithOtp(String name, {dynamic email, required String phone}) {
     return authRepoInterface.registerWithOtp(name, email: email, phone: phone);
   }
 
 
   @override
-  Future registerWithSocialMedia(String name, {required String email,String? phone})  {
+  Future registerWithSocialMedia(String name, {required String email,dynamic phone})  {
     return authRepoInterface.registerWithSocialMedia(name, email: email, phone: phone);
   }
 

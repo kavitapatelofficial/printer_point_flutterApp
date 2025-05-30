@@ -1,18 +1,18 @@
 import 'package:flutter_sixvalley_ecommerce/data/model/image_full_url.dart';
 
 class MostDemandedProductModel {
-  int? id;
-  String? banner;
+  dynamic id;
+  dynamic banner;
   ImageFullUrl? bannerFullUrl;
-  int? productId;
-  int? status;
-  String? createdAt;
-  String? updatedAt;
-  String? slug;
-  int? reviewCount;
-  int? orderCount;
-  int? deliveryCount;
-  int? wishlistCount;
+  dynamic productId;
+  dynamic status;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic slug;
+  dynamic reviewCount;
+  dynamic orderCount;
+  dynamic deliveryCount;
+  dynamic wishlistCount;
 
   MostDemandedProductModel(
       {this.id,

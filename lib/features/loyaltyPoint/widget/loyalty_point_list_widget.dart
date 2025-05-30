@@ -20,7 +20,7 @@
 //       if(scrollController!.position.maxScrollExtent == scrollController!.position.pixels
 //           && Provider.of<LoyaltyPointController>(context, listen: false).loyaltyPointList.isNotEmpty
 //           && !Provider.of<LoyaltyPointController>(context, listen: false).isLoading) {
-//         int? pageSize;
+//         dynamic pageSize;
 //         pageSize = Provider.of<LoyaltyPointController>(context, listen: false).loyaltyPointPageSize;
 //
 //         if(offset < pageSize!) {

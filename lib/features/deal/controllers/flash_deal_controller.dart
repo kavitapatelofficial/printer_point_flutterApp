@@ -24,8 +24,8 @@ class FlashDealController extends ChangeNotifier {
   FlashDealModel? get flashDeal => _flashDeal;
   List<Product> get flashDealList => _flashDealList;
   Duration? get duration => _duration;
-  int? _currentIndex;
-  int? get currentIndex => _currentIndex;
+  dynamic _currentIndex;
+  dynamic get currentIndex => _currentIndex;
 
   Future<void> getFlashDealList(bool reload, bool notify) async {
 

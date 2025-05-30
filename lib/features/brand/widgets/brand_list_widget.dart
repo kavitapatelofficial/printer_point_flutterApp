@@ -44,62 +44,92 @@ class _BrandListWidgetState extends State<BrandListWidget> {
                                                     isBrand: true,
                                                     id: brand.id,
                                                     name: brand.name,
-                                                    image: brand
-                                                        .imageFullUrl?.path)));
+                                                    image: brand.imageFullUrl
+                                                                ?.status ==
+                                                            200
+                                                        ? brand
+                                                            .imageFullUrl?.path
+                                                        : brand.imageFullUrl
+                                                            ?.key!)));
                                   },
-                                  child: Padding(
-                                    padding: EdgeInsets.only(
-                                        left:
-                                            Provider.of<LocalizationController>(
-                                                        context,
-                                                        listen: false)
-                                                    .isLtr
-                                                ? Dimensions.paddingSizeDefault
-                                                : 0,
-                                        right: brandProvider.brandList.length ==
-                                                brandProvider.brandList
-                                                        .indexOf(brand) +
-                                                    1
-                                            ? Dimensions.paddingSizeDefault
-                                            : Provider.of<LocalizationController>(
-                                                        context,
-                                                        listen: false)
-                                                    .isLtr
-                                                ? 0
-                                                : Dimensions
-                                                    .paddingSizeDefault),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        Container(
-                                          width: ResponsiveHelper.isTab(context)
-                                              ? 120
-                                              : 80,
-                                          height:
-                                              ResponsiveHelper.isTab(context)
-                                                  ? 120
-                                                  : 80,
-                                          decoration: BoxDecoration(
-                                            color: Color(
-                                                0xFFF8F8FF), // Assuming --ghost-white (you can adjust)
-                                            border: Border.all(
+                                  child: Container(
+                                    margin: EdgeInsets.all(4),
+                                    padding:
+                                        const EdgeInsets.fromLTRB(5, 5, 5, 3),
+                                    constraints: BoxConstraints(
+                                      maxWidth:
+                                          MediaQuery.of(context).size.width *
+                                                  0.333 -
+                                              10,
+                                      minHeight: 100,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: Color(
+                                          0xFFF8F8FF), // Assuming --ghost-white (you can adjust)
+                                      border: Border.all(
+                                        color: Color(
+                                            0xFFE5E4E2), // Assuming --platinum (adjust as needed)
+                                        width: 1,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsets.only(
+                                          left:
+                                              Provider.of<LocalizationController>(
+                                                          context,
+                                                          listen: false)
+                                                      .isLtr
+                                                  ? Dimensions
+                                                      .paddingSizeDefault
+                                                  : 0,
+                                          right: brandProvider
+                                                      .brandList.length ==
+                                                  brandProvider.brandList
+                                                          .indexOf(brand) +
+                                                      1
+                                              ? Dimensions.paddingSizeDefault
+                                              : Provider.of<LocalizationController>(
+                                                          context,
+                                                          listen: false)
+                                                      .isLtr
+                                                  ? 0
+                                                  : Dimensions
+                                                      .paddingSizeDefault),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            width:
+                                                ResponsiveHelper.isTab(context)
+                                                    ? 120
+                                                    : 80,
+                                            height:
+                                                ResponsiveHelper.isTab(context)
+                                                    ? 120
+                                                    : 80,
+                                            decoration: BoxDecoration(
                                               color: Color(
-                                                  0xFFE5E4E2), // Assuming --platinum (adjust as needed)
-                                              width: 1,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8),
-                                          ),
-                                          child: ClipRRect(
+                                                  0xFFF8F8FF), // Assuming --ghost-white (you can adjust)
+                                              border: Border.all(
+                                                color: Color(
+                                                    0xFFE5E4E2), // Assuming --platinum (adjust as needed)
+                                                width: 1,
+                                              ),
                                               borderRadius:
-                                                  const BorderRadius.all(
-                                                      Radius.circular(5)),
-                                              child: CustomImageWidget(
-                                                  image:
-                                                      '${brand.imageFullUrl?.path!}')),
-                                        ),
-                                      ],
+                                                  BorderRadius.circular(8),
+                                            ),
+                                            child: ClipRRect(
+                                                borderRadius:
+                                                    const BorderRadius.all(
+                                                        Radius.circular(5)),
+                                                child: CustomImageWidget(
+                                                    image:
+                                                        '${brand.imageFullUrl?.status == 200 ? brand.imageFullUrl?.path : brand.imageFullUrl?.key!}')),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ))
@@ -110,17 +140,17 @@ class _BrandListWidgetState extends State<BrandListWidget> {
                         scrollController: _scrollController,
                         totalSize: brandProvider.brandModel?.totalSize,
                         offset: brandProvider.brandModel?.offset,
-                        onPaginate: (int? offset) async {
+                        onPaginate: (dynamic offset) async {
                           await brandProvider.getBrandList(false,
                               offset: offset!);
                         },
                         itemView: GridView.builder(
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 4,
-                                  childAspectRatio: (1 / 1.3),
-                                  mainAxisSpacing: 10,
-                                  crossAxisSpacing: 5),
+                                  crossAxisCount: 3,
+                                  childAspectRatio: (1 / 0.98),
+                                  mainAxisSpacing: 15,
+                                  crossAxisSpacing: 15),
                           padding: EdgeInsets.zero,
                           itemCount: brandProvider.brandList.length,
                           shrinkWrap: true,
@@ -139,32 +169,57 @@ class _BrandListWidgetState extends State<BrandListWidget> {
                                                 name: brandProvider
                                                     .brandList[index].name,
                                                 image: brandProvider
-                                                    .brandList[index]
-                                                    .imageFullUrl
-                                                    ?.path)));
+                                                            .brandList[index]
+                                                            .imageFullUrl
+                                                            ?.status ==
+                                                        200
+                                                    ? brandProvider
+                                                        .brandList[index]
+                                                        .imageFullUrl
+                                                        ?.path
+                                                    : brandProvider
+                                                        .brandList[index]
+                                                        .imageFullUrl
+                                                        ?.key)));
                               },
                               child: Container(
+                                padding: const EdgeInsets.fromLTRB(5, 5, 5, 3),
+                                constraints: BoxConstraints(
+                                  maxWidth: MediaQuery.of(context).size.width *
+                                          0.333 -
+                                      10,
+                                  minHeight: 100,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Color(
+                                      0xFFF8F8FF), // Assuming --ghost-white (you can adjust)
+                                  border: Border.all(
+                                    color: Color(
+                                        0xFFE5E4E2), // Assuming --platinum (adjust as needed)
+                                    width: 1,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
                                 child: Column(
                                   crossAxisAlignment:
                                       CrossAxisAlignment.stretch,
                                   children: [
                                     Expanded(
                                         child: Container(
-                                          decoration: BoxDecoration(
-                                            color: const Color(
-                                                0xFFF8F8FF), // Assuming --ghost-white (you can adjust)
-                                            border: Border.all(
-                                              color: const Color(
-                                                  0xFFE5E4E2), // Assuming --platinum (adjust as needed)
-                                              width: 1,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8),
-                                          ),
-                                          child: CustomImageWidget(
-                                              image:
-                                                  '${brandProvider.brandList[index].imageFullUrl?.path!}'),
-                                        )),
+                                      decoration: BoxDecoration(
+                                        color: const Color(
+                                            0xFFF8F8FF), // Assuming --ghost-white (you can adjust)
+                                        border: Border.all(
+                                          color: const Color(
+                                              0xFFE5E4E2), // Assuming --platinum (adjust as needed)
+                                          width: 1,
+                                        ),
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      child: CustomImageWidget(
+                                          image:
+                                              '${brandProvider.brandList[index].imageFullUrl?.status == 200 ? brandProvider.brandList[index].imageFullUrl?.path : brandProvider.brandList[index].imageFullUrl?.key}'),
+                                    )),
                                     SizedBox(
                                         height:
                                             (MediaQuery.of(context).size.width /

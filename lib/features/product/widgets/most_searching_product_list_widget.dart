@@ -33,7 +33,7 @@ class _MostSearchingProductListWidgetState extends State<MostSearchingProductLis
               totalSize: productController.mostSearchingProduct!.totalSize,
               offset: (productController.mostSearchingProduct != null && productController.mostSearchingProduct!.offset != null) ?
               int.parse(productController.mostSearchingProduct!.offset.toString()) : null,
-              onPaginate: (int? offset) async {
+              onPaginate: (dynamic offset) async {
                 await productController.getMostSearchingProduct(offset!);
               },
 

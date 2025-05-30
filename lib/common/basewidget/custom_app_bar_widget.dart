@@ -5,7 +5,7 @@ import 'package:flutter_sixvalley_ecommerce/utill/dimensions.dart';
 import 'package:flutter_sixvalley_ecommerce/utill/images.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final String? title;
+  final dynamic title;
   final bool isBackButtonExist;
   final bool showActionButton;
   final Function()? onBackPressed;

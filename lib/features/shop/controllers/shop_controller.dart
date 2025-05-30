@@ -17,11 +17,11 @@ class ShopController extends ChangeNotifier {
   final ShopServiceInterface? shopServiceInterface;
   ShopController({required this.shopServiceInterface});
 
-  String? _searchText;
-  String? get searchText => _searchText;
+  dynamic _searchText;
+  dynamic get searchText => _searchText;
 
-  String? shopName;
-  void setShopName(String? name, {bool notify = true}){
+  dynamic shopName;
+  void setShopName(dynamic name, {bool notify = true}){
     shopName = name;
     if(notify){
       notifyListeners();
@@ -254,12 +254,12 @@ class ShopController extends ChangeNotifier {
   Future <ApiResponse> getClearanceSearchProduct(String sellerId, int offset, String productId, {
     bool reload = true,
     String search = '',
-    String? categoryIds = '[]',
-    String? brandIds = '[]',
-    String? authorIds = '[]',
-    String? publishingIds = '[]',
-    String? productType = 'all',
-    String? offerType = 'clearance_sale',
+    dynamic categoryIds = '[]',
+    dynamic brandIds = '[]',
+    dynamic authorIds = '[]',
+    dynamic publishingIds = '[]',
+    dynamic productType = 'all',
+    dynamic offerType = 'clearance_sale',
     bool fromPaginantion = false
   }) async {
 
@@ -298,8 +298,8 @@ class ShopController extends ChangeNotifier {
   }
 
 
-  int? _clearanceSaleProductSelectedIndex;
-  int? get clearanceSaleProductSelectedIndex => _clearanceSaleProductSelectedIndex;
+  dynamic _clearanceSaleProductSelectedIndex;
+  dynamic get clearanceSaleProductSelectedIndex => _clearanceSaleProductSelectedIndex;
 
   void changeSelectedIndex(int selectedIndex) {
     _clearanceSaleProductSelectedIndex = selectedIndex;
@@ -307,7 +307,7 @@ class ShopController extends ChangeNotifier {
   }
 
 
-  void setSearchText(String? value, {bool isUpdate = true}) {
+  void setSearchText(dynamic value, {bool isUpdate = true}) {
     _searchText = value;
   }
 

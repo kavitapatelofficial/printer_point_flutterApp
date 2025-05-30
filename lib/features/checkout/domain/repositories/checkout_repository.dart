@@ -19,15 +19,15 @@ class CheckoutRepository implements CheckoutRepositoryInterface{
 
   @override
   Future<ApiResponse> cashOnDeliveryPlaceOrder(
-      {String? addressID,
-        String? couponCode,
-        String? couponDiscountAmount,
-        String? billingAddressId,
-        String? orderNote,
+      {dynamic addressID,
+        dynamic couponCode,
+        dynamic couponDiscountAmount,
+        dynamic billingAddressId,
+        dynamic orderNote,
         bool? isCheckCreateAccount,
-        String? password,
+        dynamic password,
         double? cashChangeAmount,
-        String? currentCurrencyCode,
+        dynamic currentCurrencyCode,
       }) async {
     try {
       // Build query parameters map
@@ -57,7 +57,7 @@ class CheckoutRepository implements CheckoutRepositoryInterface{
 
 
   @override
-  Future<ApiResponse> offlinePaymentPlaceOrder(String? addressID, String? couponCode, String? couponDiscountAmount, String? billingAddressId, String? orderNote, List <String?> typeKey, List<String> typeValue, int? id, String name, String? paymentNote, bool? isCheckCreateAccount, String? password) async {
+  Future<ApiResponse> offlinePaymentPlaceOrder(dynamic addressID, dynamic couponCode, dynamic couponDiscountAmount, dynamic billingAddressId, dynamic orderNote, List <String?> typeKey, List<String> typeValue, dynamic id, String name, dynamic paymentNote, bool? isCheckCreateAccount, dynamic password) async {
     try {
       Map<String?, String> fields = {};
       Map<String?, String> info = {};
@@ -92,7 +92,7 @@ class CheckoutRepository implements CheckoutRepositoryInterface{
 
 
   @override
-  Future<ApiResponse> walletPaymentPlaceOrder(String? addressID, String? couponCode,String? couponDiscountAmount, String? billingAddressId, String? orderNote, bool? isCheckCreateAccount, String? password) async {
+  Future<ApiResponse> walletPaymentPlaceOrder(dynamic addressID, dynamic couponCode,dynamic couponDiscountAmount, dynamic billingAddressId, dynamic orderNote, bool? isCheckCreateAccount, dynamic password) async {
     int isCheckAccount = isCheckCreateAccount! ? 1: 0;
     try {
       final response = await dioClient!.get('${AppConstants.walletPayment}?address_id=$addressID&coupon_code=$couponCode&coupon_discount=$couponDiscountAmount&billing_address_id=$billingAddressId&order_note=$orderNote&guest_id=${Provider.of<AuthController>(Get.context!, listen: false).getGuestToken()}&is_guest=${Provider.of<AuthController>(Get.context!, listen: false).isLoggedIn()? 0 :1}&is_check_create_account=$isCheckAccount&password=$password',);
@@ -115,15 +115,15 @@ class CheckoutRepository implements CheckoutRepositoryInterface{
 
   @override
   Future<ApiResponse> digitalPaymentPlaceOrder(
-      String? orderNote,
-      String? customerId,
-      String? addressId,
-      String? billingAddressId,
-      String? couponCode,
-      String? couponDiscount,
-      String? paymentMethod,
+      dynamic orderNote,
+      dynamic customerId,
+      dynamic addressId,
+      dynamic billingAddressId,
+      dynamic couponCode,
+      dynamic couponDiscount,
+      dynamic paymentMethod,
       bool? isCheckCreateAccount,
-      String? password
+      dynamic password
       ) async {
 
     try {
@@ -171,7 +171,7 @@ class CheckoutRepository implements CheckoutRepositoryInterface{
   }
 
   @override
-  Future getList({int? offset}) {
+  Future getList({dynamic offset}) {
     // TODO: implement getList
     throw UnimplementedError();
   }

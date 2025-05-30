@@ -3,62 +3,62 @@ import 'package:flutter_sixvalley_ecommerce/features/product/domain/models/produ
 import 'package:flutter_sixvalley_ecommerce/features/shop/domain/models/seller_model.dart';
 
 class ProductDetailsModel {
-  int? _id;
-  String? _addedBy;
-  int? _userId;
-  String? _name;
-  String? _slug;
-  String? _productType;
+  dynamic _id;
+  dynamic _addedBy;
+  dynamic _userId;
+  dynamic _name;
+  dynamic _slug;
+  dynamic _productType;
   List<CategoryIds>? _categoryIds;
-  int? _brandId;
-  String? _unit;
-  int? _minQty;
-  int? _refundable;
-  String? _digitalProductType;
-  String? _digitalFileReady;
+  dynamic _brandId;
+  dynamic _unit;
+  dynamic _minQty;
+  dynamic _refundable;
+  dynamic _digitalProductType;
+  dynamic _digitalFileReady;
   List<String>? _images;
   List<ImageFullUrl>? _imagesFullUrl;
   List<ColorImage>? _colorImage;
   List<ColorImagesFullUrl>? _colorImagesFullUrl;
-  String? _thumbnail;
+  dynamic _thumbnail;
   ImageFullUrl? _thumbnailFullUrl;
-  int? _featured;
-  String? _videoProvider;
-  String? _videoUrl;
+  dynamic _featured;
+  dynamic _videoProvider;
+  dynamic _videoUrl;
   List<ColorModel>? _colors;
-  int? _variantProduct;
+  dynamic _variantProduct;
   List<int>? _attributes;
   List<ChoiceOptions>? _choiceOptions;
   List<Variation>? _variation;
-  int? _published;
+  dynamic _published;
   double? _unitPrice;
   double? _purchasePrice;
   double? _tax;
-  String? _taxModel;
-  String? _taxType;
+  dynamic _taxModel;
+  dynamic _taxType;
   double? _discount;
-  String? _discountType;
-  int? _currentStock;
-  int? _minimumOrderQty;
-  String? _details;
-  int? _freeShipping;
-  String? _createdAt;
-  String? _updatedAt;
-  int? _status;
-  int? _featuredStatus;
-  String? _metaTitle;
-  String? _metaDescription;
-  String? _metaImage;
-  int? _requestStatus;
-  String? _deniedNote;
+  dynamic _discountType;
+  dynamic _currentStock;
+  dynamic _minimumOrderQty;
+  dynamic _details;
+  dynamic _freeShipping;
+  dynamic _createdAt;
+  dynamic _updatedAt;
+  dynamic _status;
+  dynamic _featuredStatus;
+  dynamic _metaTitle;
+  dynamic _metaDescription;
+  dynamic _metaImage;
+  dynamic _requestStatus;
+  dynamic _deniedNote;
   double? _shippingCost;
-  int? _multiplyQty;
-  String? _code;
-  int? _reviewsCount;
-  String? _averageReview;
+  dynamic _multiplyQty;
+  dynamic _code;
+  dynamic _reviewsCount;
+  dynamic _averageReview;
   List<Reviews>? _reviews;
   Seller? _seller;
-  int? wishList;
+  dynamic wishList;
   List<String>? _digitalProductFileTypes;
   Map<String, dynamic>? _digitalProductExtensions;
   List<DigitalVariation>? _digitalVariation;
@@ -68,66 +68,66 @@ class ProductDetailsModel {
   List<String?>? _publishingHouse;
 
   List<String?>? restockRequestedList;
-  int? isRestockRequested;
+  dynamic isRestockRequested;
   ClearanceSale? clearanceSale;
 
   ProductDetailsModel(
-      {int? id,
-        String? addedBy,
-        int? userId,
-        String? name,
-        String? slug,
-        String? productType,
+      {dynamic id,
+        dynamic addedBy,
+        dynamic userId,
+        dynamic name,
+        dynamic slug,
+        dynamic productType,
         List<CategoryIds>? categoryIds,
-        int? brandId,
-        String? unit,
-        int? minQty,
-        int? refundable,
-        String? digitalProductType,
-        String? digitalFileReady,
+        dynamic brandId,
+        dynamic unit,
+        dynamic minQty,
+        dynamic refundable,
+        dynamic digitalProductType,
+        dynamic digitalFileReady,
         List<String>? images,
         List<ImageFullUrl>? imagesFullUrl,
         List<ColorImage>? colorImage,
         List<ColorImagesFullUrl>? colorImagesFullUrl,
-        String? thumbnail,
+        dynamic thumbnail,
         ImageFullUrl? thumbnailFullUrl,
-        int? featured,
-        String? videoProvider,
-        String? videoUrl,
+        dynamic featured,
+        dynamic videoProvider,
+        dynamic videoUrl,
         List<ColorModel>? colors,
-        int? variantProduct,
+        dynamic variantProduct,
         List<int>? attributes,
         List<ChoiceOptions>? choiceOptions,
         List<Variation>? variation,
-        int? published,
+        dynamic published,
         double? unitPrice,
         double? purchasePrice,
         double? tax,
-        String? taxModel,
-        String? taxType,
+        dynamic taxModel,
+        dynamic taxType,
         double? discount,
-        String? discountType,
-        int? currentStock,
-        int? minimumOrderQty,
-        String? details,
-        int? freeShipping,
-        String? createdAt,
-        String? updatedAt,
-        int? status,
-        int? featuredStatus,
-        String? metaTitle,
-        String? metaDescription,
-        String? metaImage,
-        int? requestStatus,
-        String? deniedNote,
+        dynamic discountType,
+        dynamic currentStock,
+        dynamic minimumOrderQty,
+        dynamic details,
+        dynamic freeShipping,
+        dynamic createdAt,
+        dynamic updatedAt,
+        dynamic status,
+        dynamic featuredStatus,
+        dynamic metaTitle,
+        dynamic metaDescription,
+        dynamic metaImage,
+        dynamic requestStatus,
+        dynamic deniedNote,
         double? shippingCost,
-        int? multiplyQty,
-        String? code,
-        int? reviewsCount,
-        String? averageReview,
+        dynamic multiplyQty,
+        dynamic code,
+        dynamic reviewsCount,
+        dynamic averageReview,
         List<Reviews>? reviews,
         Seller? seller,
-        int? wishList,
+        dynamic wishList,
         List<String>? digitalProductFileTypes,
         Map<String, dynamic>? digitalProductExtensions,
         List<DigitalVariation>? digitalVariation,
@@ -336,59 +336,59 @@ class ProductDetailsModel {
     clearanceSale;
   }
 
-  int? get id => _id;
-  String? get addedBy => _addedBy;
-  int? get userId => _userId;
-  String? get name => _name;
-  String? get slug => _slug;
-  String? get productType => _productType;
+  dynamic get id => _id;
+  dynamic get addedBy => _addedBy;
+  dynamic get userId => _userId;
+  dynamic get name => _name;
+  dynamic get slug => _slug;
+  dynamic get productType => _productType;
   List<CategoryIds>? get categoryIds => _categoryIds;
-  int? get brandId => _brandId;
-  String? get unit => _unit;
-  int? get minQty => _minQty;
-  int? get refundable => _refundable;
-  String? get digitalProductType => _digitalProductType;
-  String? get digitalFileReady => _digitalFileReady;
+  dynamic get brandId => _brandId;
+  dynamic get unit => _unit;
+  dynamic get minQty => _minQty;
+  dynamic get refundable => _refundable;
+  dynamic get digitalProductType => _digitalProductType;
+  dynamic get digitalFileReady => _digitalFileReady;
   List<String>? get images => _images;
   List<ImageFullUrl>? get imagesFullUrl => _imagesFullUrl;
   List<ColorImage>? get colorImage => _colorImage;
   List<ColorImagesFullUrl>? get colorImagesFullUrl => _colorImagesFullUrl;
-  String? get thumbnail => _thumbnail;
+  dynamic get thumbnail => _thumbnail;
   ImageFullUrl? get thumbnailFullUrl => _thumbnailFullUrl;
-  int? get featured => _featured;
-  String? get videoProvider => _videoProvider;
-  String? get videoUrl => _videoUrl;
+  dynamic get featured => _featured;
+  dynamic get videoProvider => _videoProvider;
+  dynamic get videoUrl => _videoUrl;
   List<ColorModel>? get colors => _colors;
-  int? get variantProduct => _variantProduct;
+  dynamic get variantProduct => _variantProduct;
   List<int>? get attributes => _attributes;
   List<ChoiceOptions>? get choiceOptions => _choiceOptions;
   List<Variation>? get variation => _variation;
-  int? get published => _published;
+  dynamic get published => _published;
   double? get unitPrice => _unitPrice;
   double? get purchasePrice => _purchasePrice;
   double? get tax => _tax;
-  String? get taxModel => _taxModel;
-  String? get taxType => _taxType;
+  dynamic get taxModel => _taxModel;
+  dynamic get taxType => _taxType;
   double? get discount => _discount;
-  String? get discountType => _discountType;
-  int? get currentStock => _currentStock;
-  int? get minimumOrderQty => _minimumOrderQty;
-  String? get details => _details;
-  int? get freeShipping => _freeShipping;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-  int? get status => _status;
-  int? get featuredStatus => _featuredStatus;
-  String? get metaTitle => _metaTitle;
-  String? get metaDescription => _metaDescription;
-  String? get metaImage => _metaImage;
-  int? get requestStatus => _requestStatus;
-  String? get deniedNote => _deniedNote;
+  dynamic get discountType => _discountType;
+  dynamic get currentStock => _currentStock;
+  dynamic get minimumOrderQty => _minimumOrderQty;
+  dynamic get details => _details;
+  dynamic get freeShipping => _freeShipping;
+  dynamic get createdAt => _createdAt;
+  dynamic get updatedAt => _updatedAt;
+  dynamic get status => _status;
+  dynamic get featuredStatus => _featuredStatus;
+  dynamic get metaTitle => _metaTitle;
+  dynamic get metaDescription => _metaDescription;
+  dynamic get metaImage => _metaImage;
+  dynamic get requestStatus => _requestStatus;
+  dynamic get deniedNote => _deniedNote;
   double? get shippingCost => _shippingCost;
-  int? get multiplyQty => _multiplyQty;
-  String? get code => _code;
-  int? get reviewsCount => _reviewsCount;
-  String? get averageReview => _averageReview;
+  dynamic get multiplyQty => _multiplyQty;
+  dynamic get code => _code;
+  dynamic get reviewsCount => _reviewsCount;
+  dynamic get averageReview => _averageReview;
   List<Reviews>? get reviews => _reviews;
   Seller? get seller => _seller;
   List<String>? get digitalProductFileTypes => _digitalProductFileTypes;
@@ -575,10 +575,10 @@ class ProductDetailsModel {
 }
 
 class CategoryIds {
-  String? _id;
-  int? _position;
+  dynamic _id;
+  dynamic _position;
 
-  CategoryIds({String? id, int? position}) {
+  CategoryIds({dynamic id, dynamic position}) {
     if (id != null) {
       _id = id;
     }
@@ -587,8 +587,8 @@ class CategoryIds {
     }
   }
 
-  String? get id => _id;
-  int? get position => _position;
+  dynamic get id => _id;
+  dynamic get position => _position;
 
 
   CategoryIds.fromJson(Map<String, dynamic> json) {
@@ -605,11 +605,11 @@ class CategoryIds {
 }
 
 class ColorModel {
-  String? _name;
-  String? _code;
+  dynamic _name;
+  dynamic _code;
 
-  String? get name => _name;
-  String? get code => _code;
+  dynamic get name => _name;
+  dynamic get code => _code;
 
 
   ColorModel.fromJson(Map<String, dynamic> json) {
@@ -628,29 +628,29 @@ class ColorModel {
 
 
 class Reviews {
-  int? _id;
-  int? _productId;
-  int? _customerId;
-  String? _comment;
-  String? _attachment;
-  int? _rating;
-  int? _status;
-  String? _createdAt;
-  String? _updatedAt;
+  dynamic _id;
+  dynamic _productId;
+  dynamic _customerId;
+  dynamic _comment;
+  dynamic _attachment;
+  dynamic _rating;
+  dynamic _status;
+  dynamic _createdAt;
+  dynamic _updatedAt;
   Customer? _customer;
   List<ImageFullUrl>? _attachmentFullUrl;
 
 
   Reviews(
-      {int? id,
-        int? productId,
-        int? customerId,
-        String? comment,
-        String? attachment,
-        int? rating,
-        int? status,
-        String? createdAt,
-        String? updatedAt,
+      {dynamic id,
+        dynamic productId,
+        dynamic customerId,
+        dynamic comment,
+        dynamic attachment,
+        dynamic rating,
+        dynamic status,
+        dynamic createdAt,
+        dynamic updatedAt,
         Customer? customer,
         List<ImageFullUrl>? attachmentFullUrl}) {
     if (id != null) {
@@ -688,15 +688,15 @@ class Reviews {
     }
   }
 
-  int? get id => _id;
-  int? get productId => _productId;
-  int? get customerId => _customerId;
-  String? get comment => _comment;
-  String? get attachment => _attachment;
-  int? get rating => _rating;
-  int? get status => _status;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
+  dynamic get id => _id;
+  dynamic get productId => _productId;
+  dynamic get customerId => _customerId;
+  dynamic get comment => _comment;
+  dynamic get attachment => _attachment;
+  dynamic get rating => _rating;
+  dynamic get status => _status;
+  dynamic get createdAt => _createdAt;
+  dynamic get updatedAt => _updatedAt;
   Customer? get customer => _customer;
   List<ImageFullUrl>? get attachmentFullUrl => _attachmentFullUrl;
 
@@ -744,20 +744,20 @@ class Reviews {
 }
 
 class Customer {
-  int? _id;
-  String? _fName;
-  String? _lName;
-  String? _phone;
-  String? _image;
-  String? _email;
+  dynamic _id;
+  dynamic _fName;
+  dynamic _lName;
+  dynamic _phone;
+  dynamic _image;
+  dynamic _email;
 
   Customer(
-      {int? id,
-        String? fName,
-        String? lName,
-        String? phone,
-        String? image,
-        String? email,
+      {dynamic id,
+        dynamic fName,
+        dynamic lName,
+        dynamic phone,
+        dynamic image,
+        dynamic email,
       }) {
     if (id != null) {
       _id = id;
@@ -780,12 +780,12 @@ class Customer {
 
   }
 
-  int? get id => _id;
-  String? get fName => _fName;
-  String? get lName => _lName;
-  String? get phone => _phone;
-  String? get image => _image;
-  String? get email => _email;
+  dynamic get id => _id;
+  dynamic get fName => _fName;
+  dynamic get lName => _lName;
+  dynamic get phone => _phone;
+  dynamic get image => _image;
+  dynamic get email => _email;
 
 
   Customer.fromJson(Map<String, dynamic> json) {
@@ -813,10 +813,10 @@ class Customer {
 
 
 class ColorImage {
-  String? color;
-  String? imageName;
+  dynamic color;
+  dynamic imageName;
 
-  ColorImage({String? color, String? imageName}) {
+  ColorImage({dynamic color, dynamic imageName}) {
     if (color != null) {
       color = color;
     }
@@ -834,7 +834,7 @@ class ColorImage {
 
 
 class ColorImagesFullUrl {
-  String? color;
+  dynamic color;
   ImageFullUrl? imageName;
 
   ColorImagesFullUrl({this.color, this.imageName});
@@ -858,14 +858,14 @@ class ColorImagesFullUrl {
 
 
 class DigitalVariation {
-  int? id;
-  int? productId;
-  String? variantKey;
-  String? sku;
-  int? price;
-  String? file;
-  String? createdAt;
-  String? updatedAt;
+  dynamic id;
+  dynamic productId;
+  dynamic variantKey;
+  dynamic sku;
+  dynamic price;
+  dynamic file;
+  dynamic createdAt;
+  dynamic updatedAt;
 
   DigitalVariation(
       {this.id,

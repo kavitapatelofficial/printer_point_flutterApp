@@ -7,17 +7,17 @@ class RefundService implements RefundServiceInterface{
   RefundService({required this.refundRepositoryInterface});
 
   @override
-  Future getRefundInfo(int? orderDetailsId) async{
+  Future getRefundInfo(dynamic orderDetailsId) async{
     return await refundRepositoryInterface.getRefundInfo(orderDetailsId);
   }
 
   @override
-  Future getRefundResult(int? orderDetailsId) async{
+  Future getRefundResult(dynamic orderDetailsId) async{
     return refundRepositoryInterface.getRefundResult(orderDetailsId);
   }
 
   @override
-  Future refundRequest(int? orderDetailsId, double? amount, String refundReason, List<XFile?> file) async{
+  Future refundRequest(dynamic orderDetailsId, double? amount, String refundReason, List<XFile?> file) async{
     return await refundRepositoryInterface.refundRequest(orderDetailsId, amount, refundReason, file);
   }
 

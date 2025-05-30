@@ -13,8 +13,8 @@ import 'package:provider/provider.dart';
 
 class ShopAgainFromRecentStoreWidget extends StatelessWidget {
   final ShopAgainFromRecentStoreModel? shopAgainFromRecentStoreModel;
-  final int? length;
-  final int? index;
+  final dynamic length;
+  final dynamic index;
   const ShopAgainFromRecentStoreWidget({super.key, this.shopAgainFromRecentStoreModel, this.length,  this.index});
 
   @override
@@ -42,7 +42,7 @@ class ShopAgainFromRecentStoreWidget extends StatelessWidget {
                     border: Border.all(color: Theme.of(context).primaryColor.withOpacity(0.1), width: 1),
                     borderRadius: const BorderRadius.all(Radius.circular(Dimensions.radiusDefault))),
                   child: ClipRRect(borderRadius: BorderRadius.circular(Dimensions.paddingSizeSmall),
-                    child: CustomImageWidget(image: "${shopAgainFromRecentStoreModel?.thumbnail}"))),
+                    child: CustomImageWidget(image: "${shopAgainFromRecentStoreModel?.thumbnailFullUrl!.status==200?shopAgainFromRecentStoreModel?.thumbnailFullUrl!.path:shopAgainFromRecentStoreModel?.thumbnailFullUrl!.key}"))),
                 const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                 Text(PriceConverter.convertPrice(context, shopAgainFromRecentStoreModel?.unitPrice),

@@ -46,8 +46,8 @@ class AuthController with ChangeNotifier {
   bool _isActiveRememberMe = false;
   bool get isActiveRememberMe => _isActiveRememberMe;
 
-  String? _loginErrorMessage = '';
-  String? get loginErrorMessage => _loginErrorMessage;
+  dynamic _loginErrorMessage = '';
+  dynamic get loginErrorMessage => _loginErrorMessage;
 
   set setIsLoading(bool value)=> _isLoading = value;
   set setIsPhoneVerificationButttonLoading(bool value) => _isPhoneNumberVerificationButtonLoading = value;
@@ -59,8 +59,8 @@ class AuthController with ChangeNotifier {
   bool _sendToEmail = false;
   bool get sendToEmail => _sendToEmail;
 
-  String? _verificationMsg = '';
-  String? get verificationMessage => _verificationMsg;
+  dynamic _verificationMsg = '';
+  dynamic get verificationMessage => _verificationMsg;
 
   bool _isForgotPasswordLoading = false;
   bool get isForgotPasswordLoading => _isForgotPasswordLoading;
@@ -74,8 +74,8 @@ class AuthController with ChangeNotifier {
     }
   }
 
-  String? _verificationID = '';
-  String? get verificationID => _verificationID;
+  dynamic _verificationID = '';
+  dynamic get verificationID => _verificationID;
 
   updateSelectedIndex(int index, {bool notify = true}){
     _selectedIndex = index;
@@ -103,7 +103,7 @@ class AuthController with ChangeNotifier {
 
       _isLoading = false;
       Map map = apiResponse.response!.data;
-      String? message = '', token = '', temporaryToken= '', phone = '';
+      dynamic message = '', token = '', temporaryToken= '', phone = '';
       ProfileModel? profileModel;
       bool isPhoneVerified = false;
 
@@ -169,7 +169,7 @@ class AuthController with ChangeNotifier {
     _isLoading = false;
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {
       Map map = apiResponse.response!.data;
-      String? tempToken = '', token = '';
+      dynamic tempToken = '', token = '';
 
       if (map.containsKey('temporary_token')) {
         tempToken = map["temporary_token"];
@@ -221,13 +221,13 @@ class AuthController with ChangeNotifier {
 
 
 
-  Future<ResponseModel>  login (String? userInput, String? password, String? type, FromPage? fromPage) async {
+  Future<ResponseModel>  login (dynamic userInput, dynamic password, dynamic type, FromPage? fromPage) async {
     _isLoading = true;
     _loginErrorMessage = '';
     notifyListeners();
 
-    String? verificationType = type;
-    String? userInputData = userInput;
+    dynamic verificationType = type;
+    dynamic userInputData = userInput;
 
     ApiResponse apiResponse = await authServiceInterface.login(userInput, password, verificationType);
 
@@ -239,7 +239,7 @@ class AuthController with ChangeNotifier {
       clearGuestId();
       Map map = apiResponse.response!.data;
 
-      String? temporaryToken = '', token = '', email, phone;
+      dynamic temporaryToken = '', token = '', email, phone;
       // bool isPhoneVerified = false;
       // bool isMailVerified = false;
        bool isPhoneVerified = true;
@@ -331,7 +331,7 @@ class AuthController with ChangeNotifier {
     return apiResponse;
   }
 
-  Future<void> sendVerificationCode(ConfigModel config, SignUpModel signUpModel, {String? type, FromPage? fromPage}) async {
+  Future<void> sendVerificationCode(ConfigModel config, SignUpModel signUpModel, {dynamic type, FromPage? fromPage}) async {
     _resendButtonLoading = true;
 
     notifyListeners();
@@ -403,7 +403,7 @@ class AuthController with ChangeNotifier {
     //     }
 
     //   },
-    //   codeSent: (String vId, int? resendToken) async {
+    //   codeSent: (String vId, dynamic resendToken) async {
     //     _isPhoneNumberVerificationButtonLoading = false;
     //     _resendButtonLoading = false;
     //     notifyListeners();
@@ -528,8 +528,8 @@ class AuthController with ChangeNotifier {
 
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {
       Map map = apiResponse.response!.data;
-      String? token;
-      String? tempToken;
+      dynamic token;
+      dynamic tempToken;
 
 
       try{
@@ -557,14 +557,14 @@ class AuthController with ChangeNotifier {
     notifyListeners();
   }
 
-  Future<ResponseModel> registerWithOtp (String name, {String? email, required String phone}) async{
+  Future<ResponseModel> registerWithOtp (String name, {dynamic email, required String phone}) async{
     _isPhoneNumberVerificationButtonLoading = true;
     _loginErrorMessage = '';
     notifyListeners();
     ApiResponse apiResponse = await authServiceInterface.registerWithOtp(name, email: email, phone: phone);
     ResponseModel responseModel;
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {
-      String? token;
+      dynamic token;
       Map map = apiResponse.response!.data;
       if(map.containsKey('token')){
         token = map["token"];
@@ -622,7 +622,7 @@ class AuthController with ChangeNotifier {
     return (responseModel, tempToken);
   }
 
-  Future<(ResponseModel, String?)> registerWithSocialMedia (String name, {required String email, String? phone}) async {
+  Future<(ResponseModel, String?)> registerWithSocialMedia (String name, {required String email, dynamic phone}) async {
     _isPhoneNumberVerificationButtonLoading = true;
     _loginErrorMessage = '';
     notifyListeners();
@@ -679,7 +679,7 @@ class AuthController with ChangeNotifier {
       responseModel = ResponseModel(apiResponse.response!.data["token"],true);
       // resendTime = (apiResponse.response!.data["resend_time"]);
     } else {
-      String? errorMessage;
+      dynamic errorMessage;
       if (apiResponse.error is String) {
         errorMessage = apiResponse.error.toString();
       } else {
@@ -826,7 +826,7 @@ class AuthController with ChangeNotifier {
     return authServiceInterface.getUserToken();
   }
 
-  String? getGuestToken() {
+  dynamic getGuestToken() {
     return authServiceInterface.getGuestIdToken();
   }
 

@@ -32,7 +32,7 @@ class RecommendedProductWidget extends StatelessWidget {
       child: Column(children: [
           Consumer<ProductController>(
             builder: (context, recommended, child) {
-              String? ratting = recommended.recommendedProduct != null && recommended.recommendedProduct!.rating != null &&
+              dynamic ratting = recommended.recommendedProduct != null && recommended.recommendedProduct!.rating != null &&
                   recommended.recommendedProduct!.rating!.isNotEmpty? recommended.recommendedProduct!.rating![0].average : "0";
 
               return  recommended.recommendedProduct != null?
@@ -97,7 +97,7 @@ class RecommendedProductWidget extends StatelessWidget {
                                               CustomImageWidget(
                                                 height: ResponsiveHelper.isTab(context) ? 250 :  size.width * 0.4,
                                                 width: ResponsiveHelper.isTab(context) ? 230 : size.width * 0.4,
-                                                image: '${recommended.recommendedProduct?.thumbnail}',
+                                                image: '${recommended.recommendedProduct?.imagesFullUrl!.first.status==200?recommended.recommendedProduct?.imagesFullUrl!.first.path:recommended.recommendedProduct?.imagesFullUrl!.first.key}',
                                               ),
 
                                               if(recommended.recommendedProduct!.currentStock! == 0 &&

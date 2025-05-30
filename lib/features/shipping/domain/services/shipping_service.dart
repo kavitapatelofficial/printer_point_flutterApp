@@ -6,7 +6,7 @@ class ShippingService implements ShippingServiceInterface{
   ShippingService({required this.shippingRepositoryInterface});
 
   @override
-  Future addShippingMethod(int? id, String? cartGroupId) async{
+  Future addShippingMethod(dynamic id, dynamic cartGroupId) async{
     return await shippingRepositoryInterface.addShippingMethod(id,cartGroupId);
   }
   @override
@@ -16,7 +16,7 @@ class ShippingService implements ShippingServiceInterface{
 
 
   @override
-  Future getShippingMethod(int? sellerId, String? type) async {
+  Future getShippingMethod(dynamic sellerId, dynamic type) async {
     return await shippingRepositoryInterface.getShippingMethod(sellerId, type);
   }
 

@@ -27,7 +27,7 @@ class ProductController extends ChangeNotifier {
 
 
   ProductType _productType = ProductType.newArrival;
-  String? _title = '${getTranslated('best_selling', Get.context!)}';
+  dynamic _title = '${getTranslated('best_selling', Get.context!)}';
 
   bool _filterIsLoading = false;
   bool _filterFirstLoading = true;
@@ -37,16 +37,16 @@ class ProductController extends ChangeNotifier {
   bool get isFeaturedLoading => _isFeaturedLoading;
   bool _firstFeaturedLoading = true;
   bool _firstLoading = true;
-  int? _latestPageSize = 1;
+  dynamic _latestPageSize = 1;
   int _lOffset = 1;
-  int? _lPageSize;
-  int? get lPageSize=> _lPageSize;
-  int? _featuredPageSize;
+  dynamic _lPageSize;
+  dynamic get lPageSize=> _lPageSize;
+  dynamic _featuredPageSize;
   int _lOffsetFeatured = 1;
 
 
   ProductType get productType => _productType;
-  String? get title => _title;
+  dynamic get title => _title;
   int get lOffset => _lOffset;
   int get lOffsetFeatured => _lOffsetFeatured;
 
@@ -67,8 +67,8 @@ class ProductController extends ChangeNotifier {
   bool get isLoading => _isLoading;
   bool get firstFeaturedLoading => _firstFeaturedLoading;
   bool get firstLoading => _firstLoading;
-  int? get latestPageSize => _latestPageSize;
-  int? get featuredPageSize => _featuredPageSize;
+  dynamic get latestPageSize => _latestPageSize;
+  dynamic get featuredPageSize => _featuredPageSize;
 
   ProductModel? _discountedProductModel;
   ProductModel? get discountedProductModel => _discountedProductModel;
@@ -76,8 +76,8 @@ class ProductController extends ChangeNotifier {
 
   bool filterApply = false;
 
-  String? _searchText;
-  String? get searchText => _searchText;
+  dynamic _searchText;
+  dynamic get searchText => _searchText;
 
 
 
@@ -255,7 +255,7 @@ class ProductController extends ChangeNotifier {
 
   
 int selectedProductTypeIndex = 0;
- void changeTypeOfProduct(ProductType type, String? title, {int index = 0}){
+ void changeTypeOfProduct(ProductType type, dynamic title, {int index = 0}){
     _productType = type;
     _title = title;
     _latestProductList = null;
@@ -292,7 +292,7 @@ int selectedProductTypeIndex = 0;
 
   ProductModel? get brandOrCategoryProductList => _brandOrCategoryProductList;
 
-  Future<void> initBrandOrCategoryProductList({required bool isBrand, required int? id, required int offset, bool isUpdate = true}) async {
+  Future<void> initBrandOrCategoryProductList({required bool isBrand, required dynamic id, required int offset, bool isUpdate = true}) async {
     if(offset == 1) {
       _brandOrCategoryProductList = null;
     }
@@ -758,7 +758,7 @@ int selectedProductTypeIndex = 0;
   bool isSearchLoading = false;
   bool isSearchActive = false;
   bool isFilterActive = false;
-  Future <ApiResponse> getClearanceSearchProduct({required String query, String? categoryIds, String? brandIds,  String? authorIds, String? publishingIds, String? sort, String? priceMin, String? priceMax, required int offset, String? productType, String offerType = 'clearance_sale', bool fromPaginantion = false, isNotify = true}) async {
+  Future <ApiResponse> getClearanceSearchProduct({required String query, dynamic categoryIds, dynamic brandIds,  dynamic authorIds, dynamic publishingIds, dynamic sort, dynamic priceMin, dynamic priceMax, required int offset, dynamic productType, String offerType = 'clearance_sale', bool fromPaginantion = false, isNotify = true}) async {
 
     if(!fromPaginantion && isNotify){
       isSearchLoading = true;
@@ -791,7 +791,7 @@ int selectedProductTypeIndex = 0;
   }
 
 
-  void setSearchText(String? value, {bool isUpdate = true}) {
+  void setSearchText(dynamic value, {bool isUpdate = true}) {
     _searchText = value;
   }
 
@@ -816,7 +816,7 @@ int selectedProductTypeIndex = 0;
 }
 
 class ProductTypeModel{
-  String? title;
+  dynamic title;
   ProductType productType;
 
   ProductTypeModel(this.title, this.productType);

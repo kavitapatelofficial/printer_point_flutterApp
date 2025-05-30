@@ -9,8 +9,8 @@ class OrderPlaceDialogWidget extends StatelessWidget {
   final bool isFailed;
   final double rotateAngle;
   final IconData icon;
-  final String? title;
-  final String? description;
+  final dynamic title;
+  final dynamic description;
   const OrderPlaceDialogWidget({super.key, this.isFailed = false, this.rotateAngle = 0, required this.icon, required this.title, required this.description});
 
   @override

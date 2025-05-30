@@ -67,7 +67,7 @@ class SettingsScreen extends StatelessWidget {
 
 class TitleButton extends StatelessWidget {
   final String image;
-  final String? title;
+  final dynamic title;
   final Function onTap;
   const TitleButton({super.key, required this.image, required this.title, required this.onTap});
 

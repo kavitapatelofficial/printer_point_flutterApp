@@ -11,10 +11,10 @@ import 'package:provider/provider.dart';
 class CartQuantityButton extends StatelessWidget {
   final CartModel? cartModel;
   final bool isIncrement;
-  final int? quantity;
+  final dynamic quantity;
   final int index;
-  final int? maxQty;
-  final int? minimumOrderQuantity;
+  final dynamic maxQty;
+  final dynamic minimumOrderQuantity;
   final bool? digitalProduct;
   const CartQuantityButton({super.key, required this.isIncrement, required this.quantity, required this.index,
     required this.maxQty,required this.cartModel, this.minimumOrderQuantity, this.digitalProduct});

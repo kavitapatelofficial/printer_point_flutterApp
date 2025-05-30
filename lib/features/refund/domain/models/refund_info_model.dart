@@ -25,7 +25,7 @@ class RefundInfoModel {
 
 class Refund {
   double? productPrice;
-  int? quntity;
+  dynamic quntity;
   double? productTotalDiscount;
   double? productTotalTax;
   double? subtotal;

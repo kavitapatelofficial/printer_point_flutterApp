@@ -16,7 +16,7 @@ import 'package:flutter_sixvalley_ecommerce/common/basewidget/custom_button_widg
 import 'package:provider/provider.dart';
 
 class ClearanceProductFilterDialog extends StatefulWidget {
-  final int? sellerId;
+  final dynamic sellerId;
   final bool fromShop;
   final List<AuthorModel>? authorList;
   final List<AuthorModel>? publishingHouse;
@@ -415,7 +415,7 @@ class ClearanceProductFilterDialogState extends State<ClearanceProductFilterDial
 }
 
 class FilterItemWidget extends StatelessWidget {
-  final String? title;
+  final dynamic title;
   final int index;
   const FilterItemWidget({super.key, required this.title, required this.index});
 
@@ -440,7 +440,7 @@ class FilterItemWidget extends StatelessWidget {
 }
 
 class CategoryFilterItem extends StatelessWidget {
-  final String? title;
+  final dynamic title;
   final bool checked;
   final Function()? onTap;
   const CategoryFilterItem({super.key, required this.title, required this.checked, this.onTap});

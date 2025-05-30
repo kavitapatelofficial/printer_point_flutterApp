@@ -26,7 +26,7 @@ class ForgetPasswordScreen extends StatefulWidget {
 
 class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
   TextEditingController? _userInputController;
-  String? _countryCode;
+  dynamic _countryCode;
 
   final GlobalKey<ScaffoldMessengerState> _key = GlobalKey();
 

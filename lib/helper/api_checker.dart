@@ -20,7 +20,7 @@ class ApiChecker {
       showCustomSnackBar(apiResponse.response?.data['message'] , Get.context!);
     }else {
       log("==ff=>${apiResponse.error}");
-      String? errorMessage = apiResponse.error.toString();
+      dynamic errorMessage = apiResponse.error.toString();
       if (apiResponse.error is String) {
         errorMessage = apiResponse.error.toString();
       } else {

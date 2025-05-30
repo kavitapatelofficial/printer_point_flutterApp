@@ -1,7 +1,7 @@
 class LoginModel {
-  String? email;
-  String? password;
-  String? guestId;
+  dynamic email;
+  dynamic password;
+  dynamic guestId;
 
   LoginModel({this.email, this.password, this.guestId});
 

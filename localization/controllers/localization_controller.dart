@@ -16,11 +16,11 @@ class LocalizationController extends ChangeNotifier {
 
   Locale _locale = Locale(AppConstants.languages[0].languageCode!, AppConstants.languages[0].countryCode);
   bool _isLtr = true;
-  int? _languageIndex;
+  dynamic _languageIndex;
 
   Locale get locale => _locale;
   bool get isLtr => _isLtr;
-  int? get languageIndex => _languageIndex;
+  dynamic get languageIndex => _languageIndex;
 
   void setLanguage(Locale locale) {
     _locale = locale;
@@ -56,7 +56,7 @@ class LocalizationController extends ChangeNotifier {
   }
 
 
-  String? getCurrentLanguage() {
+  dynamic getCurrentLanguage() {
     return sharedPreferences!.getString(AppConstants.countryCode) ?? "US";
   }
 }

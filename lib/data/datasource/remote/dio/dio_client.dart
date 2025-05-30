@@ -13,8 +13,8 @@ class DioClient {
   final SharedPreferences sharedPreferences;
 
   Dio? dio;
-  String? token;
-  String? countryCode;
+  dynamic token;
+  dynamic countryCode;
 
   DioClient(this.baseUrl,
       Dio? dioC, {
@@ -42,7 +42,7 @@ class DioClient {
     dio!.interceptors.add(loggingInterceptor);
   }
 
-  void updateHeader(String? token, String? countryCode) {
+  void updateHeader(dynamic token, dynamic countryCode) {
     token = token ?? this.token;
     countryCode = countryCode == null ? this.countryCode == 'US' ? 'en': this.countryCode!.toLowerCase(): countryCode == 'US' ? 'en' : countryCode.toLowerCase();
     this.token = token;
@@ -85,7 +85,7 @@ class DioClient {
     Options? options,
     CancelToken? cancelToken,
     ProgressCallback? onReceiveProgress,
-    String? filePath,
+    dynamic filePath,
   }) async {
     final directory = await getApplicationDocumentsDirectory();
     final filePath = path.join(directory.path, 'order.pdf');

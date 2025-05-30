@@ -9,8 +9,8 @@ class SuccessDialog extends StatelessWidget {
   final bool isFailed;
   final double rotateAngle;
   final IconData icon;
-  final String? title;
-  final String? description;
+  final dynamic title;
+  final dynamic description;
   final Function()? onTap;
   const SuccessDialog({super.key, this.isFailed = false, this.rotateAngle = 0, required this.icon, required this.title, required this.description, this.onTap});
 

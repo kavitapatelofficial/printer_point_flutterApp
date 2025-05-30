@@ -2,7 +2,7 @@ import 'package:flutter_sixvalley_ecommerce/localization/language_constrants.dar
 import 'package:flutter_sixvalley_ecommerce/main.dart';
 
 class ValidateCheck{
-  static String? validateEmail(String? value) {
+  static dynamic validateEmail(dynamic value) {
     const pattern = r"(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'"
         r'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-'
         r'\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*'
@@ -20,14 +20,14 @@ class ValidateCheck{
     return null;
   }
 
-  static String? validateEmptyText(String? value, String? message) {
+  static dynamic validateEmptyText(dynamic value, dynamic message) {
     if (value == null || value.isEmpty) {
       return getTranslated(message, Get.context!)??'This field is required';
     }
     return null;
   }
 
-  static String? validatePassword(String? value, String? message) {
+  static dynamic validatePassword(dynamic value, dynamic message) {
     if (value == null || value.isEmpty) {
       return getTranslated(message, Get.context!)??'This field is required';
     }else if(value.length < 8){
@@ -35,7 +35,7 @@ class ValidateCheck{
     }
     return null;
   }
-  static String? validateConfirmPassword(String? value, String? password) {
+  static dynamic validateConfirmPassword(dynamic value, dynamic password) {
     if (value == null || value.isEmpty) {
       return getTranslated('confirm_password_must_be_required', Get.context!);
     }else if(value != password){

@@ -38,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController? _emailPhoneController;
   TextEditingController? _passwordController;
   GlobalKey<FormState>? _formKeyLogin;
-  String? countryCode;
+  dynamic countryCode;
 
   @override
   void initState() {

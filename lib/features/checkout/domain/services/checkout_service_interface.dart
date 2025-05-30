@@ -1,22 +1,22 @@
 abstract class CheckoutServiceInterface{
 
   Future<dynamic> cashOnDeliveryPlaceOrder({
-    String? addressID,
-    String? couponCode,
-    String? couponDiscountAmount,
-    String? billingAddressId,
-    String? orderNote,
+    dynamic addressID,
+    dynamic couponCode,
+    dynamic couponDiscountAmount,
+    dynamic billingAddressId,
+    dynamic orderNote,
     bool? isCheckCreateAccount,
-    String? password,
+    dynamic password,
     double? cashChangeAmount,
-    String? currentCurrencyCode,
+    dynamic currentCurrencyCode,
   });
 
-  Future<dynamic> offlinePaymentPlaceOrder(String? addressID, String? couponCode, String? couponDiscountAmount, String? billingAddressId, String? orderNote, List <String?> typeKey, List<String> typeValue, int? id, String name, String? paymentNote,bool? isCheckCreateAccount, String? password);
+  Future<dynamic> offlinePaymentPlaceOrder(dynamic addressID, dynamic couponCode, dynamic couponDiscountAmount, dynamic billingAddressId, dynamic orderNote, List <String?> typeKey, List<String> typeValue, dynamic id, String name, dynamic paymentNote,bool? isCheckCreateAccount, dynamic password);
 
-  Future<dynamic> walletPaymentPlaceOrder(String? addressID, String? couponCode,String? couponDiscountAmount, String? billingAddressId, String? orderNote, bool? isCheckCreateAccount, String? password);
+  Future<dynamic> walletPaymentPlaceOrder(dynamic addressID, dynamic couponCode,dynamic couponDiscountAmount, dynamic billingAddressId, dynamic orderNote, bool? isCheckCreateAccount, dynamic password);
 
-  Future<dynamic> digitalPaymentPlaceOrder(String? orderNote, String? customerId, String? addressId, String? billingAddressId, String? couponCode, String? couponDiscount, String? paymentMethod, bool? isCheckCreateAccount, String? password);
+  Future<dynamic> digitalPaymentPlaceOrder(dynamic orderNote, dynamic customerId, dynamic addressId, dynamic billingAddressId, dynamic couponCode, dynamic couponDiscount, dynamic paymentMethod, bool? isCheckCreateAccount, dynamic password);
 
   Future<dynamic> offlinePaymentList();
 }

@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 class IconWithTextRowWidget extends StatelessWidget {
   final String text;
   final IconData icon;
-  final String? imageIcon;
+  final dynamic imageIcon;
   final Color? iconColor;
   final Color? textColor;
   final bool isTitle;

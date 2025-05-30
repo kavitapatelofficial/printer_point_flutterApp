@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 class CountryCodeHelper{
 
 
-  static String? getCountryCode(String? number) {
-    String? countryCode = '';
+  static dynamic getCountryCode(dynamic number) {
+    dynamic countryCode = '';
     try{
       countryCode = codes.firstWhere((item) =>
           number!.contains('${item['dial_code']}'))['dial_code'];

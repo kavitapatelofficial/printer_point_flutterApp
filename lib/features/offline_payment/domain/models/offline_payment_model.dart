@@ -15,13 +15,13 @@ class OfflinePaymentModel {
 }
 
 class OfflineMethods {
-  int? id;
-  String? methodName;
+  dynamic id;
+  dynamic methodName;
   List<MethodFields>? methodFields;
   List<MethodInformations>? methodInformations;
-  int? status;
-  String? createdAt;
-  String? updatedAt;
+  dynamic status;
+  dynamic createdAt;
+  dynamic updatedAt;
 
   OfflineMethods(
       {this.id,
@@ -55,8 +55,8 @@ class OfflineMethods {
 }
 
 class MethodFields {
-  String? inputName;
-  String? inputData;
+  dynamic inputName;
+  dynamic inputData;
 
   MethodFields({this.inputName, this.inputData});
 
@@ -69,9 +69,9 @@ class MethodFields {
 }
 
 class MethodInformations {
-  String? customerInput;
-  String? customerPlaceholder;
-  int? isRequired;
+  dynamic customerInput;
+  dynamic customerPlaceholder;
+  dynamic isRequired;
 
   MethodInformations(
       {this.customerInput, this.customerPlaceholder, this.isRequired});

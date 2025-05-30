@@ -15,8 +15,8 @@ class SuggestionModel {
 }
 
 class Products {
-  int? id;
-  String? name;
+  dynamic id;
+  dynamic name;
 
   Products({this.id, this.name});
 

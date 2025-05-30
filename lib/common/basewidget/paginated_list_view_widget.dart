@@ -4,10 +4,10 @@ import 'package:flutter_sixvalley_ecommerce/utill/dimensions.dart';
 
 class PaginatedListView extends StatefulWidget {
   final ScrollController scrollController;
-  final Function(int? offset) onPaginate;
-  final int? totalSize;
-  final int? offset;
-  final int? limit;
+  final Function(dynamic offset) onPaginate;
+  final dynamic totalSize;
+  final dynamic offset;
+  final dynamic limit;
   final Widget itemView;
   final bool enabledPagination;
   final bool reverse;
@@ -21,7 +21,7 @@ class PaginatedListView extends StatefulWidget {
 }
 
 class _PaginatedListViewState extends State<PaginatedListView> {
-  int? _offset;
+  dynamic _offset;
   late List<int?> _offsetList;
   bool _isLoading = false;
 

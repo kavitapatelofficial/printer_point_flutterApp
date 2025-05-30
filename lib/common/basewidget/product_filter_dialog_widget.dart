@@ -19,7 +19,7 @@ import 'package:flutter_sixvalley_ecommerce/common/basewidget/show_custom_snakba
 import 'package:provider/provider.dart';
 
 class ProductFilterDialog extends StatefulWidget {
-  final int? sellerId;
+  final dynamic sellerId;
   final bool fromShop;
   const ProductFilterDialog({super.key, this.sellerId,  this.fromShop = true});
 
@@ -476,7 +476,7 @@ class ProductFilterDialogState extends State<ProductFilterDialog> {
 }
 
 class FilterItemWidget extends StatelessWidget {
-  final String? title;
+  final dynamic title;
   final int index;
   const FilterItemWidget({super.key, required this.title, required this.index});
 
@@ -501,7 +501,7 @@ class FilterItemWidget extends StatelessWidget {
 }
 
 class CategoryFilterItem extends StatelessWidget {
-  final String? title;
+  final dynamic title;
   final bool checked;
   final Function()? onTap;
   const CategoryFilterItem({super.key, required this.title, required this.checked, this.onTap});

@@ -7,7 +7,7 @@ class SellerProductService implements SellerProductServiceInterface{
   SellerProductService({required this.sellerProductRepositoryInterface});
 
   @override
-  Future getSellerProductList(String sellerId, String offset, String productId, {String search = '', String? categoryIds, String? brandIds, String? authorIds, String? publishingIds, String? productType}) async{
+  Future getSellerProductList(String sellerId, String offset, String productId, {String search = '', dynamic categoryIds, dynamic brandIds, dynamic authorIds, dynamic publishingIds, dynamic productType}) async{
     return await sellerProductRepositoryInterface.getSellerProductList(sellerId, offset, productId, search: search, categoryIds: categoryIds, brandIds: brandIds, authorIds: authorIds, publishingIds: publishingIds, productType: productType);
   }
 

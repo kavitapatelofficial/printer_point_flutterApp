@@ -1,25 +1,25 @@
 import 'package:flutter_sixvalley_ecommerce/data/model/image_full_url.dart';
 
 class ProfileModel {
-  int? id;
-  String? name;
-  String? method;
-  String? fName;
-  String? lName;
-  String? phone;
-  String? image;
+  dynamic id;
+  dynamic name;
+  dynamic method;
+  dynamic fName;
+  dynamic lName;
+  dynamic phone;
+  dynamic image;
   ImageFullUrl? imageFullUrl;
-  String? email;
-  String? emailVerifiedAt;
-  String? createdAt;
-  String? updatedAt;
+  dynamic email;
+  dynamic emailVerifiedAt;
+  dynamic createdAt;
+  dynamic updatedAt;
   double? walletBalance;
   double? loyaltyPoint;
-  String? referCode;
-  int? referCount;
+  dynamic referCode;
+  dynamic referCount;
   double? totalOrder;
-  int? isPhoneVerified;
-  String? emailVerificationToken;
+  dynamic isPhoneVerified;
+  dynamic emailVerificationToken;
 
   ProfileModel(
       {this.id,

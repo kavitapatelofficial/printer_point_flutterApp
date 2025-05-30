@@ -1,20 +1,20 @@
 class ChosenShippingMethodModel {
-  int? _id;
-  String? _cartGroupId;
-  int? _shippingMethodId;
+  dynamic _id;
+  dynamic _cartGroupId;
+  dynamic _shippingMethodId;
   double? _shippingCost;
-  String? _createdAt;
-  String? _updatedAt;
-  int? _isCheckItemExist;
+  dynamic _createdAt;
+  dynamic _updatedAt;
+  dynamic _isCheckItemExist;
 
   ChosenShippingMethodModel(
-      {int? id,
-        String? cartGroupId,
-        int? shippingMethodId,
+      {dynamic id,
+        dynamic cartGroupId,
+        dynamic shippingMethodId,
         double? shippingCost,
-        String? createdAt,
-        String? updatedAt,
-        int? isCheckItemExist}) {
+        dynamic createdAt,
+        dynamic updatedAt,
+        dynamic isCheckItemExist}) {
     _id = id;
     _cartGroupId = cartGroupId;
     _shippingMethodId = shippingMethodId;
@@ -24,13 +24,13 @@ class ChosenShippingMethodModel {
     _isCheckItemExist = isCheckItemExist;
   }
 
-  int? get id => _id;
-  String? get cartGroupId => _cartGroupId;
-  int? get shippingMethodId => _shippingMethodId;
+  dynamic get id => _id;
+  dynamic get cartGroupId => _cartGroupId;
+  dynamic get shippingMethodId => _shippingMethodId;
   double? get shippingCost => _shippingCost;
-  String? get createdAt => _createdAt;
-  String? get updatedAt => _updatedAt;
-  int? get isCheckItemExist => _isCheckItemExist;
+  dynamic get createdAt => _createdAt;
+  dynamic get updatedAt => _updatedAt;
+  dynamic get isCheckItemExist => _isCheckItemExist;
 
   ChosenShippingMethodModel.fromJson(Map<String, dynamic> json) {
     _id = json['id'];

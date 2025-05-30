@@ -11,7 +11,7 @@ import 'package:flutter_sixvalley_ecommerce/common/basewidget/not_loggedin_widge
 import 'package:provider/provider.dart';
 
 class CustomExpandedAppBarWidget extends StatelessWidget {
-  final String? title;
+  final dynamic title;
   final Widget child;
   final Widget? bottomChild;
   final bool isGuestCheck;

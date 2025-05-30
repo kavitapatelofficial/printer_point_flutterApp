@@ -187,7 +187,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.push(context, MaterialPageRoute(builder: (_) => CartScreen()));
                   },
                   child: Image.asset(Images.cartImage,
-                      color: Colors.white, height: 30, width: 30),
+                      color: Colors.white, height: 20, width: 20),
                 ),
                   SizedBox(width: 20,),
                  GestureDetector(
@@ -195,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.push(context, MaterialPageRoute(builder: (_) => WishListScreen()));
                   },
                   child: Image.asset(Images.wishlist,
-                      color: Colors.white, height: 30, width: 30),
+                      color: Colors.white, height: 20, width: 20),
                 ),
                 SizedBox(width: 20,)
               ],

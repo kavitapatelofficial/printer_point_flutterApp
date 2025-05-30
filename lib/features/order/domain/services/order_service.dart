@@ -6,14 +6,14 @@ class OrderService implements OrderServiceInterface{
   OrderService({required this.orderRepositoryInterface});
 
   @override
-  Future cancelOrder(int? orderId) async{
+  Future cancelOrder(dynamic orderId) async{
     return await orderRepositoryInterface.cancelOrder(orderId);
   }
 
 
 
   @override
-  Future<void> getOrderList(int offset, String status, {String? type}) async {
+  Future<void> getOrderList(int offset, String status, {dynamic type}) async {
     return await orderRepositoryInterface.getOrderList(offset, status);
   }
 

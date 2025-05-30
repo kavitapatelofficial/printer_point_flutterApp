@@ -19,7 +19,7 @@ class CouponRepository implements CouponRepositoryInterface{
   }
 
   @override
-  Future<ApiResponse> getList({int? offset}) async {
+  Future<ApiResponse> getList({dynamic offset}) async {
     try {
       final response = await dioClient!.get('${AppConstants.couponListApi}$offset');
       return ApiResponse.withSuccess(response);

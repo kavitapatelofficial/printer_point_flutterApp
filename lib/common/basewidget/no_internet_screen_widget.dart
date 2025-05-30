@@ -13,8 +13,8 @@ import 'package:flutter_sixvalley_ecommerce/features/dashboard/screens/dashboard
 class NoInternetOrDataScreenWidget extends StatelessWidget {
   final bool isNoInternet;
   final Widget? child;
-  final String? message;
-  final String? icon;
+  final dynamic message;
+  final dynamic icon;
   final bool icCart;
   final EdgeInsets? padding;
   const NoInternetOrDataScreenWidget({super.key, required this.isNoInternet, this.child, this.message, this.icon,  this.icCart = false, this.padding});

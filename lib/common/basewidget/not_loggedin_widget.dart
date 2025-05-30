@@ -8,7 +8,7 @@ import 'package:flutter_sixvalley_ecommerce/common/basewidget/custom_button_widg
 import 'package:flutter_sixvalley_ecommerce/features/dashboard/screens/dashboard_screen.dart';
 
 class NotLoggedInWidget extends StatelessWidget {
-  final String? message;
+  final dynamic message;
   const NotLoggedInWidget({super.key, this.message});
 
   @override

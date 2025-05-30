@@ -26,8 +26,8 @@ import 'package:flutter_sixvalley_ecommerce/common/basewidget/title_row_widget.d
 import 'package:provider/provider.dart';
 
 class ProductDetails extends StatefulWidget {
-  final int? productId;
-  final String? slug;
+  final dynamic productId;
+  final dynamic slug;
   final bool isFromWishList;
   final bool isNotification;
   const ProductDetails(
@@ -112,7 +112,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               if (details.productDetailsModel?.publishingHouse != null &&
                   details.productDetailsModel!.publishingHouse!.isNotEmpty) {
                 _publishingHouse = [];
-                for (String? houseName
+                for (dynamic houseName
                     in details.productDetailsModel!.publishingHouse!) {
                   _publishingHouse.add(TextSpan(
                       text: '${houseName!} ',
@@ -124,7 +124,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               if (details.productDetailsModel?.authors != null &&
                   details.productDetailsModel!.authors!.isNotEmpty) {
                 _authors = [];
-                for (String? authorName
+                for (dynamic authorName
                     in details.productDetailsModel!.authors!) {
                   _authors.add(TextSpan(
                       text: '${authorName!} ',

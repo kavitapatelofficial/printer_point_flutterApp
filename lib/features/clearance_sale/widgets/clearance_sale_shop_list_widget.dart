@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 
 class ClearanceShopListWidget extends StatelessWidget {
   final bool isHomeScreen;
-  final String? sellerId;
+  final dynamic sellerId;
   const ClearanceShopListWidget({super.key, this.sellerId, this.isHomeScreen = true});
 
   @override

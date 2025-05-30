@@ -14,7 +14,7 @@ class SearchProductRepository implements SearchProductRepositoryInterface{
   SearchProductRepository({required this.dioClient, required this.sharedPreferences});
 
   @override
-  Future<ApiResponse> getSearchProductList(String query, String? categoryIds, String? brandIds, String? authorIds, String? publishingIds, String? sort, String? priceMin, String? priceMax, int offset, String? productType) async {
+  Future<ApiResponse> getSearchProductList(String query, dynamic categoryIds, dynamic brandIds, dynamic authorIds, dynamic publishingIds, dynamic sort, dynamic priceMin, dynamic priceMax, int offset, dynamic productType) async {
 
     try {
       log("===limit==>" );
@@ -92,7 +92,7 @@ class SearchProductRepository implements SearchProductRepositoryInterface{
   }
 
   @override
-  Future getList({int? offset = 1}) {
+  Future getList({dynamic offset = 1}) {
     // TODO: implement getList
     throw UnimplementedError();
   }
@@ -105,7 +105,7 @@ class SearchProductRepository implements SearchProductRepositoryInterface{
 
 
   @override
-  Future<ApiResponse> getAuthorList(int? sellerId) async {
+  Future<ApiResponse> getAuthorList(dynamic sellerId) async {
     try {
       final response = await dioClient!.get('${AppConstants.getDigitalAuthorList}&seller_id=$sellerId');
       return ApiResponse.withSuccess(response);
@@ -115,7 +115,7 @@ class SearchProductRepository implements SearchProductRepositoryInterface{
   }
 
   @override
-  Future<ApiResponse> getPublishingHouse(int? sellerId) async {
+  Future<ApiResponse> getPublishingHouse(dynamic sellerId) async {
     try {
       final response = await dioClient!.get('${AppConstants.getDigitalPublishingHouse}&seller_id=$sellerId');
       return ApiResponse.withSuccess(response);

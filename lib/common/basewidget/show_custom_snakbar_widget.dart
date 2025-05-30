@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
- showCustomSnackBar(String? message, BuildContext context, {bool isError = true, bool isToaster = false}) {
+ showCustomSnackBar(dynamic message, BuildContext context, {bool isError = true, bool isToaster = false}) {
    Fluttertoast.showToast(
        msg: message!,
        toastLength: Toast.LENGTH_SHORT,

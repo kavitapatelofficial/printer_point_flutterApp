@@ -15,7 +15,7 @@ import 'package:provider/provider.dart';
 
 class WishListWidget extends StatelessWidget {
   final WishlistModel? wishlistModel;
-  final int? index;
+  final dynamic index;
   const WishListWidget({super.key, this.wishlistModel, this.index});
 
   @override
@@ -40,7 +40,7 @@ class WishListWidget extends StatelessWidget {
                   child: Container(
                     constraints: const BoxConstraints(maxHeight: 90),
                     child: CustomImageWidget(width: 90,
-                      image: '${wishlistModel?.productFullInfo!.thumbnail}',
+                      image: '${wishlistModel?.productFullInfo!.thumbnailFullUrl!.status==200?wishlistModel?.productFullInfo!.thumbnailFullUrl!.path:wishlistModel?.productFullInfo!.thumbnailFullUrl!.key}',
                     ),
                   ),
                 ),

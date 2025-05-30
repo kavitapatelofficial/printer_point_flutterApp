@@ -24,8 +24,8 @@ class ChatItemWidget extends StatefulWidget {
 }
 
 class _ChatItemWidgetState extends State<ChatItemWidget> {
-  String? baseUrl = '', image = '', call = '', name = '';
-  int? id;
+  dynamic baseUrl = '', image = '', call = '', name = '';
+  dynamic id;
   bool vacationIsOn = false;
 
 

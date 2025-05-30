@@ -10,7 +10,7 @@ class WishListRepository implements WishListRepositoryInterface{
   WishListRepository({required this.dioClient});
 
   @override
-  Future<ApiResponse> getList({int? offset = 1}) async {
+  Future<ApiResponse> getList({dynamic offset = 1}) async {
     try {
       final response = await dioClient!.get(AppConstants.getWishListUri);
       return ApiResponse.withSuccess(response);

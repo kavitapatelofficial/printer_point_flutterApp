@@ -15,10 +15,10 @@ class FeaturedDealController extends ChangeNotifier {
   final FeaturedDealServiceInterface featuredDealServiceInterface;
   FeaturedDealController({required this.featuredDealServiceInterface});
 
-  int? _featuredDealSelectedIndex;
+  dynamic _featuredDealSelectedIndex;
   List<Product>? _featuredDealProductList;
   List<Product>? get featuredDealProductList =>_featuredDealProductList;
-  int? get featuredDealSelectedIndex => _featuredDealSelectedIndex;
+  dynamic get featuredDealSelectedIndex => _featuredDealSelectedIndex;
 
 
   Future<void> getFeaturedDealList(bool reload) async {

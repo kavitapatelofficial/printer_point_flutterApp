@@ -42,7 +42,7 @@ class AuthRepository implements AuthRepoInterface{
   }
 
   @override
-  Future<ApiResponse> login(String? userInput, String? password, String? type) async {
+  Future<ApiResponse> login(dynamic userInput, dynamic password, dynamic type) async {
     try {
       Response response = await dioClient!.post(AppConstants.loginUri,
         data: {"email_or_phone": userInput, "password": password, "type": type},
@@ -87,7 +87,7 @@ class AuthRepository implements AuthRepoInterface{
   // @override
   // Future<ApiResponse> updateDeviceToken() async {
   //   try {
-  //     String? deviceToken = await _getDeviceToken();
+  //     dynamic deviceToken = await _getDeviceToken();
   //     // FirebaseMessaging.instance.subscribeToTopic(AppConstants.topic);
   //     // FirebaseMessaging.instance.subscribeToTopic(AppConstants.demoTopic);
   //     Response response = await dioClient!.post(
@@ -102,7 +102,7 @@ class AuthRepository implements AuthRepoInterface{
   // }
 
   Future<String?> _getDeviceToken() async {
-    String? deviceToken;
+    dynamic deviceToken;
     // if(Platform.isIOS) {
     //   deviceToken = await FirebaseMessaging.instance.getToken();
     // }else {
@@ -151,7 +151,7 @@ class AuthRepository implements AuthRepoInterface{
   }
 
   @override
-  String? getGuestIdToken() {
+  dynamic getGuestIdToken() {
     return sharedPreferences!.getString(AppConstants.guestId) ?? "1";
   }
 
@@ -290,7 +290,7 @@ class AuthRepository implements AuthRepoInterface{
   }
 
   @override
-  Future<ApiResponse> registerWithOtp(String name, {String? email, required String phone}) async {
+  Future<ApiResponse> registerWithOtp(String name, {dynamic email, required String phone}) async {
 
     try {
       Response response = await dioClient!.post(
@@ -305,7 +305,7 @@ class AuthRepository implements AuthRepoInterface{
 
 
   @override
-  Future<ApiResponse> registerWithSocialMedia(String name, {required String email,String? phone}) async {
+  Future<ApiResponse> registerWithSocialMedia(String name, {required String email,dynamic phone}) async {
     try {
       Response response = await dioClient!.post(
         AppConstants.registerWithSocialMedia,
@@ -415,7 +415,7 @@ class AuthRepository implements AuthRepoInterface{
 
 
   @override
-  Future getList({int? offset}) {
+  Future getList({dynamic offset}) {
     // TODO: implement getList
     throw UnimplementedError();
   }

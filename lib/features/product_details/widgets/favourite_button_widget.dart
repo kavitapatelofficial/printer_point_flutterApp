@@ -8,7 +8,7 @@ import 'package:provider/provider.dart';
 
 class FavouriteButtonWidget extends StatelessWidget {
   final Color backgroundColor;
-  final int? productId;
+  final dynamic productId;
   const FavouriteButtonWidget({super.key, this.backgroundColor = Colors.black, this.productId});
   @override
   Widget build(BuildContext context) {

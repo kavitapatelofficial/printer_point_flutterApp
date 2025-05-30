@@ -15,15 +15,15 @@ extension EmailValidator on String {
 
 class ClearanceCustomTextFieldWidget extends StatefulWidget {
   final TextEditingController? controller;
-  final String? hintText;
+  final dynamic hintText;
   final TextInputType? textInputType;
-  final int? maxLine;
+  final dynamic maxLine;
   final FocusNode? focusNode;
   final FocusNode? nextNode;
   final TextInputAction? textInputAction;
   final bool isPhoneNumber;
   final bool isValidator;
-  final String? validatorMessage;
+  final dynamic validatorMessage;
   final Color? fillColor;
   final TextCapitalization capitalization;
   final bool isAmount;
@@ -35,9 +35,9 @@ class ClearanceCustomTextFieldWidget extends StatefulWidget {
   final bool isPassword;
   final Function(String text)? onChanged;
   final Function(String text)? onFieldSubmit;
-  final String? prefixIconImage;
+  final dynamic prefixIconImage;
   final bool isPos;
-  final int? maxSize;
+  final dynamic maxSize;
   final bool variant;
   final bool focusBorder;
   final bool showBorder;

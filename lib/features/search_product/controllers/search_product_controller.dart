@@ -124,7 +124,7 @@ class SearchProductController with ChangeNotifier {
 
 
   ProductModel? searchedProduct;
-  Future searchProduct({required String query, String? categoryIds, String? brandIds,  String? authorIds, String? publishingIds, String? sort, String? priceMin, String? priceMax, required int offset}) async {
+  Future searchProduct({required String query, dynamic categoryIds, dynamic brandIds,  dynamic authorIds, dynamic publishingIds, dynamic sort, dynamic priceMin, dynamic priceMax, required int offset}) async {
     if(query.isNotEmpty){
       searchController.text = query;
     }
@@ -192,7 +192,7 @@ class SearchProductController with ChangeNotifier {
   }
 
   int selectedSearchedProductId = 0;
-  void setSelectedProductId(int index, int? compareId){
+  void setSelectedProductId(int index, dynamic compareId){
     if(suggestionModel!.products!.isNotEmpty){
       selectedSearchedProductId = suggestionModel!.products![index].id!;
     }
@@ -212,7 +212,7 @@ class SearchProductController with ChangeNotifier {
     notifyListeners();
   }
 
-  void removeSearchAddress(int? index) async {
+  void removeSearchAddress(dynamic index) async {
     _historyList.removeAt(index!);
     searchProductServiceInterface!.clearSavedSearchProductName();
     for(int i =0; i<_historyList.length; i++ ) {
@@ -232,7 +232,7 @@ class SearchProductController with ChangeNotifier {
   }
 
 
-  Future<void> getAuthorList(int? sellerId) async {
+  Future<void> getAuthorList(dynamic sellerId) async {
     ApiResponse apiResponse = await searchProductServiceInterface!.getAuthorList(sellerId);
 
     if(sellerId != null && apiResponse.response != null && apiResponse.response!.statusCode == 200) {
@@ -251,7 +251,7 @@ class SearchProductController with ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> getPublishingHouseList(int? sellerId) async {
+  Future<void> getPublishingHouseList(dynamic sellerId) async {
     ApiResponse apiResponse = await searchProductServiceInterface!.getPublishingHouse(sellerId);
     if(sellerId != null && apiResponse.response != null && apiResponse.response!.statusCode == 200) {
       _sellerPublishingHouseList = [];
@@ -339,7 +339,7 @@ class SearchProductController with ChangeNotifier {
     _sellerPublishingHouseIds = [];
   }
 
-  Future<void> resetChecked(int? id, bool fromShop) async{
+  Future<void> resetChecked(dynamic id, bool fromShop) async{
     if(fromShop){
       getAuthorList(id);
       getPublishingHouseList(id);

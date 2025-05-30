@@ -18,7 +18,7 @@ class WishListController extends ChangeNotifier {
   List<int> addedIntoWish =[];
 
 
-  void addWishList(int? productID) async {
+  void addWishList(dynamic productID) async {
     addedIntoWish.add(productID!);
     ApiResponse apiResponse = await wishlistServiceInterface!.add(productID);
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {
@@ -30,7 +30,7 @@ class WishListController extends ChangeNotifier {
     notifyListeners();
   }
 
-  void removeWishList(int? productID, {int? index}) async {
+  void removeWishList(dynamic productID, {dynamic index}) async {
     addedIntoWish.removeAt(addedIntoWish.indexOf(productID!));
     ApiResponse apiResponse = await wishlistServiceInterface!.delete(productID);
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {

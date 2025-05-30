@@ -9,7 +9,7 @@ class CompareRepository implements CompareRepositoryInterface {
   CompareRepository({required this.dioClient});
 
   @override
-  Future<ApiResponse> getList({int? offset}) async {
+  Future<ApiResponse> getList({dynamic offset}) async {
     try {
       final response = await dioClient!.get(AppConstants.getCompareList);
       return ApiResponse.withSuccess(response);

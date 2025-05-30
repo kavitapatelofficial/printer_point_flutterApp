@@ -1,8 +1,8 @@
 class SocialLoginModel {
-  String? token;
-  String? uniqueId;
-  String? medium;
-  String? email;
+  dynamic token;
+  dynamic uniqueId;
+  dynamic medium;
+  dynamic email;
 
   SocialLoginModel({this.token, this.uniqueId, this.medium, this.email});
 

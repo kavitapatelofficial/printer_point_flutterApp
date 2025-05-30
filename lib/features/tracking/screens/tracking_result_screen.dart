@@ -34,7 +34,7 @@ class _TrackingResultScreenState extends State<TrackingResultScreen> {
 
           Expanded(child: Consumer<OrderController>(
               builder: (context, tracking, child) {
-                String? status = tracking.trackingModel != null ? tracking.trackingModel!.orderStatus : '';
+                dynamic status = tracking.trackingModel != null ? tracking.trackingModel!.orderStatus : '';
                 return tracking.trackingModel != null?
                 ListView( children: [
 

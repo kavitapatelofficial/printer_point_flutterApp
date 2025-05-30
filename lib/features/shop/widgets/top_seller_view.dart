@@ -44,7 +44,7 @@ class _TopSellerViewState extends State<TopSellerView> {
           controller: widget.scrollController,
           child: PaginatedListView(
             scrollController: widget.scrollController,
-            onPaginate: (int? offset) async => await topSellerProvider.getTopSellerList(false, offset?? 1, type : topSellerProvider.sellerType),
+            onPaginate: (dynamic offset) async => await topSellerProvider.getTopSellerList(false, offset?? 1, type : topSellerProvider.sellerType),
             totalSize: topSellerProvider.sellerModel!.totalSize,
             offset: topSellerProvider.sellerModel!.offset,
             itemView: ListView.builder(

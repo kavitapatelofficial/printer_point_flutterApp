@@ -3,7 +3,7 @@ import 'package:flutter_sixvalley_ecommerce/utill/custom_themes.dart';
 import 'package:flutter_sixvalley_ecommerce/utill/dimensions.dart';
 
 class AmountWidget extends StatelessWidget {
-  final String? title;
+  final dynamic title;
   final String amount;
 
   const AmountWidget({super.key, required this.title, required this.amount});

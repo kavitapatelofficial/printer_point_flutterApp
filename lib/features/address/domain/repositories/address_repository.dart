@@ -59,7 +59,7 @@ class AddressRepository implements AddressRepoInterface<ApiResponse>{
 
 
   @override
-  Future<ApiResponse> getList({int? offset}) async {
+  Future<ApiResponse> getList({dynamic offset}) async {
     try {
       final response = await dioClient!.get('${AppConstants.addressListUri}?guest_id=${Provider.of<AuthController>(Get.context!, listen: false).getGuestToken()}');
       return ApiResponse.withSuccess(response);
@@ -69,7 +69,7 @@ class AddressRepository implements AddressRepoInterface<ApiResponse>{
   }
 
   @override
-  Future<ApiResponse> delete(int? id) async {
+  Future<ApiResponse> delete(dynamic id) async {
     try {
       final response = await dioClient!.post(
         '${AppConstants.removeAddressUri}?address_id=$id&guest_id=${Provider.of<AuthController>(Get.context!, listen: false).getGuestToken()}',

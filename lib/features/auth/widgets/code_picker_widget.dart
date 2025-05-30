@@ -11,7 +11,7 @@ import 'package:flutter_sixvalley_ecommerce/utill/images.dart';
 class CodePickerWidget extends StatefulWidget {
   final ValueChanged<CountryCode>? onChanged;
   final ValueChanged<CountryCode?>? onInit;
-  final String? initialSelection;
+  final dynamic initialSelection;
   final List<String> favorite;
   final TextStyle? textStyle;
   final EdgeInsetsGeometry padding;

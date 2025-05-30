@@ -9,7 +9,7 @@ abstract class ChatServiceInterface {
 
   Future<dynamic> searchChat(String type, String search);
 
-  Future<dynamic> getMessageList(String type, int? id,int offset);
+  Future<dynamic> getMessageList(String type, dynamic id,int offset);
 
   Future<dynamic> seenMessage(int id, String type);
 

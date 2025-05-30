@@ -23,17 +23,17 @@ class ReviewController extends ChangeNotifier {
   List<ReviewModel>? get reviewList => _reviewList;
   int _rating = 0;
   bool _isLoading = false;
-  String? _errorText;
+  dynamic _errorText;
   bool _hasConnection = true;
 
 
   int get rating => _rating;
   bool get isLoading => _isLoading;
-  String? get errorText => _errorText;
+  dynamic get errorText => _errorText;
   bool get hasConnection => _hasConnection;
 
 
-  Future<void> getReviewList(int? productId,String? productSlug, BuildContext context) async {
+  Future<void> getReviewList(dynamic productId,dynamic productSlug, BuildContext context) async {
     _hasConnection = true;
     ApiResponse reviewResponse = await reviewServiceInterface.get(productId.toString());
     if (reviewResponse.response != null && reviewResponse.response!.statusCode == 200) {
@@ -101,7 +101,7 @@ class ReviewController extends ChangeNotifier {
   void removePrevReview() {
     _reviewList = null;
   }
-  void setErrorText(String? error) {
+  void setErrorText(dynamic error) {
     _errorText = error;
     notifyListeners();
   }

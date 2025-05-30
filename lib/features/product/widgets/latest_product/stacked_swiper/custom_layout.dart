@@ -10,7 +10,7 @@ abstract class _CustomLayoutStateBase<T extends _SubSwiper> extends State<T>
   //late AnimationController _animationController2;
   SwiperController get _controller => widget.controller;
   late int _startIndex;
-  int? _animationCount;
+  dynamic _animationCount;
   int _currentIndex = 0;
 
   @override
@@ -158,7 +158,7 @@ abstract class _CustomLayoutStateBase<T extends _SubSwiper> extends State<T>
 
   bool _lockScroll = false;
 
-  Future<void> _move(double position, {int? nextIndex}) async {
+  Future<void> _move(double position, {dynamic nextIndex}) async {
 
     if (_lockScroll) return;
     try {
@@ -380,7 +380,7 @@ class CustomLayoutOption {
 
   final List<TransformBuilder<dynamic>> builders = [];
   final int startIndex;
-  final int? stateCount;
+  final dynamic stateCount;
 
   void addOpacity(List<double> values) {
     builders.add(OpacityTransformBuilder(values: values));

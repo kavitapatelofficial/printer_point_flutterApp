@@ -1,14 +1,14 @@
 import 'package:flutter_sixvalley_ecommerce/features/product/domain/models/product_model.dart';
 
 class HomeCategoryProduct {
-  int? id;
-  String? name;
-  String? slug;
-  String? icon;
-  int? parentId;
-  int? position;
-  String? createdAt;
-  String? updatedAt;
+  dynamic id;
+  dynamic name;
+  dynamic slug;
+  dynamic icon;
+  dynamic parentId;
+  dynamic position;
+  dynamic createdAt;
+  dynamic updatedAt;
   List<Product>? products;
   List<dynamic>? translations;
 

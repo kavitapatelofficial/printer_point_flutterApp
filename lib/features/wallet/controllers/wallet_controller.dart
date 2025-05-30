@@ -19,8 +19,8 @@ class WalletController extends ChangeNotifier {
   bool get isConvert => _isConvert;
   bool get isLoading => _isLoading;
   bool get firstLoading => _firstLoading;
-  int? _transactionPageSize;
-  int? get transactionPageSize=> _transactionPageSize;
+  dynamic _transactionPageSize;
+  dynamic get transactionPageSize=> _transactionPageSize;
   WalletTransactionModel? _walletTransactionModel;
   WalletTransactionModel? get walletTransactionModel => _walletTransactionModel;
 
@@ -30,8 +30,8 @@ class WalletController extends ChangeNotifier {
   DateTime? _endDate;
   DateTime? get endDate => _endDate;
 
-  String? _selectedFilterBy;
-  String? get selectedFilterBy => _selectedFilterBy;
+  dynamic _selectedFilterBy;
+  dynamic get selectedFilterBy => _selectedFilterBy;
 
   Set<String>? _selectedEarnByList;
   Set<String>? get selectedEarnByList => _selectedEarnByList;
@@ -43,7 +43,7 @@ class WalletController extends ChangeNotifier {
   Future<void> getTransactionList(int offset, {
     bool reload = false,
     bool isUpdate = true,
-    String? filterBy,
+    dynamic filterBy,
     DateTime? startDate,
     DateTime? endDate,
     List<String>? transactionTypes,
@@ -134,7 +134,7 @@ class WalletController extends ChangeNotifier {
   }
 
 
-  void setSelectedProductType({String? type, bool isUpdate = true}){
+  void setSelectedProductType({dynamic type, bool isUpdate = true}){
     _selectedFilterBy = type;
 
     if(isUpdate){

@@ -1,10 +1,10 @@
 class SignUpModel {
-  String? fName;
-  String? lName;
-  String? phone;
-  String? email;
-  String? password;
-  String? referralCode;
+  dynamic fName;
+  dynamic lName;
+  dynamic phone;
+  dynamic email;
+  dynamic password;
+  dynamic referralCode;
 
   SignUpModel({this.fName, this.lName, this.phone, this.email='', this.password, this.referralCode = ''});
 

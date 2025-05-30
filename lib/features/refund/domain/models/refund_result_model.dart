@@ -2,7 +2,7 @@ import 'package:flutter_sixvalley_ecommerce/data/model/image_full_url.dart';
 
 class RefundResultModel {
   double? productPrice;
-  int? quntity;
+  dynamic quntity;
   double? productTotalDiscount;
   double? productTotalTax;
   double? subtotal;
@@ -54,22 +54,22 @@ class RefundResultModel {
 }
 
 class RefundRequest {
-  int? id;
-  int? orderDetailsId;
-  int? customerId;
-  String? status;
+  dynamic id;
+  dynamic orderDetailsId;
+  dynamic customerId;
+  dynamic status;
   double? amount;
-  int? productId;
-  int? orderId;
-  String? refundReason;
+  dynamic productId;
+  dynamic orderId;
+  dynamic refundReason;
   List<String>? images;
   List<ImageFullUrl>? imagesFullUrl;
-  String? createdAt;
-  String? updatedAt;
-  String? approvedNote;
-  String? rejectedNote;
-  String? paymentInfo;
-  String? changeBy;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic approvedNote;
+  dynamic rejectedNote;
+  dynamic paymentInfo;
+  dynamic changeBy;
   List<RefundStatus>? refundStatus;
 
   RefundRequest(
@@ -149,14 +149,14 @@ class RefundRequest {
 
 
 class RefundStatus {
-  int? id;
-  int? refundRequestId;
-  String? changeBy;
-  int? changeById;
-  String? status;
-  String? message;
-  String? createdAt;
-  String? updatedAt;
+  dynamic id;
+  dynamic refundRequestId;
+  dynamic changeBy;
+  dynamic changeById;
+  dynamic status;
+  dynamic message;
+  dynamic createdAt;
+  dynamic updatedAt;
 
   RefundStatus(
       {this.id,

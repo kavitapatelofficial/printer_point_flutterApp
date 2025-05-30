@@ -18,10 +18,10 @@ class CheckoutController with ChangeNotifier {
   final CheckoutServiceInterface checkoutServiceInterface;
   CheckoutController({required this.checkoutServiceInterface});
 
-  int? _addressIndex;
-  int? _billingAddressIndex;
-  int? get billingAddressIndex => _billingAddressIndex;
-  int? _shippingIndex;
+  dynamic _addressIndex;
+  dynamic _billingAddressIndex;
+  dynamic get billingAddressIndex => _billingAddressIndex;
+  dynamic _shippingIndex;
   bool _isLoading = false;
   bool _isCheckCreateAccount = false;
   bool _newUser = false;
@@ -29,8 +29,8 @@ class CheckoutController with ChangeNotifier {
   int _paymentMethodIndex = -1;
   bool _onlyDigital = true;
   bool get onlyDigital => _onlyDigital;
-  int? get addressIndex => _addressIndex;
-  int? get shippingIndex => _shippingIndex;
+  dynamic get addressIndex => _addressIndex;
+  dynamic get shippingIndex => _shippingIndex;
   bool get isLoading => _isLoading;
   int get paymentMethodIndex => _paymentMethodIndex;
   bool get isCheckCreateAccount => _isCheckCreateAccount;
@@ -57,10 +57,10 @@ class CheckoutController with ChangeNotifier {
 
 
 
-  Future<void> placeOrder({required Function callback, String? addressID,
-        String? couponCode, String? couponAmount,
-        String? billingAddressId, String? orderNote, String? transactionId,
-        String? paymentNote, int? id, String? name,bool isfOffline = false, bool wallet = false}) async {
+  Future<void> placeOrder({required Function callback, dynamic addressID,
+        dynamic couponCode, dynamic couponAmount,
+        dynamic billingAddressId, dynamic orderNote, dynamic transactionId,
+        dynamic paymentNote, dynamic id, dynamic name,bool isfOffline = false, bool wallet = false}) async {
     for(TextEditingController textEditingController in inputFieldControllerList) {
       inputValueList.add(textEditingController.text.trim());
 
@@ -237,11 +237,11 @@ class CheckoutController with ChangeNotifier {
 
   }
 
-  Future<ApiResponse> digitalPaymentPlaceOrder({String? orderNote, String? customerId,
-    String? addressId, String? billingAddressId,
-    String? couponCode,
-    String? couponDiscount,
-    String? paymentMethod}) async {
+  Future<ApiResponse> digitalPaymentPlaceOrder({dynamic orderNote, dynamic customerId,
+    dynamic addressId, dynamic billingAddressId,
+    dynamic couponCode,
+    dynamic couponDiscount,
+    dynamic paymentMethod}) async {
     _isLoading =true;
 
     ApiResponse apiResponse = await checkoutServiceInterface.digitalPaymentPlaceOrder(orderNote, customerId, addressId, billingAddressId, couponCode, couponDiscount, paymentMethod, _isCheckCreateAccount, passwordController.text.trim());

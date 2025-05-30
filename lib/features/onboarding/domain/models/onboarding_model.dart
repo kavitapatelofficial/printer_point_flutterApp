@@ -1,7 +1,7 @@
 class OnboardingModel {
   final String _imageUrl;
-  final String? _title;
-  final String? _description;
+  final dynamic _title;
+  final dynamic _description;
 
   get imageUrl => _imageUrl;
   get title => _title;

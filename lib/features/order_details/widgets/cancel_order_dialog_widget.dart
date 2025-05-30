@@ -9,7 +9,7 @@ import 'package:flutter_sixvalley_ecommerce/common/basewidget/show_custom_snakba
 import 'package:provider/provider.dart';
 
 class CancelOrderDialogWidget extends StatefulWidget {
-  final int? orderId;
+  final dynamic orderId;
    const CancelOrderDialogWidget({super.key, required this.orderId});
 
   @override

@@ -17,18 +17,18 @@ class FindWhatYouNeedModel {
 }
 
 class FindWhatYouNeed {
-  int? id;
-  String? name;
-  String? slug;
-  String? icon;
+  dynamic id;
+  dynamic name;
+  dynamic slug;
+  dynamic icon;
   ImageFullUrl? iconFullUrl;
-  int? parentId;
-  int? position;
-  String? createdAt;
-  String? updatedAt;
-  int? homeStatus;
-  int? priority;
-  int? productCount;
+  dynamic parentId;
+  dynamic position;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic homeStatus;
+  dynamic priority;
+  dynamic productCount;
   List<Childes>? childes;
 
   FindWhatYouNeed(
@@ -74,18 +74,18 @@ class FindWhatYouNeed {
 }
 
 class Childes {
-  int? id;
-  String? name;
-  String? slug;
-  String? icon;
+  dynamic id;
+  dynamic name;
+  dynamic slug;
+  dynamic icon;
   ImageFullUrl? iconFullUrl;
-  int? parentId;
-  int? position;
-  String? createdAt;
-  String? updatedAt;
-  int? homeStatus;
-  int? priority;
-  int? subCategoryProductCount;
+  dynamic parentId;
+  dynamic position;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic homeStatus;
+  dynamic priority;
+  dynamic subCategoryProductCount;
 
 
   Childes(

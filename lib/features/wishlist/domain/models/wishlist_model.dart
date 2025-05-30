@@ -2,11 +2,11 @@ import 'package:flutter_sixvalley_ecommerce/data/model/image_full_url.dart';
 import 'package:flutter_sixvalley_ecommerce/features/product/domain/models/product_model.dart';
 
 class WishlistModel {
-  int? id;
-  int? customerId;
-  int? productId;
-  String? createdAt;
-  String? updatedAt;
+  dynamic id;
+  dynamic customerId;
+  dynamic productId;
+  dynamic createdAt;
+  dynamic updatedAt;
   ProductFullInfo? productFullInfo;
 
   WishlistModel(
@@ -30,52 +30,52 @@ class WishlistModel {
 }
 
 class ProductFullInfo {
-  int? id;
-  String? addedBy;
-  int? userId;
-  String? name;
-  String? slug;
-  String? productType;
-  int? brandId;
-  String? unit;
-  int? minQty;
-  int? refundable;
-  String? colorImage;
-  String? thumbnail;
+  dynamic id;
+  dynamic addedBy;
+  dynamic userId;
+  dynamic name;
+  dynamic slug;
+  dynamic productType;
+  dynamic brandId;
+  dynamic unit;
+  dynamic minQty;
+  dynamic refundable;
+  dynamic colorImage;
+  dynamic thumbnail;
   ImageFullUrl? thumbnailFullUrl;
-  int? featured;
-  String? videoProvider;
-  String? colors;
-  int? variantProduct;
-  String? attributes;
-  String? choiceOptions;
-  String? variation;
-  int? published;
+  dynamic featured;
+  dynamic videoProvider;
+  dynamic colors;
+  dynamic variantProduct;
+  dynamic attributes;
+  dynamic choiceOptions;
+  dynamic variation;
+  dynamic published;
   double? unitPrice;
   double? purchasePrice;
   double? tax;
-  String? taxType;
-  String? taxModel;
+  dynamic taxType;
+  dynamic taxModel;
   double? discount;
-  String? discountType;
-  int? currentStock;
-  int? minimumOrderQty;
-  String? details;
-  int? freeShipping;
-  String? createdAt;
-  String? updatedAt;
-  int? status;
-  int? featuredStatus;
-  String? metaTitle;
-  String? metaDescription;
-  String? metaImage;
-  int? requestStatus;
+  dynamic discountType;
+  dynamic currentStock;
+  dynamic minimumOrderQty;
+  dynamic details;
+  dynamic freeShipping;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic status;
+  dynamic featuredStatus;
+  dynamic metaTitle;
+  dynamic metaDescription;
+  dynamic metaImage;
+  dynamic requestStatus;
 
   double? shippingCost;
-  int? multiplyQty;
+  dynamic multiplyQty;
 
-  String? code;
-  int? reviewsCount;
+  dynamic code;
+  dynamic reviewsCount;
 
   ClearanceSale? clearanceSale;
 

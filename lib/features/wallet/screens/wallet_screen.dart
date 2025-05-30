@@ -143,7 +143,7 @@ class _WalletScreenState extends State<WalletScreen> {
               builder: (context, walletController, _) {
                 return (walletController.walletTransactionModel?.walletTransactionList?.isNotEmpty ?? false) ?  PaginatedListView(
                   scrollController: scrollController,
-                  onPaginate: (int? offset) async => walletController.getTransactionList(
+                  onPaginate: (dynamic offset) async => walletController.getTransactionList(
                     offset ?? 1,
                     startDate: walletController.walletTransactionModel?.startDate,
                     endDate: walletController.walletTransactionModel?.endDate,

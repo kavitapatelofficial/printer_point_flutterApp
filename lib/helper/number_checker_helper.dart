@@ -16,8 +16,8 @@ class NumberCheckerHelper {
 
   }
 
-  static String? getCountryCode(String? number) {
-    String? countryCode = '';
+  static dynamic getCountryCode(dynamic number) {
+    dynamic countryCode = '';
     try{
       countryCode = codes.firstWhere((item) =>
           number!.contains('${item['dial_code']}'))['dial_code'];
@@ -27,7 +27,7 @@ class NumberCheckerHelper {
     return countryCode;
   }
 
-  static String? getPhoneNumber(String phoneNumberWithCountryCode, String countryCode){
+  static dynamic getPhoneNumber(String phoneNumberWithCountryCode, String countryCode){
     String phoneNumber = phoneNumberWithCountryCode.split(countryCode).last;
     return phoneNumber;
   }

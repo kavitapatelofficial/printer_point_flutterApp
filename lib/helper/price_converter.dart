@@ -3,7 +3,7 @@ import 'package:flutter_sixvalley_ecommerce/features/splash/controllers/splash_c
 import 'package:provider/provider.dart';
 
 class PriceConverter {
-  static String convertPrice(BuildContext context, double? price, {double? discount, String? discountType}) {
+  static String convertPrice(BuildContext context, double? price, {double? discount, dynamic discountType}) {
     if(discount != null && discountType != null){
       if(discountType == 'amount' || discountType == 'flat') {
         price = price! - discount;
@@ -31,7 +31,7 @@ class PriceConverter {
 
   }
 
-  static double? convertWithDiscount(BuildContext context, double? price, double? discount, String? discountType) {
+  static double? convertWithDiscount(BuildContext context, double? price, double? discount, dynamic discountType) {
     if(discountType == 'amount' || discountType == 'flat') {
       price = price! - discount!;
     }else if(discountType == 'percent' || discountType == 'percentage') {
@@ -50,7 +50,7 @@ class PriceConverter {
     return calculatedAmount;
   }
 
-  static String percentageCalculation(BuildContext context, double? price, double? discount, String? discountType) {
+  static String percentageCalculation(BuildContext context, double? price, double? discount, dynamic discountType) {
     return '-${(discountType == 'percent' || discountType == 'percentage') ? '${discount?.toStringAsFixed(Provider.of<SplashController>(context,listen: false).configModel!.decimalPointSettings??1)} %'
       : convertPrice(context, discount)}';
   }

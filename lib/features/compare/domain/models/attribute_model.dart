@@ -1,8 +1,8 @@
 class AttributeModel {
-  int? id;
-  String? name;
-  String? createdAt;
-  String? updatedAt;
+  dynamic id;
+  dynamic name;
+  dynamic createdAt;
+  dynamic updatedAt;
 
 
   AttributeModel(

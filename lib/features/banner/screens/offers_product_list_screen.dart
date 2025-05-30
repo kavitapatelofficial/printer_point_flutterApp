@@ -47,7 +47,7 @@ class _OfferProductListScreenState extends State<OfferProductListScreen> {
               scrollController: scrollController,
               totalSize: productController.discountedProductModel?.totalSize,
               offset: productController.discountedProductModel?.offset,
-              onPaginate: (int? offset) async => await productController.getDiscountedProductList(offset ?? 1, false),
+              onPaginate: (dynamic offset) async => await productController.getDiscountedProductList(offset ?? 1, false),
               itemView: Expanded(
                 child: RepaintBoundary(
                   child: MasonryGridView.count(

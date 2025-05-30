@@ -1,6 +1,6 @@
 class PlaceDetailsModel {
   Result? result;
-  String? status;
+  dynamic status;
 
   PlaceDetailsModel({this.result, this.status});
 
@@ -22,20 +22,20 @@ class PlaceDetailsModel {
 
 class Result {
   List<AddressComponents>? addressComponents;
-  String? adrAddress;
-  String? formattedAddress;
+  dynamic adrAddress;
+  dynamic formattedAddress;
   Geometry? geometry;
-  String? icon;
-  String? iconBackgroundColor;
-  String? iconMaskBaseUri;
-  String? name;
+  dynamic icon;
+  dynamic iconBackgroundColor;
+  dynamic iconMaskBaseUri;
+  dynamic name;
   List<Photos>? photos;
-  String? placeId;
-  String? reference;
+  dynamic placeId;
+  dynamic reference;
   List<String>? types;
-  String? url;
-  int? utcOffset;
-  String? website;
+  dynamic url;
+  dynamic utcOffset;
+  dynamic website;
 
   Result(
       {this.addressComponents,
@@ -113,8 +113,8 @@ class Result {
 }
 
 class AddressComponents {
-  String? longName;
-  String? shortName;
+  dynamic longName;
+  dynamic shortName;
   List<String>? types;
 
   AddressComponents({this.longName, this.shortName, this.types});
@@ -208,10 +208,10 @@ class Viewport {
 }
 
 class Photos {
-  int? height;
+  dynamic height;
   List<String>? htmlAttributions;
-  String? photoReference;
-  int? width;
+  dynamic photoReference;
+  dynamic width;
 
   Photos({this.height, this.htmlAttributions, this.photoReference, this.width});
 

@@ -31,7 +31,7 @@ class MessageBubbleWidget extends StatelessWidget {
 
     bool isMe = message.sentByCustomer!;
 
-    String? image = chatController.userTypeIndex != 0 ?
+    dynamic image = chatController.userTypeIndex != 0 ?
     message.sellerInfo != null? message.sellerInfo?.shops![0].imageFullUrl?.path : '' : message.deliveryMan?.imageFullUrl?.path;
 
     if(message.attachment != null) {

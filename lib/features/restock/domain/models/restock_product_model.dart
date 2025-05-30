@@ -3,9 +3,9 @@ import 'package:flutter_sixvalley_ecommerce/features/product/domain/models/produ
 
 class RestockProductModel {
   List<Data>? data;
-  int? totalSize;
-  String? limit;
-  String? offset;
+  dynamic totalSize;
+  dynamic limit;
+  dynamic offset;
 
   RestockProductModel({this.data, this.totalSize, this.limit, this.offset});
 
@@ -36,13 +36,13 @@ class RestockProductModel {
 }
 
 class Data {
-  int? id;
-  int? productId;
-  String? variant;
-  String? createdAt;
-  String? updatedAt;
-  String? fcmTopic;
-  int? restockProductCustomersCount;
+  dynamic id;
+  dynamic productId;
+  dynamic variant;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic fcmTopic;
+  dynamic restockProductCustomersCount;
   Product? product;
 
   Data(
@@ -86,11 +86,11 @@ class Data {
 //
 //
 // class RestockProductModel {
-//   int? id;
-//   int? productId;
-//   String? variant;
-//   String? createdAt;
-//   String? updatedAt;
+//   dynamic id;
+//   dynamic productId;
+//   dynamic variant;
+//   dynamic createdAt;
+//   dynamic updatedAt;
 //   Product? product;
 //
 //   RestockProductModel(

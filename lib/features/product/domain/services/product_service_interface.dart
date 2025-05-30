@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sixvalley_ecommerce/features/product/enums/product_type.dart';
 
 abstract class ProductServiceInterface{
-  Future<dynamic> getFilteredProductList(BuildContext context,String offset, ProductType productType, String? title);
+  Future<dynamic> getFilteredProductList(BuildContext context,String offset, ProductType productType, dynamic title);
   Future<dynamic> getBrandOrCategoryProductList({required bool isBrand, required int id, required int offset});
   Future<dynamic> getRelatedProductList(String id);
   Future<dynamic> getFeaturedProductList(String offset);
@@ -14,5 +14,5 @@ abstract class ProductServiceInterface{
   Future<dynamic> getMostSearchingProductList(int offset);
   Future<dynamic> getHomeCategoryProductList();
   Future<dynamic> getClearanceAllProductList(String offset);
-  Future<dynamic> getClearanceSearchProducts(String query, String? categoryIds, String? brandIds, String? authorIds, String? publishingIds, String? sort, String? priceMin, String? priceMax, int offset, String? productType, String? offerType);
+  Future<dynamic> getClearanceSearchProducts(String query, dynamic categoryIds, dynamic brandIds, dynamic authorIds, dynamic publishingIds, dynamic sort, dynamic priceMin, dynamic priceMax, int offset, dynamic productType, dynamic offerType);
 }

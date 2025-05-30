@@ -1,20 +1,20 @@
 class AddressModel {
-  int? id;
-  String? contactPersonName;
-  String? addressType;
-  String? address;
-  String? city;
-  String? zip;
-  String? phone;
-  String? createdAt;
-  String? updatedAt;
-  String? state;
-  String? country;
-  String? latitude;
-  String? longitude;
+  dynamic id;
+  dynamic contactPersonName;
+  dynamic addressType;
+  dynamic address;
+  dynamic city;
+  dynamic zip;
+  dynamic phone;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic state;
+  dynamic country;
+  dynamic latitude;
+  dynamic longitude;
   bool? isBilling;
-  String? guestId;
-  String? email;
+  dynamic guestId;
+  dynamic email;
   AddressModel(
       {this.id,
         this.contactPersonName,

@@ -1,15 +1,15 @@
 
 class MessageBody {
-  int? _id;
-  String? _message;
+  dynamic _id;
+  dynamic _message;
 
-  MessageBody({int? id, String? message}) {
+  MessageBody({dynamic id, dynamic message}) {
     _id = id;
     _message = message;
   }
 
-  int? get id => _id;
-  String? get message => _message;
+  dynamic get id => _id;
+  dynamic get message => _message;
 
   MessageBody.fromJson(Map<String, dynamic> json) {
     _id = json['id'];

@@ -5,7 +5,7 @@ import 'package:flutter_sixvalley_ecommerce/utill/custom_themes.dart';
 import 'package:provider/provider.dart';
 
 class OrderTypeButton extends StatelessWidget {
-  final String? text;
+  final dynamic text;
   final int index;
 
   const OrderTypeButton({super.key, required this.text, required this.index});

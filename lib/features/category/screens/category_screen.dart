@@ -178,8 +178,8 @@ class _CategoryScreenState extends State<CategoryScreen> {
 }
 
 class CategoryItem extends StatelessWidget {
-  final String? title;
-  final String? icon;
+  final dynamic title;
+  final dynamic icon;
   final bool isSelected;
   const CategoryItem({super.key, required this.title, required this.icon, required this.isSelected});
 

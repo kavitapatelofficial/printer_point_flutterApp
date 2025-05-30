@@ -94,7 +94,7 @@ class Swiper extends StatefulWidget {
   //   bool autoplayDisableOnInteraction = true,
   //   int duration = kDefaultAutoplayTransactionDuration,
   //   ValueChanged<int>? onIndexChanged,
-  //   int? index,
+  //   dynamic index,
   //   SwiperOnTap? onTap,
   //   bool loop = true,
   //   Curve curve = Curves.ease,
@@ -207,7 +207,7 @@ class Swiper extends StatefulWidget {
   ///Index number of initial slide.
   ///If not set , the `Swiper` is 'uncontrolled', which means manage index by itself
   ///If set , the `Swiper` is 'controlled', which means the index is fully managed by parent widget.
-  final int? index;
+  final dynamic index;
 
   ///Called when tap
   final SwiperOnTap? onTap;
@@ -256,7 +256,7 @@ class Swiper extends StatefulWidget {
     bool autoplayDisableOnInteraction = true,
     int duration = kDefaultAutoplayTransactionDuration,
     ValueChanged<int>? onIndexChanged,
-    int? index,
+    dynamic index,
     SwiperOnTap? onTap,
     bool loop = true,
     Curve curve = Curves.ease,
@@ -703,10 +703,10 @@ abstract class _SubSwiper extends StatefulWidget {
 
   final IndexedWidgetBuilder? itemBuilder;
   final int itemCount;
-  final int? index;
+  final dynamic index;
   final ValueChanged<int>? onIndexChanged;
   final SwiperController controller;
-  final int? duration;
+  final dynamic duration;
   final Curve curve;
   final double? itemWidth;
   final double? itemHeight;

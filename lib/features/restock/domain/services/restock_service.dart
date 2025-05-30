@@ -16,7 +16,7 @@ class RestockService implements RestockServiceInterface{
   }
 
   @override
-  Future deleteRestockProduct(String? type, String? id) async{
+  Future deleteRestockProduct(dynamic type, dynamic id) async{
     return await restockRepositoryInterface.deleteRestockProduct(type, id);
   }
 }

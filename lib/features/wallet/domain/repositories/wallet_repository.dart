@@ -18,7 +18,7 @@ class WalletRepository implements WalletRepositoryInterface{
 
 
   @override
-  Future getList({int? offset = 1, String? filterBy, DateTime? startDate, DateTime? endDate, List<String>? transactionTypes}) async{
+  Future getList({dynamic offset = 1, dynamic filterBy, DateTime? startDate, DateTime? endDate, List<String>? transactionTypes}) async{
 
     // Build query parameters dynamically
     final Map<String, dynamic> queryParams = {

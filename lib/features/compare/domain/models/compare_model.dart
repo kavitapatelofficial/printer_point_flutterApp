@@ -17,11 +17,11 @@ class CompareModel {
 }
 
 class CompareLists {
-  int? id;
-  int? userId;
-  int? productId;
-  String? createdAt;
-  String? updatedAt;
+  dynamic id;
+  dynamic userId;
+  dynamic productId;
+  dynamic createdAt;
+  dynamic updatedAt;
   Product? product;
 
   CompareLists(

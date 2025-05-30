@@ -9,8 +9,8 @@ import 'package:flutter_sixvalley_ecommerce/common/basewidget/custom_button_widg
 import 'package:provider/provider.dart';
 
 class ShippingMethodBottomSheetWidget extends StatefulWidget {
-  final String? groupId;
-  final int? sellerId;
+  final dynamic groupId;
+  final dynamic sellerId;
   final int sellerIndex;
   const ShippingMethodBottomSheetWidget({super.key, required this.groupId, required this.sellerId, required this.sellerIndex});
 

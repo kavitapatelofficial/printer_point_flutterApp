@@ -21,14 +21,14 @@ import 'package:flutter_sixvalley_ecommerce/features/shop/widgets/shop_product_v
 import 'package:provider/provider.dart';
 
 class TopSellerProductScreen extends StatefulWidget {
-  final int? sellerId;
+  final dynamic sellerId;
   final bool? temporaryClose;
   final bool? vacationStatus;
-  final String? vacationEndDate;
-  final String? vacationStartDate;
-  final String? name;
-  final String? banner;
-  final String? image;
+  final dynamic vacationEndDate;
+  final dynamic vacationStartDate;
+  final dynamic name;
+  final dynamic banner;
+  final dynamic image;
   final bool fromMore;
   const TopSellerProductScreen({super.key, this.sellerId, this.temporaryClose, this.vacationStatus, this.vacationEndDate,
     this.vacationStartDate, this.name, this.banner, this.image, this.fromMore = false});

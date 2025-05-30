@@ -5,8 +5,8 @@ import 'package:flutter_sixvalley_ecommerce/utill/dimensions.dart';
 import 'package:provider/provider.dart';
 
 class CustomDateRangePickerWidget extends StatefulWidget {
-  final String? text;
-  final String? image;
+  final dynamic text;
+  final dynamic image;
   final bool requiredField;
   final Function? selectDate;
   final bool isFromHistory;

@@ -56,7 +56,7 @@ class _ClearanceSaleAllProductScreenState extends State<ClearanceSaleAllProductS
                       showFilter: true,
                       controller: _searchController,
                       fromShop: false,
-                      handleSearchText: (String? text) {
+                      handleSearchText: (dynamic text) {
                         productController.setSearchText(text);
                         },
                       onSearchClick: () => onClick(context, productController, _searchController),
@@ -79,7 +79,7 @@ class _ClearanceSaleAllProductScreenState extends State<ClearanceSaleAllProductS
                     return (productModel != null && !productController.isSearchLoading)
                         ? (productModel.products != null && productModel.products!.isNotEmpty)
                         ? PaginatedListView(scrollController: _scrollController,
-                        onPaginate: (int? offset) async => applyFilter(context: context, fromPagination: true, offset: offset),
+                        onPaginate: (dynamic offset) async => applyFilter(context: context, fromPagination: true, offset: offset),
                           totalSize: productModel.totalSize,
                           offset: productModel.offset,
                           itemView: RepaintBoundary(
@@ -104,7 +104,7 @@ class _ClearanceSaleAllProductScreenState extends State<ClearanceSaleAllProductS
   }
 }
 
-void applyFilter({required BuildContext context, bool fromPagination = false, int? offset}) {
+void applyFilter({required BuildContext context, bool fromPagination = false, dynamic offset}) {
 
   final brandProvider = Provider.of<BrandController>(context, listen: false);
   final categoryProvider = Provider.of<CategoryController>(context, listen: false);

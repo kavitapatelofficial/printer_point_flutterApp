@@ -1,14 +1,14 @@
 import 'package:flutter_sixvalley_ecommerce/data/model/image_full_url.dart';
 
 class SupportReplyModel {
-  int? id;
-  String? customerMessage;
-  String? adminMessage;
-  String? createdAt;
-  String? updatedAt;
+  dynamic id;
+  dynamic customerMessage;
+  dynamic adminMessage;
+  dynamic createdAt;
+  dynamic updatedAt;
   List<String>? attachment;
   List<ImageFullUrl>? attachmentFullUrl;
-  String? adminId;
+  dynamic adminId;
 
   SupportReplyModel(
       {this.id,

@@ -39,7 +39,7 @@ class ContactUsRepository implements ContactUsRepositoryInterface{
   }
 
   @override
-  Future getList({int? offset}) {
+  Future getList({dynamic offset}) {
     // TODO: implement getList
     throw UnimplementedError();
   }

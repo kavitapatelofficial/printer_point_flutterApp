@@ -52,10 +52,10 @@ class TransformInfo {
   final double? position;
 
   /// The `index` of the widget pass to [PageTransformer.transform]
-  final int? index;
+  final dynamic index;
 
   /// The `activeIndex` of the PageView
-  final int? activeIndex;
+  final dynamic activeIndex;
 
   /// The `activeIndex` of the PageView, from user start to swipe
   /// It will change when user end drag
@@ -120,7 +120,7 @@ class TransformerPageController extends PageController {
     return _getRenderIndexFromRealIndex(index, loop, itemCount, reverse);
   }
 
-  int? getRealItemCount() {
+  dynamic getRealItemCount() {
     if (itemCount == 0) return 0;
     return loop ? itemCount + kMaxValue : itemCount;
   }
@@ -231,7 +231,7 @@ class TransformerPageView extends StatefulWidget {
 
   factory TransformerPageView.children({
     Key? key,
-    int? index,
+    dynamic index,
     Duration? duration,
     Curve curve = Curves.ease,
     double viewportFraction = 1.0,
@@ -312,7 +312,7 @@ class TransformerPageView extends StatefulWidget {
   final double viewportFraction;
 
   /// If not set, it is controlled by this widget.
-  final int? index;
+  final dynamic index;
 
   final bool allowImplicitScrolling;
 

@@ -18,8 +18,8 @@ class LoyaltyPointController extends ChangeNotifier {
   LoyaltyPointModel? _loyaltyPointModel;
   LoyaltyPointModel? get loyaltyPointModel => _loyaltyPointModel;
 
-  String? _selectedFilterBy;
-  String? get selectedFilterBy => _selectedFilterBy;
+  dynamic _selectedFilterBy;
+  dynamic get selectedFilterBy => _selectedFilterBy;
 
   DateTime? _startDate;
   DateTime? get startDate => _startDate;
@@ -36,7 +36,7 @@ class LoyaltyPointController extends ChangeNotifier {
   Future<void> getLoyaltyPointList(BuildContext context, int offset, {
     bool reload = false,
     bool isUpdate = true,
-    String? filterBy,
+    dynamic filterBy,
     DateTime? startDate,
     DateTime? endDate,
     List<String>? transactionTypes,
@@ -91,7 +91,7 @@ class LoyaltyPointController extends ChangeNotifier {
 
 
 
-  void setSelectedProductType({String? type, bool isUpdate = true}){
+  void setSelectedProductType({dynamic type, bool isUpdate = true}){
     _selectedFilterBy = type;
 
     if(isUpdate){

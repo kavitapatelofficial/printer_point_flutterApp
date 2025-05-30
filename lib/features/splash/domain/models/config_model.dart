@@ -2,84 +2,84 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_sixvalley_ecommerce/data/model/image_full_url.dart';
 
 class ConfigModel {
-  String? brandSetting;
-  String? digitalProductSetting;
-  int? systemDefaultCurrency;
+  dynamic brandSetting;
+  dynamic digitalProductSetting;
+  dynamic systemDefaultCurrency;
   bool? digitalPayment;
   bool? cashOnDelivery;
-  String? sellerRegistration;
-  String? posActive;
-  String? companyPhone;
-  String? companyEmail;
+  dynamic sellerRegistration;
+  dynamic posActive;
+  dynamic companyPhone;
+  dynamic companyEmail;
   ImageFullUrl? companyLogo;
   ImageFullUrl? companyCoverImage;
-  String? companyIcon;
-  String? companyName;
-  int? deliveryCountryRestriction;
-  int? deliveryZipCodeAreaRestriction;
+  dynamic companyIcon;
+  dynamic companyName;
+  dynamic deliveryCountryRestriction;
+  dynamic deliveryZipCodeAreaRestriction;
   BaseUrls? baseUrls;
   StaticUrls? staticUrls;
-  String? aboutUs;
-  String? privacyPolicy;
+  dynamic aboutUs;
+  dynamic privacyPolicy;
   List<Faq>? faq;
-  String? termsConditions;
+  dynamic termsConditions;
   RefundPolicy? refundPolicy;
   RefundPolicy? returnPolicy;
   RefundPolicy? cancellationPolicy;
   RefundPolicy? shippingPolicy;
   List<CurrencyList>? currencyList;
-  String? currencySymbolPosition;
-  String? businessMode;
+  dynamic currencySymbolPosition;
+  dynamic businessMode;
   bool? maintenanceMode;
   List<Language>? language;
   List<ColorsModel>? colors;
   List<String>? unit;
-  String? shippingMethod;
+  dynamic shippingMethod;
   bool? emailVerification;
   bool? phoneVerification;
   bool? firebaseVerification;
-  String? countryCode;
+  dynamic countryCode;
   List<SocialLogin>? socialLogin;
-  String? currencyModel;
-  String? forgotPasswordVerification;
+  dynamic currencyModel;
+  dynamic forgotPasswordVerification;
   Announcement? announcement;
-  String? softwareVersion;
-  int? decimalPointSettings;
-  String? inhouseSelectedShippingType;
-  int? billingInputByCustomer;
-  int? minimumOrderLimit;
-  int? walletStatus;
-  int? loyaltyPointStatus;
+  dynamic softwareVersion;
+  dynamic decimalPointSettings;
+  dynamic inhouseSelectedShippingType;
+  dynamic billingInputByCustomer;
+  dynamic minimumOrderLimit;
+  dynamic walletStatus;
+  dynamic loyaltyPointStatus;
   double? loyaltyPointExchangeRate;
-  int? loyaltyPointMinimumPoint;
+  dynamic loyaltyPointMinimumPoint;
   List<PaymentMethods>? paymentMethods;
   OfflinePayment? offlinePayment;
-  String? paymentMethodImagePath;
-  String? refEarningStatus;
-  String? activeTheme;
+  dynamic paymentMethodImagePath;
+  dynamic refEarningStatus;
+  dynamic activeTheme;
   List<PopularTags>? popularTags;
-  int? guestCheckOut;
-  int? addFundsToWallet;
+  dynamic guestCheckOut;
+  dynamic addFundsToWallet;
   double? minimumAddFundAmount;
   double? maximumAddFundAmount;
-  String? refSignup;
-  int? orderVerification;
+  dynamic refSignup;
+  dynamic orderVerification;
   InhouseTemporaryClose? inhouseTemporaryClose;
   InhouseVacationAdd? inhouseVacationAdd;
-  int? mapApiStatus;
+  dynamic mapApiStatus;
   DefaultLocation? defaultLocation;
   UserAppVersionControl? userAppVersionControl;
   ImageFullUrl? companyFavIcon;
-  String? primaryColorCode;
-  String? secondaryColorCode;
+  dynamic primaryColorCode;
+  dynamic secondaryColorCode;
   MaintenanceMode? maintenanceModeData;
   CustomerLogin? customerLogin;
   CustomerVerification? customerVerification;
-  int? refundDayLimit;
-  int? otpResendTime;
+  dynamic refundDayLimit;
+  dynamic otpResendTime;
   bool? hasLocaldb;
   bool? localMaintenanceMode;
-  String? blogUrl;
+  dynamic blogUrl;
 
   ConfigModel(
       {this.brandSetting,
@@ -357,18 +357,18 @@ class ConfigModel {
 }
 
 class BaseUrls {
-  String? productImageUrl;
-  String? productThumbnailUrl;
-  String? digitalProductUrl;
-  String? brandImageUrl;
-  String? customerImageUrl;
-  String? bannerImageUrl;
-  String? categoryImageUrl;
-  String? reviewImageUrl;
-  String? sellerImageUrl;
-  String? shopImageUrl;
-  String? notificationImageUrl;
-  String? deliveryManImageUrl;
+  dynamic productImageUrl;
+  dynamic productThumbnailUrl;
+  dynamic digitalProductUrl;
+  dynamic brandImageUrl;
+  dynamic customerImageUrl;
+  dynamic bannerImageUrl;
+  dynamic categoryImageUrl;
+  dynamic reviewImageUrl;
+  dynamic sellerImageUrl;
+  dynamic shopImageUrl;
+  dynamic notificationImageUrl;
+  dynamic deliveryManImageUrl;
 
   BaseUrls(
       {this.productImageUrl,
@@ -402,10 +402,10 @@ class BaseUrls {
 }
 
 class StaticUrls {
-  String? contactUs;
-  String? brands;
-  String? categories;
-  String? customerAccount;
+  dynamic contactUs;
+  dynamic brands;
+  dynamic categories;
+  dynamic customerAccount;
 
   StaticUrls(
       {this.contactUs, this.brands, this.categories, this.customerAccount});
@@ -419,13 +419,13 @@ class StaticUrls {
 }
 
 class Faq {
-  int? id;
-  String? question;
-  String? answer;
-  int? ranking;
-  int? status;
-  String? createdAt;
-  String? updatedAt;
+  dynamic id;
+  dynamic question;
+  dynamic answer;
+  dynamic ranking;
+  dynamic status;
+  dynamic createdAt;
+  dynamic updatedAt;
 
   Faq(
       {this.id,
@@ -449,8 +449,8 @@ class Faq {
 }
 
 class RefundPolicy {
-  int? status;
-  String? content;
+  dynamic status;
+  dynamic content;
 
   RefundPolicy({this.status, this.content});
 
@@ -469,14 +469,14 @@ class RefundPolicy {
 }
 
 class CurrencyList {
-  int? id;
-  String? name;
-  String? symbol;
-  String? code;
+  dynamic id;
+  dynamic name;
+  dynamic symbol;
+  dynamic code;
   bool? status;
   double? exchangeRate;
-  String? createdAt;
-  String? updatedAt;
+  dynamic createdAt;
+  dynamic updatedAt;
 
   CurrencyList(
       {this.id,
@@ -509,8 +509,8 @@ class CurrencyList {
 }
 
 class Language {
-  String? code;
-  String? name;
+  dynamic code;
+  dynamic name;
 
   Language({this.code, this.name});
 
@@ -521,11 +521,11 @@ class Language {
 }
 
 class ColorsModel {
-  int? id;
-  String? name;
-  String? code;
-  String? createdAt;
-  String? updatedAt;
+  dynamic id;
+  dynamic name;
+  dynamic code;
+  dynamic createdAt;
+  dynamic updatedAt;
 
   ColorsModel({this.id, this.name, this.code, this.createdAt, this.updatedAt});
 
@@ -540,7 +540,7 @@ class ColorsModel {
 }
 
 class SocialLogin {
-  String? loginMedium;
+  dynamic loginMedium;
   bool? status;
 
   SocialLogin({this.loginMedium, this.status});
@@ -553,10 +553,10 @@ class SocialLogin {
 }
 
 class Announcement {
-  String? status;
-  String? color;
-  String? textColor;
-  String? announcement;
+  dynamic status;
+  dynamic color;
+  dynamic textColor;
+  dynamic announcement;
 
   Announcement({this.status, this.color, this.textColor, this.announcement});
 
@@ -570,7 +570,7 @@ class Announcement {
 }
 
 class PaymentMethods {
-  String? keyName;
+  dynamic keyName;
   AdditionalDatas? additionalDatas;
 
   PaymentMethods({this.keyName, this.additionalDatas});
@@ -583,8 +583,8 @@ class PaymentMethods {
 }
 
 class AdditionalDatas {
-  String? gatewayTitle;
-  String? gatewayImage;
+  dynamic gatewayTitle;
+  dynamic gatewayImage;
 
   AdditionalDatas({this.gatewayTitle, this.gatewayImage});
 
@@ -596,8 +596,8 @@ class AdditionalDatas {
 }
 
 class OfflinePayment {
-  String? name;
-  String? image;
+  dynamic name;
+  dynamic image;
 
   OfflinePayment({this.name, this.image});
 
@@ -609,10 +609,10 @@ class OfflinePayment {
 }
 
 class PopularTags {
-  int? id;
-  String? tag;
-  String? createdAt;
-  String? updatedAt;
+  dynamic id;
+  dynamic tag;
+  dynamic createdAt;
+  dynamic updatedAt;
 
   PopularTags(
       {this.id, this.tag,  this.createdAt, this.updatedAt});
@@ -628,7 +628,7 @@ class PopularTags {
 
 
 class InhouseTemporaryClose {
-  int? status;
+  dynamic status;
   InhouseTemporaryClose({this.status});
 
   InhouseTemporaryClose.fromJson(Map<String, dynamic> json) {
@@ -637,10 +637,10 @@ class InhouseTemporaryClose {
 }
 
 class InhouseVacationAdd {
-  int? status;
-  String? vacationStartDate;
-  String? vacationEndDate;
-  String? vacationNote;
+  dynamic status;
+  dynamic vacationStartDate;
+  dynamic vacationEndDate;
+  dynamic vacationNote;
 
   InhouseVacationAdd(
       {this.status,
@@ -658,8 +658,8 @@ class InhouseVacationAdd {
 
 
 class DefaultLocation {
-  String? lat;
-  String? lng;
+  dynamic lat;
+  dynamic lng;
 
   DefaultLocation({this.lat, this.lng});
 
@@ -705,9 +705,9 @@ class UserAppVersionControl {
 }
 
 class ForAndroid {
-  int? status;
-  String? version;
-  String? link;
+  dynamic status;
+  dynamic version;
+  dynamic link;
 
   ForAndroid({this.status, this.version, this.link});
 
@@ -728,7 +728,7 @@ class ForAndroid {
 
 
 class MaintenanceMode {
-  int? maintenanceStatus;
+  dynamic maintenanceStatus;
   SelectedMaintenanceSystem? selectedMaintenanceSystem;
   MaintenanceMessages? maintenanceMessages;
   MaintenanceTypeAndDuration? maintenanceTypeAndDuration;
@@ -773,10 +773,10 @@ class MaintenanceMode {
 }
 
 class SelectedMaintenanceSystem {
-  int? branchPanel;
-  int? customerApp;
-  int? webApp;
-  int? deliverymanApp;
+  dynamic branchPanel;
+  dynamic customerApp;
+  dynamic webApp;
+  dynamic deliverymanApp;
 
   SelectedMaintenanceSystem(
       {this.branchPanel, this.customerApp, this.webApp, this.deliverymanApp});
@@ -796,10 +796,10 @@ class SelectedMaintenanceSystem {
 }
 
 class MaintenanceMessages {
-  int? businessNumber;
-  int? businessEmail;
-  String? maintenanceMessage;
-  String? messageBody;
+  dynamic businessNumber;
+  dynamic businessEmail;
+  dynamic maintenanceMessage;
+  dynamic messageBody;
 
   MaintenanceMessages(
       {this.businessNumber,
@@ -825,12 +825,12 @@ class MaintenanceMessages {
 }
 
 class MaintenanceTypeAndDuration {
-  String? _maintenanceDuration;
-  String? _startDate;
-  String? _endDate;
+  dynamic _maintenanceDuration;
+  dynamic _startDate;
+  dynamic _endDate;
 
   MaintenanceTypeAndDuration(
-      {String? maintenanceDuration, String? startDate, String? endDate}) {
+      {dynamic maintenanceDuration, dynamic startDate, dynamic endDate}) {
     if (maintenanceDuration != null) {
       _maintenanceDuration = maintenanceDuration;
     }
@@ -842,13 +842,13 @@ class MaintenanceTypeAndDuration {
     }
   }
 
-  String? get maintenanceDuration => _maintenanceDuration;
-  set maintenanceDuration(String? maintenanceDuration) =>
+  dynamic get maintenanceDuration => _maintenanceDuration;
+  set maintenanceDuration(dynamic maintenanceDuration) =>
       _maintenanceDuration = maintenanceDuration;
-  String? get startDate => _startDate;
-  set startDate(String? startDate) => _startDate = startDate;
-  String? get endDate => _endDate;
-  set endDate(String? endDate) => _endDate = endDate;
+  dynamic get startDate => _startDate;
+  set startDate(dynamic startDate) => _startDate = startDate;
+  dynamic get endDate => _endDate;
+  set endDate(dynamic endDate) => _endDate = endDate;
 
   MaintenanceTypeAndDuration.fromJson(Map<String, dynamic> json) {
     _maintenanceDuration = json['maintenance_duration'];
@@ -895,9 +895,9 @@ class CustomerLogin {
 }
 
 class LoginOption {
-  int? manualLogin;
-  int? otpLogin;
-  int? socialMediaLogin;
+  dynamic manualLogin;
+  dynamic otpLogin;
+  dynamic socialMediaLogin;
 
   LoginOption({this.manualLogin, this.otpLogin, this.socialMediaLogin});
 
@@ -917,9 +917,9 @@ class LoginOption {
 }
 
 class SocialMediaLoginOptions {
-  int? google;
-  int? facebook;
-  int? apple;
+  dynamic google;
+  dynamic facebook;
+  dynamic apple;
 
   SocialMediaLoginOptions({this.google, this.facebook, this.apple});
 
@@ -940,10 +940,10 @@ class SocialMediaLoginOptions {
 
 
 class CustomerVerification {
-  int? status;
-  int? phone;
-  int? email;
-  int? firebase;
+  dynamic status;
+  dynamic phone;
+  dynamic email;
+  dynamic firebase;
 
   CustomerVerification({this.status, this.phone, this.email, this.firebase});
 

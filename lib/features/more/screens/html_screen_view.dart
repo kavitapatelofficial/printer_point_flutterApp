@@ -5,8 +5,8 @@ import 'package:flutter_sixvalley_ecommerce/common/basewidget/custom_app_bar_wid
 import 'package:url_launcher/url_launcher.dart';
 
 class HtmlViewScreen extends StatelessWidget {
-  final String? title;
-  final String? url;
+  final dynamic title;
+  final dynamic url;
   const HtmlViewScreen({super.key, required this.url, required this.title});
   @override
   Widget build(BuildContext context) {

@@ -61,9 +61,9 @@ class CartBottomSheetWidgetState extends State<CartBottomSheetWidget> {
             builder: (ctx, details, child) {
               List<String> variationFileType = [];
               List<List<String>> extentions = [];
-              String? variantKey;
+              dynamic variantKey;
               double? digitalVariantPrice;
-              String? colorWiseSelectedImage = '';
+              dynamic colorWiseSelectedImage = '';
               bool variationRestockRequested = false;
 
 
@@ -78,7 +78,7 @@ class CartBottomSheetWidgetState extends State<CartBottomSheetWidget> {
 
 
               Variation? variation;
-              String? variantName = (widget.product!.colors != null && widget.product!.colors!.isNotEmpty) ?
+              dynamic variantName = (widget.product!.colors != null && widget.product!.colors!.isNotEmpty) ?
               widget.product!.colors![details.variantIndex!].name : null;
               List<String> variationList = [];
               for(int index=0; index < widget.product!.choiceOptions!.length; index++) {
@@ -112,7 +112,7 @@ class CartBottomSheetWidgetState extends State<CartBottomSheetWidget> {
               }
 
               double? price = widget.product!.unitPrice;
-              int? stock = widget.product!.currentStock;
+              dynamic stock = widget.product!.currentStock;
               variationType = variationType.replaceAll(' ', '');
               for(Variation variation in widget.product!.variation!) {
                 if(variation.type == variationType) {
@@ -196,7 +196,7 @@ class CartBottomSheetWidgetState extends State<CartBottomSheetWidget> {
                                       child: CustomImageWidget(image: (widget.product!.colors != null && widget.product!.colors!.isNotEmpty &&
                                           widget.product!.imagesFullUrl != null && widget.product!.imagesFullUrl!.isNotEmpty) ?
                                       '$colorWiseSelectedImage':
-                                          '${widget.product!.thumbnail}'))),
+                                          '${widget.product!.imagesFullUrl!.first.status==200?widget.product!.imagesFullUrl!.first.path:widget.product!.imagesFullUrl!.first.key}'))),
 
                               widget.product!.discount! > 0 ?
                               Container(width: 100,
@@ -613,10 +613,10 @@ class CartBottomSheetWidgetState extends State<CartBottomSheetWidget> {
 
 class QuantityButton extends StatelessWidget {
   final bool isIncrement;
-  final int? quantity;
+  final dynamic quantity;
   final bool isCartWidget;
-  final int? stock;
-  final int? minimumOrderQuantity;
+  final dynamic stock;
+  final dynamic minimumOrderQuantity;
   final bool digitalProduct;
 
   const QuantityButton({super.key,

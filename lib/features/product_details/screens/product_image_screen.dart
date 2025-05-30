@@ -7,7 +7,7 @@ import 'package:photo_view/photo_view_gallery.dart';
 import 'package:provider/provider.dart';
 
 class ProductImageScreen extends StatefulWidget {
-  final String? title;
+  final dynamic title;
   final List<ImageFullUrl>? imageList;
   const ProductImageScreen({super.key, required this.title, required this.imageList});
 
@@ -16,7 +16,7 @@ class ProductImageScreen extends StatefulWidget {
 }
 
 class ProductImageScreenState extends State<ProductImageScreen> {
-  int? pageIndex;
+  dynamic pageIndex;
   PageController? _pageController;
 
   @override

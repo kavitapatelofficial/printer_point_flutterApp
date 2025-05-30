@@ -24,7 +24,7 @@ class RestockController with ChangeNotifier {
 
   RestockProductModel? restockProductModel;
 
-  Future<ApiResponse> reorder({String? orderId}) async {
+  Future<ApiResponse> reorder({dynamic orderId}) async {
     _isLoading =true;
     ApiResponse apiResponse = await restockServiceInterface.reorder(orderId!);
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {
@@ -64,7 +64,7 @@ class RestockController with ChangeNotifier {
   }
 
 
-  Future<void> deleteRestockProduct(String? id, String? type, int? index) async {
+  Future<void> deleteRestockProduct(dynamic id, dynamic type, dynamic index) async {
     _isLoading = true;
     ApiResponse apiResponse = await restockServiceInterface.deleteRestockProduct(type, id);
 

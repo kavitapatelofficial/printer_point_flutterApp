@@ -2,44 +2,44 @@ import 'package:flutter_sixvalley_ecommerce/data/model/image_full_url.dart';
 import 'package:flutter_sixvalley_ecommerce/features/product/domain/models/product_model.dart';
 import 'package:flutter_sixvalley_ecommerce/features/shop/domain/models/seller_model.dart';
 class CartModel {
-  int? id;
-  int? productId;
-  String? image;
-  String? name;
-  String? thumbnail;
+  dynamic id;
+  dynamic productId;
+  dynamic image;
+  dynamic name;
+  dynamic thumbnail;
   ImageFullUrl? thumbnailFullUrl;
-  int? sellerId;
-  String? sellerIs;
-  String? seller;
+  dynamic sellerId;
+  dynamic sellerIs;
+  dynamic seller;
   double? price;
   double? discountedPrice;
-  int? quantity;
-  int? maxQuantity;
-  String? variant;
-  String? color;
+  dynamic quantity;
+  dynamic maxQuantity;
+  dynamic variant;
+  dynamic color;
   Variation? variation;
   double? discount;
-  String? discountType;
+  dynamic discountType;
   double? tax;
-  String? taxModel;
-  String? taxType;
-  int? shippingMethodId;
-  String? cartGroupId;
-  String? shopInfo;
+  dynamic taxModel;
+  dynamic taxType;
+  dynamic shippingMethodId;
+  dynamic cartGroupId;
+  dynamic shopInfo;
   List<ChoiceOptions>? choiceOptions;
   List<int>? variationIndexes;
   double?  shippingCost;
-  String? shippingType;
-  int? minimumOrderQuantity;
+  dynamic shippingType;
+  dynamic minimumOrderQuantity;
   ProductInfo? productInfo;
-  String? productType;
-  String? slug;
+  dynamic productType;
+  dynamic slug;
   double? minimumOrderAmountInfo;
   FreeDeliveryOrderAmount? freeDeliveryOrderAmount;
   bool? increment;
   bool? decrement;
   Shop? shop;
-  int? isProductAvailable;
+  dynamic isProductAvailable;
   bool? isChecked;
   bool? isGroupChecked;
   bool? isGroupItemChecked;
@@ -162,8 +162,8 @@ class CartModel {
 }
 
 class ProductInfo {
-  int? minimumOrderQty;
-  int? totalCurrentStock;
+  dynamic minimumOrderQty;
+  dynamic totalCurrentStock;
   ImageFullUrl? thumbnailFullUrl;
 
   ProductInfo({ this.minimumOrderQty, this.totalCurrentStock});
@@ -191,9 +191,9 @@ class ProductInfo {
 }
 
 class FreeDeliveryOrderAmount {
-  int? status;
+  dynamic status;
   double? amount;
-  int? percentage;
+  dynamic percentage;
   double? shippingCostSaved;
   double? amountNeed;
 
@@ -229,12 +229,12 @@ class FreeDeliveryOrderAmount {
 
 
 class CartModelBody{
-  int? productId;
-  String? variant;
-  String? color;
+  dynamic productId;
+  dynamic variant;
+  dynamic color;
   Variation? variation;
-  int? quantity;
-  String? variantKey;
+  dynamic quantity;
+  dynamic variantKey;
   double? digitalVariantPrice;
 
   CartModelBody(

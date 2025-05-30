@@ -17,7 +17,7 @@ class CartRepository implements CartRepositoryInterface<ApiResponse>{
 
 
   @override
-  Future<ApiResponse> getList({int? offset}) async {
+  Future<ApiResponse> getList({dynamic offset}) async {
     try {
       final response = await dioClient!.get('${AppConstants.getCartDataUri}?guest_id=${Provider.of<AuthController>(Get.context!, listen: false).getGuestToken()}');
       return ApiResponse.withSuccess(response);
@@ -29,7 +29,7 @@ class CartRepository implements CartRepositoryInterface<ApiResponse>{
 
   @override
   Future<ApiResponse> addToCartListData(CartModelBody cart, List<ChoiceOptions> choiceOptions, List<int>? variationIndexes,
-      int? buyNow, int? shippingMethodExist, int? shippingMethodId) async {
+      dynamic buyNow, dynamic shippingMethodExist, dynamic shippingMethodId) async {
     Map<String?, dynamic> choice = {};
     for(int index=0; index<choiceOptions.length; index++){
       choice.addAll({choiceOptions[index].name: choiceOptions[index].options![variationIndexes![index]]});
@@ -66,7 +66,7 @@ class CartRepository implements CartRepositoryInterface<ApiResponse>{
 
   @override
   Future<ApiResponse> restockRequest(CartModelBody cart, List<ChoiceOptions> choiceOptions, List<int>? variationIndexes,
-      int? buyNow, int? shippingMethodExist, int? shippingMethodId) async {
+      dynamic buyNow, dynamic shippingMethodExist, dynamic shippingMethodId) async {
     Map<String?, dynamic> choice = {};
     for(int index=0; index<choiceOptions.length; index++){
       choice.addAll({choiceOptions[index].name: choiceOptions[index].options![variationIndexes![index]]});
@@ -103,7 +103,7 @@ class CartRepository implements CartRepositoryInterface<ApiResponse>{
 
 
   @override
-  Future<ApiResponse> updateQuantity(int? key,int quantity) async {
+  Future<ApiResponse> updateQuantity(dynamic key,int quantity) async {
     try {
       final response = await dioClient!.post(AppConstants.updateCartQuantityUri,
         data: {'_method': 'put',
@@ -118,7 +118,7 @@ class CartRepository implements CartRepositoryInterface<ApiResponse>{
   }
 
   @override
-  Future<ApiResponse> delete(int? key) async {
+  Future<ApiResponse> delete(dynamic key) async {
     try {
       final response = await dioClient!.post(AppConstants.removeFromCartUri,
           data: {'_method': 'delete',

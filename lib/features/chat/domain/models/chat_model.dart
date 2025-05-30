@@ -1,9 +1,9 @@
 import 'package:flutter_sixvalley_ecommerce/data/model/image_full_url.dart';
 
 class ChatModel {
-  int? totalSize;
-  String? limit;
-  String? offset;
+  dynamic totalSize;
+  dynamic limit;
+  dynamic offset;
   List<Chat>? chat;
 
   ChatModel({this.totalSize, this.limit, this.offset, this.chat});
@@ -23,22 +23,22 @@ class ChatModel {
 }
 
 class Chat {
-  int? id;
-  int? userId;
-  int? sellerId;
-  int? adminId;
-  int? deliveryManId;
-  String? message;
+  dynamic id;
+  dynamic userId;
+  dynamic sellerId;
+  dynamic adminId;
+  dynamic deliveryManId;
+  dynamic message;
   bool? sentByCustomer;
   bool? sentBySeller;
   bool? sentByAdmin;
   bool? sentByDeliveryMan;
   bool? seenByCustomer;
-  String? createdAt;
-  String? updatedAt;
+  dynamic createdAt;
+  dynamic updatedAt;
   SellerInfo? sellerInfo;
   DeliveryMan? deliveryMan;
-  int? unseenMessageCount;
+  dynamic unseenMessageCount;
 
   Chat(
       {this.id,
@@ -103,23 +103,23 @@ class SellerInfo {
 }
 
 class Shops {
-  int? id;
-  int? sellerId;
-  String? name;
-  String? address;
-  String? contact;
-  String? image;
+  dynamic id;
+  dynamic sellerId;
+  dynamic name;
+  dynamic address;
+  dynamic contact;
+  dynamic image;
   ImageFullUrl? imageFullUrl;
-  String? bottomBanner;
-  String? offerBanner;
-  String? vacationStartDate;
-  String? vacationEndDate;
-  String? vacationNote;
+  dynamic bottomBanner;
+  dynamic offerBanner;
+  dynamic vacationStartDate;
+  dynamic vacationEndDate;
+  dynamic vacationNote;
   bool? vacationStatus;
   bool? temporaryClose;
-  String? createdAt;
-  String? updatedAt;
-  String? banner;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic banner;
 
   Shops(
       {this.id,
@@ -178,12 +178,12 @@ class Shops {
 }
 
 class DeliveryMan {
-  int? id;
-  String? fName;
-  String? lName;
-  String? image;
-  String? phone;
-  String? code;
+  dynamic id;
+  dynamic fName;
+  dynamic lName;
+  dynamic image;
+  dynamic phone;
+  dynamic code;
   ImageFullUrl? imageFullUrl;
 
 

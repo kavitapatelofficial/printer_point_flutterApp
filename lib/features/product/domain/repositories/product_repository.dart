@@ -15,7 +15,7 @@ class ProductRepository implements ProductRepositoryInterface{
   ProductRepository({required this.dioClient});
 
   @override
-  Future<ApiResponse> getFilteredProductList(BuildContext context, String offset, ProductType productType, String? title) async {
+  Future<ApiResponse> getFilteredProductList(BuildContext context, String offset, ProductType productType, dynamic title) async {
     late String endUrl;
 
      if(productType == ProductType.bestSelling) {
@@ -171,7 +171,7 @@ class ProductRepository implements ProductRepositoryInterface{
 
 
   @override
-  Future<ApiResponse> getClearanceSearchProducts(String query, String? categoryIds, String? brandIds, String? authorIds, String? publishingIds, String? sort, String? priceMin, String? priceMax, int offset, String? productType, String? offerType) async {
+  Future<ApiResponse> getClearanceSearchProducts(String query, dynamic categoryIds, dynamic brandIds, dynamic authorIds, dynamic publishingIds, dynamic sort, dynamic priceMin, dynamic priceMax, int offset, dynamic productType, dynamic offerType) async {
 
     try {
       log("===limit==>" );
@@ -219,7 +219,7 @@ class ProductRepository implements ProductRepositoryInterface{
 
 
   @override
-  Future getList({int? offset = 1}) {
+  Future getList({dynamic offset = 1}) {
     // TODO: implement getList
     throw UnimplementedError();
   }

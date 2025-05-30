@@ -1,7 +1,7 @@
 
 class OrderPlaceModel {
 
-  String? _paymentMethod;
+  dynamic _paymentMethod;
   double? _discount;
 
   OrderPlaceModel(
@@ -13,7 +13,7 @@ class OrderPlaceModel {
   }
 
 
-  String? get paymentMethod => _paymentMethod;
+  dynamic get paymentMethod => _paymentMethod;
   double? get discount => _discount;
 
   OrderPlaceModel.fromJson(Map<String, dynamic> json) {

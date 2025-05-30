@@ -29,7 +29,7 @@ class ChooseShippingMethodDialog extends StatefulWidget {
 
 class _ChooseShippingMethodDialogState extends State<ChooseShippingMethodDialog> {
 
-  int? selectedIndex;
+  dynamic selectedIndex;
 
   @override
   Widget build(BuildContext context) {

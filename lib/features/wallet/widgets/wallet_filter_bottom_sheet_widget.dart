@@ -390,7 +390,7 @@ class _FilterTitleWidget extends StatelessWidget {
 }
 
 class _FilterItem extends StatelessWidget {
-  final String? title;
+  final dynamic title;
   final bool checked;
   final Function()? onTap;
   const _FilterItem({required this.title, required this.checked, this.onTap});

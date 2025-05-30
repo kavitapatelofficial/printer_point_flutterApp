@@ -86,7 +86,7 @@ class ChatController extends ChangeNotifier {
 
 
 
-  Future<void> getChatList( int offset, {bool reload = true, int? userType}) async {
+  Future<void> getChatList( int offset, {bool reload = true, dynamic userType}) async {
     if(reload){
       notifyListeners();
     }
@@ -166,7 +166,7 @@ class ChatController extends ChangeNotifier {
 
   MessageModel? messageModel;
 
-  Future<void> getMessageList(BuildContext context, int? id, int offset, {bool reload = true, int? userType}) async {
+  Future<void> getMessageList(BuildContext context, dynamic id, int offset, {bool reload = true, dynamic userType}) async {
     if(reload){
       messageModel = null;
     }
@@ -197,7 +197,7 @@ class ChatController extends ChangeNotifier {
 
 
 
-  Future<http.StreamedResponse> sendMessage(MessageBody messageBody,{int? userType}) async {
+  Future<http.StreamedResponse> sendMessage(MessageBody messageBody,{dynamic userType}) async {
     _isSending = true;
     notifyListeners();
 
@@ -220,7 +220,7 @@ class ChatController extends ChangeNotifier {
   }
 
 
-  Future<ApiResponse> seenMessage(BuildContext context, int? sellerId, int? deliveryId) async {
+  Future<ApiResponse> seenMessage(BuildContext context, dynamic sellerId, dynamic deliveryId) async {
     ApiResponse apiResponse = await chatServiceInterface!.seenMessage(_userTypeIndex == 0? sellerId!: deliveryId!, _userTypeIndex == 0? 'delivery-man' : 'seller');
     if (apiResponse.response != null && apiResponse.response!.statusCode == 200) {
       // await getChatList(1);
@@ -248,7 +248,7 @@ class ChatController extends ChangeNotifier {
   List <PlatformFile>? get pickedImageFile => _pickedImageFiles;
   List <MediaFileModel>?  pickedMediaStored = [];
 
-  void pickMultipleMedia(bool isRemove,{int? index, bool openCamera = false}) async {
+  void pickMultipleMedia(bool isRemove,{dynamic index, bool openCamera = false}) async {
     _pickedFIleCrossMaxLimit = false;
     _pickedFIleCrossMaxLength = false;
 
@@ -383,7 +383,7 @@ class ChatController extends ChangeNotifier {
 
 
 
-  String getChatTime (String todayChatTimeInUtc , String? nextChatTimeInUtc) {
+  String getChatTime (String todayChatTimeInUtc , dynamic nextChatTimeInUtc) {
     String chatTime = '';
     DateTime todayConversationDateTime = DateConverter.isoUtcStringToLocalTimeOnly(todayChatTimeInUtc);
     DateTime nextConversationDateTime;
@@ -418,7 +418,7 @@ class ChatController extends ChangeNotifier {
     return chatTime;
   }
 
-  Future<void> pickOtherFile(bool isRemove, {int? index}) async {
+  Future<void> pickOtherFile(bool isRemove, {dynamic index}) async {
     _pickedFIleCrossMaxLimit = false;
     _pickedFIleCrossMaxLength = false;
     _singleFIleCrossMaxLimit = false;
@@ -615,7 +615,7 @@ class ChatController extends ChangeNotifier {
   //   }
   // }
   //
-  // Future<void> _waitForDownload(String? taskId, String filePath) async {
+  // Future<void> _waitForDownload(dynamic taskId, String filePath) async {
   //   // Register callback to monitor the download progress
   //   FlutterDownloader.registerCallback((id, status, progress) {
   //     if (id == taskId && status == DownloadTaskStatus.complete) {
@@ -673,7 +673,7 @@ class ChatController extends ChangeNotifier {
   }
 
 
-  String? getOnPressChatTime(Message currentConversation){
+  dynamic getOnPressChatTime(Message currentConversation){
     if(currentConversation.id.toString() == _onMessageTimeShowID || currentConversation.id.toString() == _onImageOrFileTimeShowID){
       DateTime currentDate = DateTime.now();
       DateTime todayConversationDateTime = DateConverter.isoUtcStringToLocalTimeOnly(

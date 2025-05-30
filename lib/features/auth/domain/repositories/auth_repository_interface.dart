@@ -7,7 +7,7 @@ abstract class AuthRepoInterface<T> implements RepositoryInterface{
 
   Future<ApiResponse> registration(Map<String, dynamic> body);
 
-  Future<ApiResponse> login(String? userInput, String? password, String? type);
+  Future<ApiResponse> login(dynamic userInput, dynamic password, dynamic type);
 
   Future<ApiResponse> logout();
 
@@ -17,7 +17,7 @@ abstract class AuthRepoInterface<T> implements RepositoryInterface{
   
   String getUserToken();
   
-  String? getGuestIdToken();
+  dynamic getGuestIdToken();
   
   bool isGuestIdExist();
   
@@ -65,9 +65,9 @@ abstract class AuthRepoInterface<T> implements RepositoryInterface{
 
   Future<ApiResponse> firebaseAuthVerify({required String phoneNumber, required String session, required String otp, required bool isForgetPassword});
 
-  Future<ApiResponse> registerWithOtp(String name, {String? email, required String phone});
+  Future<ApiResponse> registerWithOtp(String name, {dynamic email, required String phone});
 
-  Future<ApiResponse> registerWithSocialMedia(String name, {required String email,String? phone});
+  Future<ApiResponse> registerWithSocialMedia(String name, {required String email,dynamic phone});
 
   Future<ApiResponse> verifyToken(String email, String token);
 

@@ -177,7 +177,7 @@ class SearchFilterBottomSheetState extends State<SearchFilterBottomSheet> {
 }
 
 class FilterItemWidget extends StatelessWidget {
-  final String? title;
+  final dynamic title;
   final int index;
   const FilterItemWidget({super.key, required this.title, required this.index});
 

@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 class SupportTicketReplyWidget extends StatelessWidget {
   final bool isMe;
   final String dateTime;
-  final String? message;
+  final dynamic message;
   final SupportReplyModel replyModel;
   const SupportTicketReplyWidget({super.key, required this.isMe, required this.dateTime, this.message, required this.replyModel});
 

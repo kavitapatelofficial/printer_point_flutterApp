@@ -31,13 +31,13 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/foundation.dart' as foundation;
 
 class ChatScreen extends StatefulWidget {
-  final int? id;
-  final String? name;
+  final dynamic id;
+  final dynamic name;
   final bool isDelivery;
-  final String? image;
-  final String? phone;
+  final dynamic image;
+  final dynamic phone;
   final bool shopClose;
-  final int? userType;
+  final dynamic userType;
   const ChatScreen({super.key,  this.id, required this.name,  this.isDelivery = false,  this.image, this.phone, this.shopClose = false, this.userType});
 
   @override
@@ -120,7 +120,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 child: PaginatedListView(
                   reverse: true,
                   scrollController: scrollController,
-                  onPaginate: (int? offset) => chatController.getMessageList(context,widget.id, offset ?? 1, reload: false),
+                  onPaginate: (dynamic offset) => chatController.getMessageList(context,widget.id, offset ?? 1, reload: false),
                   totalSize: chatController.messageModel?.totalSize,
                   offset: chatController.messageModel?.offset,
                   limit: chatController.messageModel?.limit,
@@ -481,7 +481,7 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 
-  String? _willShowDate(int index, MessageModel? messageModel) {
+  dynamic _willShowDate(int index, MessageModel? messageModel) {
 
     if(messageModel?.message == null) return null;
 

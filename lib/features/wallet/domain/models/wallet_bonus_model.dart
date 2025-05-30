@@ -16,18 +16,18 @@ class WalletBonusModel {
 }
 
 class BonusList {
-  int? id;
-  String? title;
-  String? description;
-  String? bonusType;
+  dynamic id;
+  dynamic title;
+  dynamic description;
+  dynamic bonusType;
   double? bonusAmount;
   double? minAddMoneyAmount;
   double? maxBonusAmount;
-  String? startDateTime;
-  String? endDateTime;
-  int? isActive;
-  String? createdAt;
-  String? updatedAt;
+  dynamic startDateTime;
+  dynamic endDateTime;
+  dynamic isActive;
+  dynamic createdAt;
+  dynamic updatedAt;
 
   BonusList(
       {this.id,

@@ -21,7 +21,7 @@ import 'package:provider/provider.dart';
 class OtpRegistrationScreen extends StatefulWidget {
   final String tempToken;
   final String userInput;
-  final String? userName;
+  final dynamic userName;
   const OtpRegistrationScreen({super.key, required this.tempToken, required this.userInput, this.userName});
 
   @override
@@ -33,7 +33,7 @@ class _OtpRegistrationScreenState extends State<OtpRegistrationScreen> {
   TextEditingController? _emailController;
   TextEditingController? _nameController;
   TextEditingController? _phoneNumberController;
-  String? countryCode;
+  dynamic countryCode;
 
 
   @override

@@ -22,8 +22,8 @@ class DeliveryChatItemWidget extends StatefulWidget {
 }
 
 class DeliveryChatItemWidgetState extends State<DeliveryChatItemWidget> {
-  String? baseUrl = '', image = '', call = '', name = '';
-  int? id;
+  dynamic baseUrl = '', image = '', call = '', name = '';
+  dynamic id;
   bool vacationIsOn = false;
   @override
   void initState() {

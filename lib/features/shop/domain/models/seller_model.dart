@@ -4,9 +4,9 @@ import 'package:flutter_sixvalley_ecommerce/main.dart';
 import 'package:provider/provider.dart';
 
 class SellerModel {
-  int? totalSize;
-  int? limit;
-  int? offset;
+  dynamic totalSize;
+  dynamic limit;
+  dynamic offset;
   List<Seller>? sellers;
 
   SellerModel({this.totalSize, this.limit, this.offset, this.sellers});
@@ -26,28 +26,28 @@ class SellerModel {
 
 }
 class Seller {
-  int? id;
-  String? fName;
-  String? lName;
-  String? phone;
-  String? image;
-  String? email;
-  String? password;
-  String? status;
-  String? rememberToken;
-  String? createdAt;
-  String? updatedAt;
-  String? authToken;
-  String? gst;
-  String? cmFirebaseToken;
-  int? posStatus;
+  dynamic id;
+  dynamic fName;
+  dynamic lName;
+  dynamic phone;
+  dynamic image;
+  dynamic email;
+  dynamic password;
+  dynamic status;
+  dynamic rememberToken;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic authToken;
+  dynamic gst;
+  dynamic cmFirebaseToken;
+  dynamic posStatus;
   double? minimumOrderAmount;
   double? freeDeliveryStatus;
   double? freeDeliveryOverAmount;
-  int? ordersCount;
-  int? productCount;
-  int? totalRating;
-  int? ratingCount;
+  dynamic ordersCount;
+  dynamic productCount;
+  dynamic totalRating;
+  dynamic ratingCount;
   double? averageRating;
   Shop? shop;
   ImageFullUrl? imageFullUrl;
@@ -118,23 +118,23 @@ class Seller {
 }
 
 class Shop {
-  int? id;
-  int? sellerId;
-  String? name;
-  String? address;
-  String? contact;
-  String? image;
+  dynamic id;
+  dynamic sellerId;
+  dynamic name;
+  dynamic address;
+  dynamic contact;
+  dynamic image;
   ImageFullUrl? imageFullUrl;
-  String? bottomBanner;
-  String? offerBanner;
-  String? vacationStartDate;
-  String? vacationEndDate;
-  String? vacationNote;
+  dynamic bottomBanner;
+  dynamic offerBanner;
+  dynamic vacationStartDate;
+  dynamic vacationEndDate;
+  dynamic vacationNote;
   bool? vacationStatus;
   bool? temporaryClose;
-  String? createdAt;
-  String? updatedAt;
-  String? banner;
+  dynamic createdAt;
+  dynamic updatedAt;
+  dynamic banner;
   ImageFullUrl? bannerFullUrl;
 
   Shop(

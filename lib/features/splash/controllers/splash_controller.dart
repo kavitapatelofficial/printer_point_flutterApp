@@ -27,7 +27,7 @@ class SplashController extends ChangeNotifier {
   CurrencyList? _myCurrency;
   CurrencyList? _usdCurrency;
   CurrencyList? _defaultCurrency;
-  int? _currencyIndex;
+  dynamic _currencyIndex;
   bool _hasConnection = true;
   bool _fromSetting = false;
   bool _firstTimeConnectionCheck = true;
@@ -40,7 +40,7 @@ class SplashController extends ChangeNotifier {
   CurrencyList? get myCurrency => _myCurrency;
   CurrencyList? get usdCurrency => _usdCurrency;
   CurrencyList? get defaultCurrency => _defaultCurrency;
-  int? get currencyIndex => _currencyIndex;
+  dynamic get currencyIndex => _currencyIndex;
   bool get hasConnection => _hasConnection;
   bool get fromSetting => _fromSetting;
   bool get firstTimeConnectionCheck => _firstTimeConnectionCheck;
@@ -65,7 +65,7 @@ class SplashController extends ChangeNotifier {
 
      localMaintainanceMode = (_configModel?.maintenanceModeData?.maintenanceStatus == 1 && _configModel?.maintenanceModeData?.selectedMaintenanceSystem?.customerApp == 1);
 
-     String? currencyCode = splashServiceInterface!.getCurrency();
+     dynamic currencyCode = splashServiceInterface!.getCurrency();
 
      for(CurrencyList currencyList in _configModel!.currencyList!) {
        if(currencyList.id == _configModel!.systemDefaultCurrency) {
@@ -107,7 +107,7 @@ class SplashController extends ChangeNotifier {
       }
 
 
-      String? currencyCode = splashServiceInterface!.getCurrency();
+      dynamic currencyCode = splashServiceInterface!.getCurrency();
 
       try{
         // await FirebaseMessaging.instance.getToken();
@@ -192,7 +192,7 @@ class SplashController extends ChangeNotifier {
     _firstTimeConnectionCheck = isChecked;
   }
 
-  void getCurrencyData(String? currencyCode) {
+  void getCurrencyData(dynamic currencyCode) {
     for (var currency in _configModel!.currencyList!) {
       if(currencyCode == currency.code) {
         _myCurrency = currency;

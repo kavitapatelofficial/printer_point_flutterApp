@@ -5,7 +5,7 @@ import 'package:flutter_sixvalley_ecommerce/utill/dimensions.dart';
 import 'package:provider/provider.dart';
 
 class FilterCheckItemWidget extends StatelessWidget {
-  final String? title;
+  final dynamic title;
   final bool checked;
   final Function()? onTap;
   const FilterCheckItemWidget({super.key, required this.title, required this.checked, this.onTap});

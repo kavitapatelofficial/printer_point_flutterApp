@@ -28,7 +28,7 @@ class _LoyaltyPointConverterDialogueWidgetState extends State<LoyaltyPointConver
   @override
   Widget build(BuildContext context) {
     double? exchangeRate = Provider.of<SplashController>(context,listen: false).configModel!.loyaltyPointExchangeRate;
-    int? min = Provider.of<SplashController>(context,listen: false).configModel!.loyaltyPointMinimumPoint;
+    dynamic min = Provider.of<SplashController>(context,listen: false).configModel!.loyaltyPointMinimumPoint;
 
     return SingleChildScrollView(
       child: Column(mainAxisSize: MainAxisSize.min, children: [

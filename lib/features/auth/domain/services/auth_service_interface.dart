@@ -4,7 +4,7 @@ abstract class AuthServiceInterface{
 
   Future<dynamic> registration(Map<String, dynamic> body, );
 
-  Future<dynamic> login(String? userInput, String? password, String? type);
+  Future<dynamic> login(dynamic userInput, dynamic password, dynamic type);
 
   Future<dynamic> logout();
 
@@ -14,7 +14,7 @@ abstract class AuthServiceInterface{
 
   String getUserToken();
 
-  String? getGuestIdToken();
+  dynamic getGuestIdToken();
 
   bool isGuestIdExist();
 
@@ -62,9 +62,9 @@ abstract class AuthServiceInterface{
 
   Future<dynamic> firebaseAuthVerify({required String phoneNumber, required String session, required String otp, required bool isForgetPassword});
 
-  Future<dynamic> registerWithOtp(String name, {String? email, required String phone});
+  Future<dynamic> registerWithOtp(String name, {dynamic email, required String phone});
 
-  Future<dynamic> registerWithSocialMedia(String name, {required String email,String? phone});
+  Future<dynamic> registerWithSocialMedia(String name, {required String email,dynamic phone});
 
   Future<dynamic> verifyToken(String email, String token);
 

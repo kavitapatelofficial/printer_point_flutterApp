@@ -76,7 +76,7 @@ class SplashScreenState extends State<SplashScreen> {
     Provider.of<SplashController>(context, listen: false).initConfig(
       context,
       (ConfigModel? configModel) {
-        String? minimumVersion = "0";
+        dynamic minimumVersion = "0";
         UserAppVersionControl? appVersion = Provider.of<SplashController>(Get.context!, listen: false).configModel?.userAppVersionControl;
         if(Platform.isAndroid) {
           minimumVersion =  appVersion?.forAndroid?.version ?? '0';
@@ -163,7 +163,7 @@ class SplashScreenState extends State<SplashScreen> {
 
 
       (ConfigModel? configModel) {
-        String? minimumVersion = "0";
+        dynamic minimumVersion = "0";
         UserAppVersionControl? appVersion = Provider.of<SplashController>(Get.context!, listen: false).configModel?.userAppVersionControl;
         if(Platform.isAndroid) {
           minimumVersion =  appVersion?.forAndroid?.version ?? '0';

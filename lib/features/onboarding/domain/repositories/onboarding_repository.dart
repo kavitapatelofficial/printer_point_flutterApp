@@ -14,7 +14,7 @@ class OnBoardingRepository implements OnBoardingRepositoryInterface{
   OnBoardingRepository({required this.dioClient});
 
   @override
-  Future<ApiResponse> getList({int? offset}) async {
+  Future<ApiResponse> getList({dynamic offset}) async {
     try {
       List<OnboardingModel> onBoardingList = [
         OnboardingModel(Images.onBoarding1,

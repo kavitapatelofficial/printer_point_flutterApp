@@ -106,7 +106,7 @@ class OrderDetailsRepository implements OrderDetailsRepositoryInterface{
 
 
   @override
-  Future getList({int? offset = 1}) {
+  Future getList({dynamic offset = 1}) {
     // TODO: implement getList
     throw UnimplementedError();
   }
@@ -131,7 +131,7 @@ class OrderDetailsRepository implements OrderDetailsRepositoryInterface{
 
 
   @override
-  Future<HttpClientResponse> productDownload(String? url) async {
+  Future<HttpClientResponse> productDownload(dynamic url) async {
       HttpClient client = HttpClient();
     final response = await client.getUrl(Uri.parse(url!)).then((HttpClientRequest request) {
           return request.close();

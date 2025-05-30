@@ -36,7 +36,7 @@ class OrderDetailsWidget extends StatefulWidget {
   final String paymentStatus;
   final Function callback;
   final bool fromTrack;
-  final int? isGuest;
+  final dynamic isGuest;
   final int index;
   const OrderDetailsWidget({super.key, required this.orderDetailsModel, required this.callback,
     required this.orderType, required this.paymentStatus,  this.fromTrack = false, this.isGuest, required this.orderId, required this.index});
@@ -69,7 +69,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
 
   DigitalVariation? digitalVariation;
 
-  String? downloadMessage;
+  dynamic downloadMessage;
   File? downloadedFile;
 
   @override
@@ -96,7 +96,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
                     ClipRRect(borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall),
                       child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall),
                         border: Border.all(color: Theme.of(context).primaryColor.withOpacity(.125))),
-                        child: CustomImageWidget(image: '${widget.orderDetailsModel.productDetails?.thumbnail}', width: 80, height: 80),
+                        child: CustomImageWidget(image: '${widget.orderDetailsModel.productDetails?.thumbnailFullUrl!.status==200?"${widget.orderDetailsModel.productDetails?.thumbnailFullUrl!.path}":widget.orderDetailsModel.productDetails?.thumbnailFullUrl!.key}', width: 80, height: 80),
                       ),
                     ),
                     const SizedBox(width: Dimensions.marginSizeDefault),

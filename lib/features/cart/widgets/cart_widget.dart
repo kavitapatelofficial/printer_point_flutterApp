@@ -83,7 +83,7 @@ class CartWidget extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall),
                                   border: Border.all(color: Theme.of(context).primaryColor.withOpacity(.10),width: 0.5)),
                                   child: ClipRRect(borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall),
-                                      child: CustomImageWidget(image: '${cartModel?.productInfo?.thumbnailFullUrl}',
+                                      child: CustomImageWidget(image: '${cartModel?.productInfo?.thumbnailFullUrl!.status==200?cartModel?.productInfo?.thumbnailFullUrl!.path:cartModel?.productInfo?.thumbnailFullUrl!.key}',
                                           height: 70, width: 70))),
                               if(cartModel!.isProductAvailable! == 0)
                                 Container(decoration: BoxDecoration(

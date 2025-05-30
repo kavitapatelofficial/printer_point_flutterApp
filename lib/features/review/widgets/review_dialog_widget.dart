@@ -267,7 +267,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall),
                   child: FadeInImage.assetNetwork(
                     placeholder: Images.placeholder, fit: BoxFit.scaleDown, width: 70, height: 70,
-                    image: '${widget.orderDetailsModel.productDetails?.thumbnail}',
+                    image: '${widget.orderDetailsModel.productDetails?.imagesFullUrl!.first.status==200?widget.orderDetailsModel.productDetails?.imagesFullUrl!.first.path:widget.orderDetailsModel.productDetails?.imagesFullUrl!.first.key}',
                     imageErrorBuilder: (c, o, s) => Image.asset(Images.placeholder,
                         fit: BoxFit.scaleDown, width: 70, height: 70)))),
               const SizedBox(width: Dimensions.marginSizeDefault),

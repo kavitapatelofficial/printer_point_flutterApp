@@ -2,14 +2,14 @@ import 'package:flutter_sixvalley_ecommerce/data/model/image_full_url.dart';
 import 'package:flutter_sixvalley_ecommerce/features/shop/domain/models/seller_model.dart';
 
 class ShopAgainFromRecentStoreModel {
-  int? id;
-  String? name;
-  String? slug;
-  String? thumbnail;
+  dynamic id;
+  dynamic name;
+  dynamic slug;
+  dynamic thumbnail;
   ImageFullUrl? thumbnailFullUrl;
   double? unitPrice;
-  int? userId;
-  int? reviewsCount;
+  dynamic userId;
+  dynamic reviewsCount;
   Seller? seller;
   bool? isAddedByAdmin;
 

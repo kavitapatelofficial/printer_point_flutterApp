@@ -154,7 +154,7 @@ class CartScreenState extends State<CartScreen> {
 
               for(int i=0; i<cart.cartList.length; i++) {
                 if(cart.cartList[i].isChecked!){
-                  totalQuantity += cart.cartList[i].quantity!;
+                  totalQuantity += int.parse("${cart.cartList[i].quantity!}");
                   amount += (cart.cartList[i].price! - cart.cartList[i].discount!) * cart.cartList[i].quantity!;
                   discount += cart.cartList[i].discount! * cart.cartList[i].quantity!;
                   if (kDebugMode) {

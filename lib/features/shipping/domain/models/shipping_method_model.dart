@@ -1,11 +1,11 @@
 class ShippingMethodModel {
-  int? id;
-  String? creatorType;
-  String? title;
+  dynamic id;
+  dynamic creatorType;
+  dynamic title;
   double? cost;
-  String? duration;
-  String? createdAt;
-  String? updatedAt;
+  dynamic duration;
+  dynamic createdAt;
+  dynamic updatedAt;
 
   ShippingMethodModel(
       {this.id,

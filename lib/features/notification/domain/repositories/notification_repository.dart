@@ -10,7 +10,7 @@ class NotificationRepository implements NotificationRepositoryInterface{
   NotificationRepository({required this.dioClient});
 
   @override
-  Future<ApiResponse>  getList({int? offset}) async {
+  Future<ApiResponse>  getList({dynamic offset}) async {
     try {
       Response response = await dioClient!.get('${AppConstants.notificationUri}?limit=10&guest_id=1&offset=$offset');
       return ApiResponse.withSuccess(response);

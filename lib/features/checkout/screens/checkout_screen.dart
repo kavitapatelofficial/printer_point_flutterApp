@@ -38,7 +38,7 @@ class CheckoutScreen extends StatefulWidget {
   final double shippingFee;
   final double discount;
   final double tax;
-  final int? sellerId;
+  final dynamic sellerId;
   final bool onlyDigital;
   final bool hasPhysical;
   final int quantity;
