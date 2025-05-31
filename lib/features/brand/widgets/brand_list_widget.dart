@@ -53,7 +53,7 @@ class _BrandListWidgetState extends State<BrandListWidget> {
                                                             ?.key!)));
                                   },
                                   child: Container(
-                                    margin: EdgeInsets.all(4),
+                                    margin: const EdgeInsets.all(4),
                                     padding:
                                         const EdgeInsets.fromLTRB(5, 5, 5, 3),
                                     constraints: BoxConstraints(
@@ -64,72 +64,48 @@ class _BrandListWidgetState extends State<BrandListWidget> {
                                       minHeight: 100,
                                     ),
                                     decoration: BoxDecoration(
-                                      color: Color(
+                                      color: const Color(
                                           0xFFF8F8FF), // Assuming --ghost-white (you can adjust)
                                       border: Border.all(
-                                        color: Color(
+                                        color: const Color(
                                             0xFFE5E4E2), // Assuming --platinum (adjust as needed)
                                         width: 1,
                                       ),
                                       borderRadius: BorderRadius.circular(8),
                                     ),
-                                    child: Padding(
-                                      padding: EdgeInsets.only(
-                                          left:
-                                              Provider.of<LocalizationController>(
-                                                          context,
-                                                          listen: false)
-                                                      .isLtr
-                                                  ? Dimensions
-                                                      .paddingSizeDefault
-                                                  : 0,
-                                          right: brandProvider
-                                                      .brandList.length ==
-                                                  brandProvider.brandList
-                                                          .indexOf(brand) +
-                                                      1
-                                              ? Dimensions.paddingSizeDefault
-                                              : Provider.of<LocalizationController>(
-                                                          context,
-                                                          listen: false)
-                                                      .isLtr
-                                                  ? 0
-                                                  : Dimensions
-                                                      .paddingSizeDefault),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            width:
-                                                ResponsiveHelper.isTab(context)
-                                                    ? 120
-                                                    : 80,
-                                            height:
-                                                ResponsiveHelper.isTab(context)
-                                                    ? 120
-                                                    : 80,
-                                            decoration: BoxDecoration(
-                                              color: Color(
-                                                  0xFFF8F8FF), // Assuming --ghost-white (you can adjust)
-                                              border: Border.all(
-                                                color: Color(
-                                                    0xFFE5E4E2), // Assuming --platinum (adjust as needed)
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(8),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width:
+                                              ResponsiveHelper.isTab(context)
+                                                  ? 120
+                                                  : 80,
+                                          height:
+                                              ResponsiveHelper.isTab(context)
+                                                  ? 120
+                                                  : 80,
+                                          decoration: BoxDecoration(
+                                            color: const Color(
+                                                0xFFF8F8FF), // Assuming --ghost-white (you can adjust)
+                                            border: Border.all(
+                                              color: const Color(
+                                                  0xFFE5E4E2), // Assuming --platinum (adjust as needed)
+                                              width: 1,
                                             ),
-                                            child: ClipRRect(
-                                                borderRadius:
-                                                    const BorderRadius.all(
-                                                        Radius.circular(5)),
-                                                child: CustomImageWidget(
-                                                    image:
-                                                        '${brand.imageFullUrl?.status == 200 ? brand.imageFullUrl?.path : brand.imageFullUrl?.key!}')),
+                                            borderRadius:
+                                                BorderRadius.circular(8),
                                           ),
-                                        ],
-                                      ),
+                                          child: ClipRRect(
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(5)),
+                                              child: CustomImageWidget(
+                                                  image:
+                                                      '${brand.imageFullUrl?.status == 200 ? brand.imageFullUrl?.path : brand.imageFullUrl?.key!}')),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ))
@@ -191,10 +167,10 @@ class _BrandListWidgetState extends State<BrandListWidget> {
                                   minHeight: 100,
                                 ),
                                 decoration: BoxDecoration(
-                                  color: Color(
+                                  color: const Color(
                                       0xFFF8F8FF), // Assuming --ghost-white (you can adjust)
                                   border: Border.all(
-                                    color: Color(
+                                    color: const Color(
                                         0xFFE5E4E2), // Assuming --platinum (adjust as needed)
                                     width: 1,
                                   ),

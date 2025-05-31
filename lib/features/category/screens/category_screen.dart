@@ -56,7 +56,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                     );
 
                   },
-                    child: CategoryItem(title: category.name, icon: category.imageFullUrl?.path, isSelected: categoryProvider.categorySelectedIndex == index));})),
+                    child: CategoryItem(title: category.name, icon: category.imageFullUrl!.status==200?category.imageFullUrl?.path:category.imageFullUrl?.key, isSelected: categoryProvider.categorySelectedIndex == index));})),
 
             Expanded(child: SingleChildScrollView(
               child: Column(

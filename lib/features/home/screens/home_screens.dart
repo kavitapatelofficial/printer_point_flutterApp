@@ -236,19 +236,22 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const BannersWidget(),
-                  const SizedBox(height: Dimensions.paddingSizeDefault),
+               
+
                   const CategoryListWidget(isHomePage: true),
-                  const SizedBox(height: Dimensions.paddingSizeDefault),
+             
                   Consumer<FlashDealController>(
                       builder: (context, megaDeal, child) {
                     return megaDeal.flashDeal == null
                         ? const FlashDealShimmer()
                         : megaDeal.flashDealList.isNotEmpty
                             ? Column(children: [
+                                   const SizedBox(height: 20),
+                                    const SizedBox(height: 20),
                                 Padding(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal:
-                                          Dimensions.paddingSizeDefault),
+                                          20),
                                   child: TitleRowWidget(
                                     title: getTranslated('flash_deal', context)
                                         ?.toUpperCase(),
@@ -270,7 +273,7 @@ class _HomePageState extends State<HomePage> {
                                 Padding(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal:
-                                          Dimensions.paddingSizeDefault),
+                                          20),
                                   child: Text(
                                     getTranslated(
                                             'hurry_up_the_offer_is_limited_grab_while_it_lasts',
@@ -293,7 +296,7 @@ class _HomePageState extends State<HomePage> {
                               ])
                             : const SizedBox.shrink();
                   }),
-                  const SizedBox(height: Dimensions.paddingSizeExtraSmall),
+              
                   Consumer<FeaturedDealController>(
                       builder: (context, featuredDealProvider, child) {
                     return featuredDealProvider.featuredDealProductList != null
@@ -301,6 +304,9 @@ class _HomePageState extends State<HomePage> {
                                 .featuredDealProductList!.isNotEmpty
                             ? Column(
                                 children: [
+
+                                   const SizedBox(height: 20),
+                                    const SizedBox(height: 20),
                                   Stack(children: [
                                     Container(
                                       width: MediaQuery.of(context).size.width,
@@ -313,7 +319,7 @@ class _HomePageState extends State<HomePage> {
                                       Padding(
                                         padding: const EdgeInsets.symmetric(
                                             vertical:
-                                                Dimensions.paddingSizeDefault),
+                                                20),
                                         child: TitleRowWidget(
                                           title:
                                               '${getTranslated('featured_deals', context)}',
@@ -328,32 +334,31 @@ class _HomePageState extends State<HomePage> {
                                     ]),
                                   ]),
                                   const SizedBox(
-                                      height: Dimensions.paddingSizeDefault),
+                                      height: 20),
                                 ],
                               )
                             : const SizedBox.shrink()
                         : const FindWhatYouNeedShimmer();
                   }),
                   const ClearanceListWidget(),
-                  const SizedBox(height: Dimensions.paddingSizeDefault),
+                
                   Consumer<BannerController>(
                       builder: (context, footerBannerProvider, child) {
                     return footerBannerProvider.footerBannerList != null &&
                             footerBannerProvider.footerBannerList!.isNotEmpty
                         ? Padding(
                             padding: const EdgeInsets.symmetric(
-                                horizontal: Dimensions.paddingSizeDefault),
+                                horizontal: 20,vertical:20),
                             child: SingleBannersWidget(
                                 bannerModel:
                                     footerBannerProvider.footerBannerList?[0]))
                         : const SizedBox();
                   }),
-                  const SizedBox(height: Dimensions.paddingSizeDefault),
                   Consumer<ProductController>(
                       builder: (context, productController, _) {
                     return const FeaturedProductWidget();
                   }),
-                  const SizedBox(height: Dimensions.paddingSizeDefault),
+                  // const SizedBox(height: 20),
                   singleVendor
                       ? const SizedBox()
                       : Consumer<ShopController>(
@@ -388,7 +393,7 @@ class _HomePageState extends State<HomePage> {
                                           .sellerModel!.sellers!.isNotEmpty))
                               ? Padding(
                                   padding: const EdgeInsets.only(
-                                      bottom: Dimensions.paddingSizeDefault),
+                                      bottom: 20),
                                   child: SizedBox(
                                       height: ResponsiveHelper.isTab(context)
                                           ? 170
@@ -401,11 +406,11 @@ class _HomePageState extends State<HomePage> {
                         }),
                   const Padding(
                       padding: EdgeInsets.only(
-                          bottom: Dimensions.paddingSizeDefault),
+                          bottom: 20,),
                       child: RecommendedProductWidget()),
                   const Padding(
                       padding: EdgeInsets.only(
-                          bottom: Dimensions.paddingSizeDefault),
+                            bottom: 20),
                       child: LatestProductListWidget()),
                   if (configModel?.brandSetting == "1")
                     TitleRowWidget(
@@ -421,12 +426,12 @@ class _HomePageState extends State<HomePage> {
                           : 0),
                   if (configModel!.brandSetting == "1") ...[
                     const BrandListWidget(isHomePage: true),
-                    const SizedBox(height: Dimensions.paddingSizeDefault),
+                    // const SizedBox(height: 20),
                   ],
                   const HomeCategoryProductWidget(isHomePage: true),
-                  const SizedBox(height: Dimensions.paddingSizeDefault),
+                  // const SizedBox(height: 20),
                   const FooterBannerSliderWidget(),
-                  const SizedBox(height: Dimensions.paddingSizeDefault),
+                  // const SizedBox(height: 20),
                   Consumer<ProductController>(
                       builder: (ctx, prodProvider, child) {
                     return Container(
@@ -439,7 +444,7 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Padding(
                                   padding: const EdgeInsets.fromLTRB(
-                                      Dimensions.paddingSizeDefault,
+                                      20,
                                       0,
                                       Dimensions.paddingSizeSmall,
                                       0),

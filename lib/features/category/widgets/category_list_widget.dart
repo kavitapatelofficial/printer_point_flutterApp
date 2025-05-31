@@ -31,6 +31,8 @@ class CategoryListWidget extends StatelessWidget {
                   horizontal: Dimensions.paddingSizeExtraExtraSmall,vertical: 0),
           child: Column(
             children: [
+              const SizedBox(height: Dimensions.paddingSizeDefault),
+              const SizedBox(height: Dimensions.paddingSizeDefault),
               TitleRowWidget(
                 title: getTranslated('CATEGORY', context),
                 onTap: () {
@@ -44,7 +46,7 @@ class CategoryListWidget extends StatelessWidget {
                   }
                 },
               ),
-              // const SizedBox(height: Dimensions.paddingSizeSmall),
+             
               categoryProvider.categoryList.isNotEmpty && isLtr
                   ? Padding(
                       padding: const EdgeInsets.symmetric(
